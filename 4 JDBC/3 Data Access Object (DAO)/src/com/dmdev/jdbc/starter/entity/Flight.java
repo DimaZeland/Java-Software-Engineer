@@ -10,6 +10,5 @@ public record Flight(Long id,
                      LocalDateTime arrivalDate,
                      String arrivalAirportCode,
                      Integer aircraftId,
-                     String status,
-                     List<Ticket> tickets) {
+                     String status) {
 }
