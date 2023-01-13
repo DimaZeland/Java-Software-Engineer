@@ -27,6 +27,7 @@ public class FirstServlet extends HttpServlet {
         resp.setHeader("token", "12345");
 //        resp.setCharacterEncoding(StandardCharsets.UTF_8.name());
         try (var writer = resp.getWriter()) {
+
             writer.write("<h1>Привет с первого сервлета!</h2>");
         }
     }

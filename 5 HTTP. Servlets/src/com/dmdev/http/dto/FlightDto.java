@@ -1,44 +1,83 @@
 package com.dmdev.http.dto;
 
-import java.util.Objects;
+import lombok.Builder;
+import lombok.Value;
 
-public class FlightDto {
+//@AllArgsConstruct
+//@Getter
+//@EqualsAndHashCode
+//@ToString
+//@NoArgsConstructor
+//@Data
+@Value
+@Builder
+public final class FlightDto {
 
-    private final Long id;
-    private final String description;
+    Long id;
+     String description;
 
-    public FlightDto(Long id, String description) {
-        this.id = id;
-        this.description = description;
-    }
+//    public FlightDto(Long id, String description) {
+//        this.id = id;
+//        this.description = description;
+//    }
+//
+//    public static FlightDtoBuilder builder() {
+//        return new FlightDtoBuilder();
+//    }
+//
+//    public static class FlightDtoBuilder {
+//        private Long id;
+//        private String description;
+//
+//        FlightDtoBuilder() {
+//        }
+//
+//        public FlightDtoBuilder id(Long id) {
+//            this.id = id;
+//            return this;
+//        }
+//
+//        public FlightDtoBuilder description(String description) {
+//            this.description = description;
+//            return this;
+//        }
+//
+//        public FlightDto build() {
+//            return new FlightDto(id, description);
+//        }
+//
+//        public String toString() {
+//            return "FlightDto.FlightDtoBuilder(id=" + this.id + ", description=" + this.description + ")";
+//        }
+//    }
 
-    public Long getId() {
-        return id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public String getDescription() {
+//        return description;
+//    }
 
-    public String getDescription() {
-        return description;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        FlightDto flightDto = (FlightDto) o;
+//        return Objects.equals(id, flightDto.id) &&
+//                Objects.equals(description, flightDto.description);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id, description);
+//    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        FlightDto flightDto = (FlightDto) o;
-        return Objects.equals(id, flightDto.id) &&
-                Objects.equals(description, flightDto.description);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, description);
-    }
-
-    @Override
-    public String toString() {
-        return "FlightDto{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "FlightDto{" +
+//                "id=" + id +
+//                ", description='" + description + '\'' +
+//                '}';
+//    }
 }
