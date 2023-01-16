@@ -12,12 +12,20 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/registration" method="post">
+
+<img src="${pageContext.request.contextPath}/images/users/2.jpg" alt="User image">
+<%--<img src="webLink" alt="User image">--%>
+<%--<video>src=""link</video>--%>
+<%--<audio>src=""link< /audio>--%>
+<form action="${pageContext.request.contextPath}/registration" method="post" enctype="multipart/form-data">
     <label for="nameId">Name:
     <input type="text" name="name" id="nameId">
     </label><br>
     <label for="birthdayId">Birthday:
-        <input type="date" name="birthday" id="birthdayId">
+        <input type="date" name="birthday" id="birthdayId" required>
+    </label><br>
+    <label for="imageId">Image:
+        <input type="file" name="image" id="imageId" required>
     </label><br>
     <label for="emailId">Email:
         <input type="text" name="email" id="emailId">

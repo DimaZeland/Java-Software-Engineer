@@ -14,15 +14,17 @@ import java.time.LocalDate;
 public class User {
     private Integer id;
     private String name;
+    private String image;
     private LocalDate birthday;
     private String email;
     private String password;
     private Role role;
     private Gender gender;
 
-    public User(Integer id, String name, LocalDate birthday, String email, String password, Role role, Gender gender) {
+    public User(Integer id, String name, String image, LocalDate birthday, String email, String password, Role role, Gender gender) {
         this.id = id;
         this.name = name;
+        this.image = image;
         this.birthday = birthday;
         this.email = email;
         this.password = password;
