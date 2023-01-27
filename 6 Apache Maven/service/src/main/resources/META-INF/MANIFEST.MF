@@ -1,0 +1,2 @@
+Main-Class: com.dmdev.service.AppRunner
+Class-Path:
