@@ -1,100 +1,43 @@
-plugins {
-    id 'java'
-    id 'war'
+import org.apache.commons.lang3.StringUtils
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+        classpath 'org.apache.commons:commons-lang3:3.12.0'
+    }
 }
 
 apply from: 'script.gradle'
+
+allprojects {
+    group StringUtils.capitalize("dmdev")
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+}
 
 repositories {
     mavenCentral()
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_16
-    targetCompatibility = JavaVersion.VERSION_16
-}
-
-configurations {
-    Configuration configurationImpl = getByName("implementation")
-    dmdev {
-        description = "dmdev configuration"
+project(":database") {
+    repositories {
+        mavenCentral()
     }
-    configurationImpl.extendsFrom(dmdev)
 
-    all {
-        resolutionStrategy {
-            force('org.springframework:spring-aop:5.3.8')
-        }
+    dependencies {
+
     }
 }
 
-dependencies {
-    compileOnly "jakarta.servlet:jakarta.servlet-api:5.0.0"
-//    add('implementation', [group: "org.springframework", name: 'spring-webmvc', version: '5.3.9'])
-//    add('implementation', "org.springframework:spring-webmvc:5.3.9")
-    implementation("org.springframework:spring-webmvc:5.3.9") {
-//        transitive(false)
-//        exclude(group: 'org.springframework', module: 'spring-aop')
-    }
-    implementation('org.springframework:spring-aop:5.3.8') {
-//        force(true)
-    }
-}
-
-configurations.runtimeClasspath.files.each { println it }
-
-jar {
-    def jars = configurations.runtimeClasspath.files.collect { "lib/$it.name" }
-
-    manifest {
-        attributes 'Main-Class': 'com.dmdev.HelloWorld',
-                'Class-Path': jars.join(' ')
-    }
-//    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
-//    from (configurations.runtimeClasspath.files.collect {zipTree(it)} )
-}
-
-task copyAllDependecies(type: Copy) {
-    from(configurations.runtimeClasspath.files)
-    into("$buildDir/libs/lib")
-}
-jar.dependsOn copyAllDependecies
-
-war {
-    archiveName "dmdev.war"
-}
-
-task deployTomcat(type: Copy) {
-    from(war.archiveFile.get())
-    into("C:\\Program Files\\Apache Software Foundation\\Tomcat 10.0\\webapps")
-}
-deployTomcat.dependsOn war
-assemble.dependsOn deployTomcat
-
-// buildSrc --- id 'custom'
-class CustomPlugin implements Plugin<Project> {
-
-    @Override
-    void apply(Project project) {
-        addHelloTask(project)
-    }
-
-    void addHelloTask(Project project) {
-        def map = [description: "Hello task", group: "dmdev", type: DefaultTask]
-        project.task(map, "hello") {
-            println "configuration phase. Task hello"
-
-            doLast {
-                println "execution phase, Action 1"
-            }
-            doFirst {
-                println "execution phase, Action 2"
-            }
-            doLast {
-                println "execution phase, Action 3"
-            }
-            println "task: $description, group: $group, actions: ${actions.size()}"
-            println "path task: $path"
-        }
-    }
+wrapper {
+    gradleVersion "7.6"
 }

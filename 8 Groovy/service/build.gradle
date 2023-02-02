@@ -1,0 +1,58 @@
+import com.dmdev.task.ReleaseTask
+
+plugins {
+    id 'java-library'
+    id 'jacoco'
+    id 'custom-dmdev'
+}
+
+//apply plugin: com.dmdev.plugin.CustomPlugin
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api project(":database")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    maxParallelForks 3
+    useJUnitPlatform()
+}
+
+test.finalizedBy jacocoTestReport
+jacocoTestReport.dependsOn test
+
+ext {
+    release = false
+}
+
+task makeRelease(type: ReleaseTask) {
+    release = project.release
+    releaseFile = new File("$rootDir/script.gradle")
+}
+
+//task makeRelease {
+//    inputs.property("release", project.release)
+//    outputs.file("$rootDir/script.gradle")
+//
+//    doLast {
+//        println "release in progress.."
+//    }
+//}
+
+
+
+
+
+
+
+
+
+
+
+
