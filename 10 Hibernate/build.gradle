@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+     sourceCompatibility = JavaVersion.VERSION_16
+    targetCompatibility = JavaVersion.VERSION_16
+}
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:6.1.6.Final' // запуск на compile & runtime phases
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0' // add package jakarta.persistence для Hibernate 6 вместо javax.persistance для Hibernate 5
+    runtimeOnly 'org.postgresql:postgresql:42.5.2' // only runtime phase
+    compileOnly 'org.projectlombok:lombok:1.18.26' // классы ломбок и его аннотации только на этапе компиляции
+    annotationProcessor 'org.projectlombok:lombok:1.18.26' // процессор для обработки аннотаций и преобразования их в Java код
+    testCompileOnly 'org.projectlombok:lombok:1.18.26' // две предыдущих зависимости на этапе тестов
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
