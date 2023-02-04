@@ -1,43 +1,44 @@
 package com.dmdev;
 
-import com.dmdev.entity.Role;
 import com.dmdev.entity.User;
+import com.dmdev.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class HibernateRunner {
 
     public static void main(String[] args) throws SQLException {
-//        BlockingDeque<Connection> pool = null;
-//        Connection connection = pool.take();
-//        SessionFactory (Hibernate аналог BlockingDeque<Connection> pool из JDBC)
+        User user = User.builder()
+                .username("ivan@gmail.com")
+                .lastname("Ivanov")
+                .firstname("Ivan")
+                .build();
 
-//        Connection connection = DriverManager
-//                .getConnection("db.url", "db.username", "db.password");
-//        Session (Hibernate аналог Connection JDBC)
-        Configuration configuration = new Configuration();
-//        configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy()); // имена полей в CamelCase будут привязыватся к столбцам таблицы в SnakeCase
-//        configuration.addAnnotatedClass(User.class); // добавить сущность в конфигурацию "ConnectionPool"
-        configuration.configure(); // аргументом нужно указать путь к hibernate.cfg.xml, по умолчанию src/main/resources/, hibernate.cfg.xml
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
+            try (Session session1 = sessionFactory.openSession()) {
+                session1.beginTransaction();
 
-        try (SessionFactory sessionFactory = configuration.buildSessionFactory(); // аналогично ConnectionPool должен существовать только 1 объект типа SessionFactory
-             Session session = sessionFactory.openSession()) { // Session "обертка вокруг Connection", предоставляе больший функционал для управления Hibernate и его сущностями
-            session.beginTransaction(); // начать транзакцию в рамках соединения с БД
+                session1.saveOrUpdate(user);
 
-            User user = User.builder()
-                    .username("ivan1@gmail.com")
-                    .firstname("Ivan")
-                    .lastname("Ivanov")
-                    .birthDate(LocalDate.of(2000, 1, 19))
-                    .age(20)
-                    .role(Role.ADMIN)
-                    .build();
-            session.persist(user); // сохранить пользователя в БД method save() deprecated in Hibernate 6
-            session.getTransaction().commit(); // закрытьва транзакцию
+                session1.getTransaction().commit();
+            }
+            try (Session session2 = sessionFactory.openSession()) {
+                session2.beginTransaction();
+
+                user.setFirstname("Sveta");
+//                session2.delete(user);
+//                refresh/merge
+//                User freshUser = session2.get(User.class, user.getUsername());
+//                freshUser.setLastname(user.getLastname());
+//                freshUser.setFirstname(user.getFirstname());
+// PostgreSQL по умолчанию имеет уровень изолированности транзакций READ_COMMITED. Поэтому мы не увидим изменений, по не сделаем commit транзакций
+                Object mergedUser = session2.merge(user); // создание в session mergeUser +
+//                session2.refresh(user); // запрос к БД + наложением изменений с БД на user
+
+                session2.getTransaction().commit(); // наложением изменений в БД с mergeUser
+            }
         }
     }
 
