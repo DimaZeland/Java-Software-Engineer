@@ -8,11 +8,16 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
+import javax.persistence.AttributeOverride;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 // Runtime аннотации, которые позволяют брать актуальные значения во время выполнения программы
 @Data // equals, hashCode, getters & setters methods
@@ -24,18 +29,26 @@ import javax.persistence.Table;
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class) // Zпсевдоним для пользовательского типа
 public class User {
 
-    @Id // каждая сущность в Hibernate должна иметь первычный ключ, который должен реализовать интерфейс Serializable, username - первычный ключ
-    private String username;
-    private String firstname;
-    private String lastname;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-//        @Convert(converter = BirthdayConverter.class) // приобразование типов полей таблицы в типы полей класса сущности
-    @Column(name = "birth_date") // привязать поле к столбцу birth_date таблицы
-    private Birthday birthDate;
+    @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
+    private PersonalInfo personalInfo;
+
+    @Column(unique = true) // уникальная колонка
+    private String username;
 
     @Type(type = "dmdev") // указать новый тип и зарегистрировать его в Hibernate, type - полный путь к классу
     private String info;
 
     @Enumerated(EnumType.STRING) // убрать использование ordinal() как цифровой идентификатор типа Enum (по порядку при инициализации) и задать текстовый формат полем name (имя ENUM, указанное при инициализации)
     private Role role;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id") // company_id
+    private Company company;
 }
+
+
+

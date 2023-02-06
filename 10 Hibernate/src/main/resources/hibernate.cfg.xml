@@ -13,6 +13,7 @@
     <property name="format_sql">true</property> <!-- форматировать красиво-->
 <!-- SQLDialect позволяет Hibernaet сконфигурировать дополнительные типы, функции, view и т.д., которые специфичные для конкретной БД-->
     <mapping class="com.dmdev.entity.User"/> <!-- добавить сущность в конфигурацию SessionFactory-->
+    <mapping class="com.dmdev.entity.Company"/>
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
   </session-factory>
