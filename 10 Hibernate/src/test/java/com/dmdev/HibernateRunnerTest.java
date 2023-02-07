@@ -1,6 +1,9 @@
 package com.dmdev;
 
+import com.dmdev.entity.Company;
 import com.dmdev.entity.User;
+import com.dmdev.util.HibernateUtil;
+import lombok.Cleanup;
 import org.junit.jupiter.api.Test;
 
 import jakarta.persistence.Column;
@@ -18,6 +21,53 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
+
+    @Test
+    void deleteCompany() {
+        @Cleanup var sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        var user = session.get(User.class, 1L);
+        session.delete(user);
+
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void addUserToNewCompany() {
+        @Cleanup var sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        var company = Company.builder()
+                .name("Facebook")
+                .build();
+
+        var user = User.builder()
+                .username("sveta@gmail.com")
+                .build();
+//        user.setCompany(company);
+//        company.getUsers().add(user)
+        company.addUser(user);
+        company.addUser(user);
+
+        session.save(company);
+
+        session.getTransaction().commit();
+    }
+
+    @Test
+    void oneToMany() {
+        @Cleanup var sessionFactory = HibernateUtil.buildSessionFactory(); // Cleanup = try with resources
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        var company = session.get(Company.class, 1);
+        System.out.println(company.getUsers());
+
+        session.getTransaction().commit();
+    }
 
     @Test
     void checkGetReflectionApi() throws SQLException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {

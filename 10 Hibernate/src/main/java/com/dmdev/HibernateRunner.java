@@ -18,10 +18,10 @@ public class HibernateRunner {
     // нужно создавать каждый логгер в отдельном классе
     public static void main(String[] args) throws SQLException {
         Company company = Company.builder()
-                .name("Google")
+                .name("Amazon")
                 .build();
         User user = User.builder()
-                .username("petr@gmail1.com")
+                .username("ivan@gmail1.com")
                 .personalInfo(PersonalInfo.builder()
                         .lastname("Petrov")
                         .firstname("Petr")
@@ -34,9 +34,6 @@ public class HibernateRunner {
             Session session1 = sessionFactory.openSession();
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
-
-                session1.save(company); // сначала сохранять компанию
-                session1.save(user); // и только потом пользователя
 
                 session1.getTransaction().commit();
             }

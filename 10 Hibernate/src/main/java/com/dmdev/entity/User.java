@@ -4,15 +4,19 @@ import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.AttributeOverride;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,6 +27,8 @@ import javax.persistence.Table;
 @Data // equals, hashCode, getters & setters methods
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = "username")
+@ToString(exclude = "company") // исключить вывод поля company из вывода метода toString()
 @Builder // для красового создания и инициализации сущностей
 @Entity // указанный POJO class - сущность Hibernate
 @Table(name = "users", schema ="public") // по умолчанию Hibernate берет название полей/класса в качестве названия таблицы/колонок [ (SQL не чувствителен к регистру))
@@ -44,8 +50,8 @@ public class User {
 
     @Enumerated(EnumType.STRING) // убрать использование ordinal() как цифровой идентификатор типа Enum (по порядку при инициализации) и задать текстовый формат полем name (имя ENUM, указанное при инициализации)
     private Role role;
-
-    @ManyToOne
+// fetch = FetchType.LAZY - ленивое инициализя подобъектов (по умолчанию для коллекций), FetchType.EAGER(жадня иницализация подобъектов)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL}) // optional = false - NOT NULL constraint, обязаны устанавливать это поле в нашу сущность
     @JoinColumn(name = "company_id") // company_id
     private Company company;
 }
