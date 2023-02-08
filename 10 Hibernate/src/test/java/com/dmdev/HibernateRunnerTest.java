@@ -1,9 +1,12 @@
 package com.dmdev;
 
+import com.dmdev.entity.Chat;
 import com.dmdev.entity.Company;
 import com.dmdev.entity.User;
+import com.dmdev.entity.UserChat;
 import com.dmdev.util.HibernateUtil;
 import lombok.Cleanup;
+import org.hibernate.Hibernate;
 import org.junit.jupiter.api.Test;
 
 import jakarta.persistence.Column;
@@ -15,12 +18,114 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.util.Arrays;
 
 import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
+
+    @Test
+    void checkManyToMany() {
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            var user = session.get(User.class, 10L);
+            var chat = session.get(Chat.class, 1L);
+
+            var userChat = UserChat.builder()
+                    .createdAt(Instant.now())
+                    .createdBy(user.getUsername())
+                    .build();
+            userChat.setUser(user);
+            userChat.setChat(chat);
+
+            session.save(userChat);
+
+//            user.getChats().clear();
+
+//            var chat = Chat.builder()
+//                    .name("dmdev")
+//                    .build();
+//            user.addChat(chat);
+//
+//            session.save(chat);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
+    void checkOneToOne() {
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            var user = session.get(User.class, 10L);
+            System.out.println();
+
+//            var user = User.builder()
+//                    .username("test4@gmail.com")
+//                    .build();
+//            var profile = Profile.builder()
+//                    .language("ru")
+//                    .street("Kolasa 18")
+//                    .build();
+
+            //            profile.setUser(user);
+//
+//            session.save(user);
+//            profile.setUser(user);
+//            session.save(profile);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
+    void checkOrhanRemoval() {
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            Company company = session.getReference(Company.class, 1);
+            company.getUsers().removeIf(user -> user.getId().equals(7L));
+
+            session.getTransaction().commit();
+        }
+    }
+
+
+    @Test
+    void checkLazyInitialisation() {
+        Company company = null;
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            company = session.getReference(Company.class, 1); // сразу получение Proxy
+
+            session.getTransaction().commit();
+        }
+        var users = company.getUsers();
+        System.out.println(users.size());
+    }
+
+
+    @Test
+    void getCompanyById() {
+        @Cleanup var sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        var company = session.get(Company.class, 1);
+        Hibernate.initialize(company.getUsers()); // инициализация Proxy объекта
+        System.out.println();
+
+        session.getTransaction().commit();
+    }
 
     @Test
     void deleteCompany() {

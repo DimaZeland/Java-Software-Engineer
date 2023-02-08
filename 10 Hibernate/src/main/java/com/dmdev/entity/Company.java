@@ -34,7 +34,7 @@ public class Company {
     private String name;
 
     @Builder.Default//    @JoinColumn(name = "company_id")
-    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)// one Company object to many objects fields
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)// one Company object to many objects fields, orphanRemoval -> удаление данных изсущности влечет удаление данных из БД
     private Set<User> users = new HashSet<>();
 
     public void addUser(User user) {
