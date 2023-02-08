@@ -10,13 +10,22 @@ CREATE TABLE users
     company_id INT REFERENCES company (id)
 );
 
+CREATE TABLE company_locale
+(
+    company_id INT NOT NULL REFERENCES company (id),
+    lang CHAR(2) NOT NULL ,
+    description VARCHAR(128) NOT NULL ,
+    PRIMARY KEY (company_id, lang)
+);
+
 CREATE TABLE users_chat /* в названии смежной таблицы на первое место ставится главная таблица*/
 (/*отлично подходит добавление ON DELETE CASCADE для каждой колонки родных таблиц (при удалении chat || user нет смысла в записях user_chat*/
     id BIGSERIAL PRIMARY KEY ,
     user_id BIGINT REFERENCES users (id),
     chat_id BIGINT REFERENCES chat (id),
     created_at TIMESTAMP NOT NULL ,
-    created_by VARCHAR(128) NOT NULL
+    created_by VARCHAR(128) NOT NULL,
+    UNIQUE (user_id, chat_id)
 );
 
 DROP TABLE users_chat;

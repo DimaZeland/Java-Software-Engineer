@@ -1,21 +1,12 @@
 package com.dmdev.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+import org.hibernate.annotations.SortNatural;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 @Data
 @NoArgsConstructor
@@ -35,10 +26,21 @@ public class Company {
 
     @Builder.Default//    @JoinColumn(name = "company_id")
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)// one Company object to many objects fields, orphanRemoval -> удаление данных изсущности влечет удаление данных из БД
-    private Set<User> users = new HashSet<>();
+    @MapKey(name = "username") // ключем в map users будет поле username объекта User
+    @SortNatural // отсортирует как TreeSet внутреннюю коллекцию Hibernate, класс сортируемых элементов должен реализовать интерфейс Comparable
+    private Map<String, User> users = new TreeMap<>();
+
+    @Builder.Default
+    @ElementCollection // добавить елемент из другого класса, который не является сущонстью
+    @CollectionTable(name = "company_locale", joinColumns = @JoinColumn(name = "company_id")) // подключится к таблице company_locale
+//    @AttributeOverride(name = "lang", column = @Column(name = "language"))
+//    private List<LocaleInfo> locales = new ArrayList<>();
+    @MapKeyColumn(name = "lang")
+    @Column(name = "description") // внести в лист locales только значения из поля description таблицы company_locale
+    private Map<String, String> locales = new HashMap<>();
 
     public void addUser(User user) {
-        users.add(user);
+        users.put(user.getUsername(), user);
         user.setCompany(this);
     }
 }

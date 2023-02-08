@@ -1,32 +1,13 @@
 package com.dmdev.entity;
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
-import javax.persistence.AttributeOverride;
-import javax.persistence.Column;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 // Runtime аннотации, которые позволяют брать актуальные значения во время выполнения программы
 @Data // equals, hashCode, getters & setters methods
 @NoArgsConstructor
@@ -37,7 +18,7 @@ import java.util.Set;
 @Entity // указанный POJO class - сущность Hibernate
 @Table(name = "users", schema ="public") // по умолчанию Hibernate берет название полей/класса в качестве названия таблицы/колонок [ (SQL не чувствителен к регистру))
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class) // Zпсевдоним для пользовательского типа
-public class User {
+public class User implements Comparable<User> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //  сентетический идетификатор, который генерируется БД
@@ -45,8 +26,8 @@ public class User {
 
     @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
     private PersonalInfo personalInfo;
-
-    @Column(unique = true) // уникальная колонка
+// columnDefinition жестко задает DDL команду при автогенерации таблиц inMemory DB
+    @Column(unique = true, columnDefinition = "") // уникальная колонка
     private String username;
 
     @Type(type = "dmdev") // указать новый тип и зарегистрировать его в Hibernate, type - полный путь к классу
@@ -69,7 +50,12 @@ public class User {
 
     @Builder.Default
     @OneToMany(mappedBy = "user")
-    private Set<UserChat> userChats = new HashSet<>();
+    private List<UserChat> userChats = new ArrayList<>();
+
+    @Override
+    public int compareTo(User o) {
+        return username.compareTo(o.username);
+    }
 }
 
 

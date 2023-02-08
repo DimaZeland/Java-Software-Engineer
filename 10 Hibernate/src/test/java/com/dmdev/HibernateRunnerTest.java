@@ -4,13 +4,14 @@ import com.dmdev.entity.Chat;
 import com.dmdev.entity.Company;
 import com.dmdev.entity.User;
 import com.dmdev.entity.UserChat;
+import com.dmdev.util.HibernateTestUtil;
 import com.dmdev.util.HibernateUtil;
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
 import lombok.Cleanup;
 import org.hibernate.Hibernate;
 import org.junit.jupiter.api.Test;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Table;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -25,6 +26,37 @@ import static java.util.Optional.ofNullable;
 import static java.util.stream.Collectors.joining;
 
 class HibernateRunnerTest {
+
+    @Test
+    void checkH2() {
+        try (var sessionFactory = HibernateTestUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            var com = Company.builder()
+                    .name("Google")
+                    .build();
+            session.save(com);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
+    void localeInfo() {
+        try (var sessionFactory = HibernateUtil.buildSessionFactory();
+             var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            var company = session.get(Company.class, 1);
+//            company.getLocales().add(LocaleInfo.of("ru", "Описание на русском"));
+//            company.getLocales().add(LocaleInfo.of("en", "English description"));
+//            System.out.println(company.getLocales());
+            company.getUsers().forEach((k, v) -> System.out.println(v));
+
+            session.getTransaction().commit();
+        }
+    }
 
     @Test
     void checkManyToMany() {
@@ -91,7 +123,7 @@ class HibernateRunnerTest {
             session.beginTransaction();
 
             Company company = session.getReference(Company.class, 1);
-            company.getUsers().removeIf(user -> user.getId().equals(7L));
+//            company.getUsers().removeIf(user -> user.getId().equals(7L));
 
             session.getTransaction().commit();
         }
