@@ -14,11 +14,11 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "username")
 @ToString(exclude = {"company", "profile", "userChats"}) // исключить вывод поля company из вывода метода toString()
-@Builder // для красового создания и инициализации сущностей
 @Entity // указанный POJO class - сущность Hibernate
 @Table(name = "users", schema ="public") // по умолчанию Hibernate берет название полей/класса в качестве названия таблицы/колонок [ (SQL не чувствителен к регистру))
-@TypeDef(name = "dmdev", typeClass = JsonBinaryType.class) // Zпсевдоним для пользовательского типа
-public class User implements Comparable<User> {
+@TypeDef(name = "dmdev", typeClass = JsonBinaryType.class) // псевдоним для пользовательского типа
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class User implements Comparable<User>, BaseEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //  сентетический идетификатор, который генерируется БД
@@ -27,7 +27,7 @@ public class User implements Comparable<User> {
     @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
     private PersonalInfo personalInfo;
 // columnDefinition жестко задает DDL команду при автогенерации таблиц inMemory DB
-    @Column(unique = true, columnDefinition = "") // уникальная колонка
+    @Column(unique = true) // уникальная колонка
     private String username;
 
     @Type(type = "dmdev") // указать новый тип и зарегистрировать его в Hibernate, type - полный путь к классу
@@ -43,12 +43,11 @@ public class User implements Comparable<User> {
     @OneToOne(
             mappedBy = "user",
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            optional = false
+            fetch = FetchType.LAZY
     )
     private Profile profile;
 
-    @Builder.Default
+//    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
 

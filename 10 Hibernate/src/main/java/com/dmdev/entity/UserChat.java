@@ -5,14 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import java.time.Instant;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -20,7 +13,7 @@ import java.time.Instant;
 @Builder
 @Entity
 @Table(name = "users_chat") // название класса дословно не соответствует названию таблицы из БД, поэтому добавляем связывание
-public class UserChat {
+public class UserChat extends AuditableEntity<Long>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,10 +25,6 @@ public class UserChat {
     @ManyToOne
     @JoinColumn(name = "chat_id")
     private Chat chat;
-
-    private Instant createdAt;
-
-    private String createdBy;
 
     public void setUser(User user) {
         this.user = user;
