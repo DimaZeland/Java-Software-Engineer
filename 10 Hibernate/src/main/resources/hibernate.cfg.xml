@@ -9,7 +9,7 @@
     <property name="connection.password">Invest12!</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-    <property name="show_sql">true</property> <!-- выдеть какой SQL формирует нам Hibernate-->
+    <property name="show_sql">true</property> <!-- в консоле видеть какой SQL формирует нам Hibernate-->
     <property name="format_sql">true</property> <!-- форматировать красиво-->
 <!-- SQLDialect позволяет Hibernaet сконфигурировать дополнительные типы, функции, view и т.д., которые специфичные для конкретной БД-->
     <mapping class="com.dmdev.entity.User"/> <!-- добавить сущность в конфигурацию SessionFactory-->
@@ -17,8 +17,7 @@
     <mapping class="com.dmdev.entity.Profile"/>
     <mapping class="com.dmdev.entity.Chat"/><!--все сущности добавляются сюда в маппинг, чтобы Hibernate мог с ней работать-->
     <mapping class="com.dmdev.entity.UserChat"/>
-    <mapping class="com.dmdev.entity.Programmer"/>
-    <mapping class="com.dmdev.entity.Manager"/>
+    <mapping class="com.dmdev.entity.Payment"/>
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
   </session-factory>

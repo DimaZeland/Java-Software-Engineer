@@ -9,16 +9,23 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 // Runtime аннотации, которые позволяют брать актуальные значения во время выполнения программы
+import static com.dmdev.util.StringUtils.SPACE;
+
+@NamedQuery(name = "findUserByName", query = "select u from User u " +
+        "left join u.company c " +
+        "where u.personalInfo.firstname = :firstname and c.name = :companyName " +
+        "order by u.personalInfo.lastname desc")
 @Data // equals, hashCode, getters & setters methods
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "username")
-@ToString(exclude = {"company", "profile", "userChats"}) // исключить вывод поля company из вывода метода toString()
+@ToString(exclude = {"company", "profile", "userChats", "payments"}) // исключить вывод поля company из вывода метода toString()
+@Builder
 @Entity // указанный POJO class - сущность Hibernate
 @Table(name = "users", schema ="public") // по умолчанию Hibernate берет название полей/класса в качестве названия таблицы/колонок [ (SQL не чувствителен к регистру))
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class) // псевдоним для пользовательского типа
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class User implements Comparable<User>, BaseEntity<Long> {
+public class User implements Comparable<User>, BaseEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //  сентетический идетификатор, который генерируется БД
@@ -47,13 +54,21 @@ public abstract class User implements Comparable<User>, BaseEntity<Long> {
     )
     private Profile profile;
 
-//    @Builder.Default
+    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
+
+    @Builder.Default
+    @OneToMany(mappedBy = "receiver")
+    private List<Payment> payments = new ArrayList<>();
 
     @Override
     public int compareTo(User o) {
         return username.compareTo(o.username);
+    }
+
+    public String fullName() {
+        return getPersonalInfo().getFirstname() + SPACE + getPersonalInfo().getLastname();
     }
 }
 
