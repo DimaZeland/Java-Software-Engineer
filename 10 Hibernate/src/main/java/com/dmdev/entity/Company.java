@@ -15,6 +15,7 @@ import java.util.TreeMap;
 @ToString(exclude = "users")
 @Builder
 @Entity
+//@BatchSize(size = 3) // для маппинга @ManyToOne аннотацию @BatchSize используют над сущностью
 public class Company {
 
     @Id

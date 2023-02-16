@@ -1,6 +1,11 @@
 package com.dmdev.util;
 
-import com.dmdev.entity.*;
+import com.dmdev.entity.Chat;
+import com.dmdev.entity.Company;
+import com.dmdev.entity.Payment;
+import com.dmdev.entity.PersonalInfo;
+import com.dmdev.entity.User;
+import com.dmdev.entity.UserChat;
 import lombok.Cleanup;
 import lombok.experimental.UtilityClass;
 import org.hibernate.Session;
@@ -76,7 +81,6 @@ public class TestDataImporter {
 
         return chat;
     }
-
 
     private Company saveCompany(Session session, String name) {
         Company company = Company.builder()
