@@ -238,7 +238,6 @@ class HibernateRunnerTest {
     }
 
 
-
     @Test
     void checkReflectionApi() throws SQLException, IllegalAccessException {
         User user = null;
@@ -276,14 +275,6 @@ class HibernateRunnerTest {
             preparedStatement.setObject(1, declaredField.get(user));
         }
     }
-
-
-
-
-
-
-
-
 
 
 }

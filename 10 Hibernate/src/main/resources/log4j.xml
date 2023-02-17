@@ -5,9 +5,10 @@
     <!-- берет лог сообщения и отправляет его туда, куда мы укажем (в нашем случае на консоль)-->
     <appender name="console" class="org.apache.log4j.ConsoleAppender">
         <param name="target" value="System.out"/>
-<!-- задает формат сообщения-->
+        <!-- задает формат сообщения-->
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="conversionPattern" value="[%d{HH:mm:ss,SSS}] %p [%c: %L] %m%n"/> <!-- setter в классе PatternLayout-->
+            <param name="conversionPattern"
+                   value="[%d{HH:mm:ss,SSS}] %p [%c: %L] %m%n"/> <!-- setter в классе PatternLayout-->
         </layout>
     </appender>
 
@@ -16,7 +17,8 @@
 
         <param name="append" value="true"/>
         <param name="maxFileSize" value="20MB"/> <!-- максимальный размер одного файла -->
-        <param name="maxBackupIndex" value="10"/> <!-- при достижении макс размера создается новый файл (№2),в общем может быть maxBackupIndex файлов -->
+        <param name="maxBackupIndex"
+               value="10"/> <!-- при достижении макс размера создается новый файл (№2),в общем может быть maxBackupIndex файлов -->
 
         <layout class="org.apache.log4j.PatternLayout">
             <param name="conversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss,SSS}] %p [%c: %L] %m%n"/>
@@ -26,7 +28,7 @@
             <param name="LevelMin" value="ALL"/>
         </filter>
     </appender>
-<!-- additivity="false" не будем дублировать сообщение, если другой логгер в нашей иерархии также его отображает-->
+    <!-- additivity="false" не будем дублировать сообщение, если другой логгер в нашей иерархии также его отображает-->
     <logger name="com.dmdev" additivity="false"> <!-- name - отслеживать логи в пакете com.dmdev-->
         <level value="info"/>
         <appender-ref ref="console"/>

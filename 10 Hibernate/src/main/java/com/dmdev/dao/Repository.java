@@ -20,6 +20,7 @@ public interface Repository<K extends Serializable, E extends BaseEntity<K>> {
     default Optional<E> findById(K id) {
         return findById(id, emptyMap());
     }
+
     Optional<E> findById(K id, Map<String, Object> properties);
 
     List<E> findAll();

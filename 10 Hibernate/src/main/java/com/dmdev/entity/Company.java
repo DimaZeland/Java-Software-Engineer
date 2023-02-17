@@ -32,15 +32,18 @@ public class Company implements BaseEntity<Integer> {
     private String name;
 
     @Builder.Default//    @JoinColumn(name = "company_id")
-    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)// one Company object to many objects fields, orphanRemoval -> удаление данных изсущности влечет удаление данных из БД
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
+// one Company object to many objects fields, orphanRemoval -> удаление данных изсущности влечет удаление данных из БД
     @MapKey(name = "username") // ключем в map users будет поле username объекта User
-    @SortNatural // отсортирует как TreeSet внутреннюю коллекцию Hibernate, класс сортируемых элементов должен реализовать интерфейс Comparable
+    @SortNatural
+    // отсортирует как TreeSet внутреннюю коллекцию Hibernate, класс сортируемых элементов должен реализовать интерфейс Comparable
     @NotAudited
     private Map<String, User> users = new TreeMap<>();
 
     @Builder.Default
     @ElementCollection // добавить елемент из другого класса, который не является сущонстью
-    @CollectionTable(name = "company_locale", joinColumns = @JoinColumn(name = "company_id")) // подключится к таблице company_locale
+    @CollectionTable(name = "company_locale", joinColumns = @JoinColumn(name = "company_id"))
+    // подключится к таблице company_locale
 //    @AttributeOverride(name = "lang", column = @Column(name = "language"))
 //    private List<LocaleInfo> locales = new ArrayList<>();
     @MapKeyColumn(name = "lang")

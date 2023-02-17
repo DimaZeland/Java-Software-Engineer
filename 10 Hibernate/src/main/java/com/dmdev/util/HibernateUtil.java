@@ -33,7 +33,8 @@ public class HibernateUtil {
         var listenerRegistry = sessionFactoryImpl.getServiceRegistry().getService(EventListenerRegistry.class);
         var auditTableListener = new AuditTableListener();
         listenerRegistry.appendListeners(EventType.PRE_INSERT, auditTableListener);
-        listenerRegistry.appendListeners(EventType.PRE_DELETE, auditTableListener);    }
+        listenerRegistry.appendListeners(EventType.PRE_DELETE, auditTableListener);
+    }
 
     public static Configuration buildConfiguration() {
         Configuration configuration = new Configuration();

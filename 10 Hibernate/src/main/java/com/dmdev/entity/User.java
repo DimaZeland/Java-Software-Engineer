@@ -2,16 +2,17 @@ package com.dmdev.entity;
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.*;
+import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.*;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.NotAudited;
 
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,7 +53,8 @@ import static com.dmdev.util.StringUtils.SPACE;
 @ToString(exclude = {"company", "userChats", "payments"}) // исключить вывод поля company из вывода метода toString()
 @Builder
 @Entity // указанный POJO class - сущность Hibernate
-@Table(name = "users", schema ="public") // по умолчанию Hibernate берет название полей/класса в качестве названия таблицы/колонок [ (SQL не чувствителен к регистру))
+@Table(name = "users", schema = "public")
+// по умолчанию Hibernate берет название полей/класса в качестве названия таблицы/колонок [ (SQL не чувствителен к регистру))
 @TypeDef(name = "dmdev", typeClass = JsonBinaryType.class) // псевдоним для пользовательского типа
 @Inheritance(strategy = InheritanceType.JOINED)
 @Audited
@@ -63,16 +65,19 @@ public class User implements Comparable<User>, BaseEntity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //  сентетический идетификатор, который генерируется БД
     private Long id;
 
+    @Valid
     @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
     private PersonalInfo personalInfo;
-// columnDefinition жестко задает DDL команду при автогенерации таблиц inMemory DB
+    // columnDefinition жестко задает DDL команду при автогенерации таблиц inMemory DB
+    @NotNull
     @Column(unique = true) // уникальная колонка
     private String username;
 
     @Type(type = "dmdev") // указать новый тип и зарегистрировать его в Hibernate, type - полный путь к классу
     private String info;
 
-    @Enumerated(EnumType.STRING) // убрать использование ordinal() как цифровой идентификатор типа Enum (по порядку при инициализации) и задать текстовый формат полем name (имя ENUM, указанное при инициализации)
+    @Enumerated(EnumType.STRING)
+    // убрать использование ordinal() как цифровой идентификатор типа Enum (по порядку при инициализации) и задать текстовый формат полем name (имя ENUM, указанное при инициализации)
     private Role role;
 // fetch = FetchType.LAZY - ленивое инициализя подобъектов (по умолчанию для коллекций), FetchType.EAGER(жадня иницализация подобъектов)
 

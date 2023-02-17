@@ -13,10 +13,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "users_chat") // название класса дословно не соответствует названию таблицы из БД, поэтому добавляем связывание
+@Table(name = "users_chat")
+// название класса дословно не соответствует названию таблицы из БД, поэтому добавляем связывание
 @EntityListeners(UserChatListener.class)
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-public class UserChat extends AuditableEntity<Long>{
+public class UserChat extends AuditableEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
