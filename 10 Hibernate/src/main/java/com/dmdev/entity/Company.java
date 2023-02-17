@@ -1,7 +1,11 @@
 package com.dmdev.entity;
 
 import lombok.*;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.SortNatural;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 
 import javax.persistence.*;
 import java.util.HashMap;
@@ -16,7 +20,9 @@ import java.util.TreeMap;
 @Builder
 @Entity
 //@BatchSize(size = 3) // для маппинга @ManyToOne аннотацию @BatchSize используют над сущностью
-public class Company {
+@Audited
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Companies")
+public class Company implements BaseEntity<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // синтетически генерируемый ключ
@@ -29,6 +35,7 @@ public class Company {
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)// one Company object to many objects fields, orphanRemoval -> удаление данных изсущности влечет удаление данных из БД
     @MapKey(name = "username") // ключем в map users будет поле username объекта User
     @SortNatural // отсортирует как TreeSet внутреннюю коллекцию Hibernate, класс сортируемых элементов должен реализовать интерфейс Comparable
+    @NotAudited
     private Map<String, User> users = new TreeMap<>();
 
     @Builder.Default
@@ -38,6 +45,7 @@ public class Company {
 //    private List<LocaleInfo> locales = new ArrayList<>();
     @MapKeyColumn(name = "lang")
     @Column(name = "description") // внести в лист locales только значения из поля description таблицы company_locale
+    @NotAudited
     private Map<String, String> locales = new HashMap<>();
 
     public void addUser(User user) {

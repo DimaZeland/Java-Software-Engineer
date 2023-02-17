@@ -1,62 +1,79 @@
 package com.dmdev;
 
-import com.dmdev.entity.User;
-import com.dmdev.entity.UserChat;
+import com.dmdev.dao.CompanyRepository;
+import com.dmdev.dao.PaymentRepository;
+import com.dmdev.dao.UserRepository;
+import com.dmdev.dto.UserCreateDto;
+import com.dmdev.entity.PersonalInfo;
+import com.dmdev.entity.Role;
+import com.dmdev.interceptor.TransactionInterceptor;
+import com.dmdev.mapper.CompanyReadMapper;
+import com.dmdev.mapper.UserCreateMapper;
+import com.dmdev.mapper.UserReadMapper;
+import com.dmdev.service.UserService;
 import com.dmdev.util.HibernateUtil;
 import lombok.extern.slf4j.Slf4j;
+import net.bytebuddy.ByteBuddy;
+import net.bytebuddy.implementation.MethodDelegation;
+import net.bytebuddy.matcher.ElementMatchers;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.graph.GraphSemantic;
 
+import javax.transaction.Transactional;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Proxy;
 import java.sql.SQLException;
-import java.util.Map;
+import java.time.LocalDate;
 
 @Slf4j
-// позволяет не указывать private static final Logger log = LoggerFactory.getLogger(HibernateRunner.class); // org.slf4j.Logger позволяет добавить любой логгер,
 public class HibernateRunner {
-    // нужно создавать каждый логгер в отдельном классе
-    public static void main(String[] args) throws SQLException {
-        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-//            session.enableFetchProfile("withCompanyAndPayment");
 
-            var userGraph = session.createEntityGraph(User.class);
-            userGraph.addAttributeNodes("company", "userChats");
-            var userChatsSubgraph = userGraph.addSubgraph("userChats", UserChat.class);
-            userChatsSubgraph.addAttributeNodes("chat");
+    @Transactional
+    public static void main(String[] args) throws SQLException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
+            var session = (Session) Proxy.newProxyInstance(SessionFactory.class.getClassLoader(), new Class[]{Session.class},
+                    (proxy, method, args1) -> method.invoke(sessionFactory.getCurrentSession(), args1));
+//            session.beginTransaction();
 
-            Map<String, Object> properties = Map.of(
-//                    GraphSemantic.LOAD.getJpaHintName(), session.getEntityGraph("WithCompanyAndChat")
-                    GraphSemantic.LOAD.getJpaHintName(), userGraph
+            var companyRepository = new CompanyRepository(session);
+
+            var companyReadMapper = new CompanyReadMapper();
+            var userReadMapper = new UserReadMapper(companyReadMapper);
+            var userCreateMapper = new UserCreateMapper(companyRepository);
+
+            var userRepository = new UserRepository(session);
+            var paymentRepository = new PaymentRepository(session);
+//            var userService = new UserService(userRepository, userReadMapper, userCreateMapper);
+            var transactionInterceptor = new TransactionInterceptor(sessionFactory);
+
+            var userService = new ByteBuddy()
+                    .subclass(UserService.class)
+                    .method(ElementMatchers.any())
+                    .intercept(MethodDelegation.to(transactionInterceptor))
+                    .make()
+                    .load(UserService.class.getClassLoader())
+                    .getLoaded()
+                    .getDeclaredConstructor(UserRepository.class, UserReadMapper.class, UserCreateMapper.class)
+                    .newInstance(userRepository, userReadMapper, userCreateMapper);
+
+            userService.findById(1L).ifPresent(System.out::println);
+
+            UserCreateDto userCreateDto = new UserCreateDto(
+                    PersonalInfo.builder()
+                            .firstname("Liza")
+                            .lastname("Stepanova")
+                            .birthDate(LocalDate.now())
+                            .build(),
+                    "liza2@gmail.com",
+                    null,
+                    Role.USER,
+                    1
             );
-            var user = session.find(User.class, 1L, properties);
-            System.out.println(user.getCompany().getName());
-            System.out.println(user.getUserChats().size());
-//            System.out.println(user.getPayments().size());
-            var users = session.createQuery(
-                    "select u from User u " +
-                            "where 1 = 1", User.class)
-//                    .setHint(GraphSemantic.LOAD.getJpaHintName(), session.getEntityGraph("WithCompanyAndChat"))
-                    .setHint(GraphSemantic.LOAD.getJpaHintName(), userGraph)
-                    .list();
-            users.forEach(it -> System.out.println(it.getUserChats().size()));
-            users.forEach(it -> System.out.println(it.getCompany().getName()));
+            userService.create(userCreateDto);
 
-            session.getTransaction().commit();
+//            session.getTransaction().commit();
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
 
 
 }

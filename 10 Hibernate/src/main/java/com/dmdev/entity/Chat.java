@@ -32,6 +32,9 @@ public class Chat {
     @Column(nullable = false, unique = true)
     private String name;
 
+    @Builder.Default
+    private Integer count = 0;
+
     @Builder.Default // mappedBy = "chats" -> ReadOnly
     @OneToMany(mappedBy = "chat") // маппинг на поле chat из сущности типа UserChat (указывается в targetEntity по умолчанию как тип данных Set
     private List<UserChat> userChats = new ArrayList<>();

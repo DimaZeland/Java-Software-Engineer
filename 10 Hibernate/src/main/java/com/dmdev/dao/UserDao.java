@@ -95,7 +95,7 @@ public class UserDao {
 //                        "where c.name = :companyName " +
 //                        "order by u.personalInfo.firstname, p.amount", Payment.class)
 //                .setParameter("companyName", companyName)
-        //                .list();
+//                .list();
 
 //        var cb = session.getCriteriaBuilder();
 //
@@ -138,7 +138,7 @@ public class UserDao {
 //                .setParameter("firstName", firstName)
 //                .setParameter("lastName", lastName)
 //                .uniqueResult();
-        //        List<Predicate> predicates = new ArrayList<>();
+//        List<Predicate> predicates = new ArrayList<>();
 //        if (filter.getFirstName() != null) {
 //            predicates.add(user.personalInfo.firstname.eq(filter.getFirstName()));
 //        }

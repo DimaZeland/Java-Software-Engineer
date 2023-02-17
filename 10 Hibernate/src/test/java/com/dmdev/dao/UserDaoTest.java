@@ -115,7 +115,7 @@ class UserDaoTest {
                 .lastName("Gates")
                 .firstName("Bill")
                 .build();
-        Double averagePaymentAmount = userDao.findAveragePaymentAmountByFirstAndLastNames(session, filter);        assertThat(averagePaymentAmount).isEqualTo(300.0);
+        Double averagePaymentAmount = userDao.findAveragePaymentAmountByFirstAndLastNames(session, filter);
         assertThat(averagePaymentAmount).isEqualTo(300.0);
 
         session.getTransaction().commit();
