@@ -1,15 +1,22 @@
 package com.dmdev.springboot.lesson.repository;
 
 import com.dmdev.springboot.lesson.IntegrationTestBase;
+import com.dmdev.springboot.lesson.dto.EmployeeFilter;
 import com.dmdev.springboot.lesson.entity.EmployeeEntity;
 import com.dmdev.springboot.lesson.projection.EmployeeNameView;
 import com.dmdev.springboot.lesson.projection.EmployeeNativeView;
+import com.dmdev.springboot.lesson.util.QPredicates;
+import com.querydsl.core.types.Predicate;
+import com.querydsl.core.types.dsl.BooleanExpression;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
 
+import static com.dmdev.springboot.lesson.entity.QEmployeeEntity.employeeEntity;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -53,7 +60,34 @@ class EmployeeRepositoryTest extends IntegrationTestBase {
 
     @Test
     void testFindCustomQuery() {
-        List<EmployeeEntity> customQuery = employeeRepository.findCustomQuery();
-        assertThat(customQuery, hasSize(0));
+        EmployeeFilter filter = EmployeeFilter.builder()
+                .firstName("ivaN")
+                .build();
+        List<EmployeeEntity> customQuery = employeeRepository.findByFilter(filter);
+        assertThat(customQuery, hasSize(1));
+    }
+
+    @Test
+    void testQuerydslPredicates() {
+        BooleanExpression predicate = employeeEntity.firstName.containsIgnoreCase("ivaN")
+                .and(employeeEntity.salary.goe(1000));
+        Page<EmployeeEntity> allValues = employeeRepository.findAll(predicate, Pageable.unpaged());
+        assertThat(allValues.getContent(), hasSize(1));
+    }
+
+    @Test
+    void testQPredicates() {
+        EmployeeFilter filter = EmployeeFilter.builder()
+                .firstName("ivaN")
+                .salary(1000)
+                .build();
+        Predicate predicate = QPredicates.builder()
+                .add(filter.getFirstName(), employeeEntity.firstName::containsIgnoreCase)
+                .add(filter.getLastName(), employeeEntity.lastName::containsIgnoreCase)
+                .add(filter.getSalary(), employeeEntity.salary::goe)
+                .buildAnd();
+        Iterable<EmployeeEntity> result = employeeRepository.findAll(predicate);
+        assertTrue(result.iterator().hasNext());
+        System.out.println();
     }
 }
