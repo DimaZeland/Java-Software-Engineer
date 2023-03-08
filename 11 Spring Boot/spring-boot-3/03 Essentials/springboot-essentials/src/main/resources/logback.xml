@@ -18,7 +18,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="com.apress" level="DEBUG" additivity="false">
+	<logger name="com." level="DEBUG" additivity="false">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
 	</logger>

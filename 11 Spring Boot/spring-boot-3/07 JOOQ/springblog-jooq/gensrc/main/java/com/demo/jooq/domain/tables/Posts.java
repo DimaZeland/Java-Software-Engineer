@@ -80,7 +80,7 @@ public class Posts extends TableImpl<PostsRecord> {
     /**
      * The column <code>PUBLIC.POSTS.POST_STATUS</code>.
      */
-    public final TableField<PostsRecord, PostsPostStatus> POST_STATUS = createField(DSL.name("POST_STATUS"), SQLDataType.VARCHAR.asEnumDataType(com.apress.demo.jooq.domain.enums.PostsPostStatus.class), this, "");
+    public final TableField<PostsRecord, PostsPostStatus> POST_STATUS = createField(DSL.name("POST_STATUS"), SQLDataType.VARCHAR.asEnumDataType(com.demo.jooq.domain.enums.PostsPostStatus.class), this, "");
 
     /**
      * The column <code>PUBLIC.POSTS.CREATED_ON</code>.

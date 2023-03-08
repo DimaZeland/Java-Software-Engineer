@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-@MapperScan("com.apress.demo.mappers")
+@MapperScan("com.demo.mappers")
 public class SpringbootMyBatisDemoApplication
 {
 

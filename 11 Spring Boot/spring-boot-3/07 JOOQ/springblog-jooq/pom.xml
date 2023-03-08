@@ -135,7 +135,7 @@
                                     <inputSchema>PUBLIC</inputSchema>
                                 </database>
                                 <target>
-                                    <packageName>com.apress.demo.jooq.domain</packageName>
+                                    <packageName>com.demo.jooq.domain</packageName>
                                     <directory>gensrc/main/java</directory>
                                 </target>
                             </generator>
@@ -211,7 +211,7 @@
                                     <inputSchema>springblog</inputSchema>
                                 </database>
                                 <target>
-                                    <packageName>com.apress.demo.jooq.domain</packageName>
+                                    <packageName>com.demo.jooq.domain</packageName>
                                     <directory>gensrc/main/java</directory>
                                 </target>
                             </generator>

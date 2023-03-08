@@ -1,6 +1,4 @@
-# Beginning SpringBoot 3
-
-### Chapter 09 : Working with MongoDB
+### 09 : Working with MongoDB
 
 **springblog-mongodb**: This module is a SpringBoot application demonstrating how to use MongoDB starter.
 
