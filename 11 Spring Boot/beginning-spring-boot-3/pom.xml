@@ -15,27 +15,27 @@
     </parent>
 
     <modules>
-        <module>chapter-01</module>
-        <module>chapter-02</module>
-        <module>chapter-03</module>
-        <module>chapter-04</module>
-        <module>chapter-05</module>
-        <module>chapter-06</module>
-        <module>chapter-07</module>
-        <module>chapter-08</module>
-        <module>chapter-09</module>
-        <module>chapter-10</module>
-        <module>chapter-11</module>
-        <module>chapter-12</module>
-        <module>chapter-13</module>
-        <module>chapter-14</module>
-        <module>chapter-15</module>
-        <module>chapter-16</module>
-        <module>chapter-17</module>
-        <module>chapter-18</module>
-        <module>chapter-19</module>
-        <module>chapter-20</module>
-        <module>chapter-21</module>
+        <module>01 Introduction</module>
+        <module>02 Getting Started</module>
+        <module>03 Essentials</module>
+        <module>04 Web Applications</module>
+        <module>05 JDBC</module>
+        <module>06 MyBatis</module>
+        <module>07 JOOQ</module>
+        <module>08 JPA</module>
+        <module>09 MongoDB</module>
+        <module>10 REST API</module>
+        <module>11 WebFlux</module>
+        <module>12 Security</module>
+        <module>13 Actuator</module>
+        <module>14 Testing</module>
+        <module>15 GraphQL</module>
+        <module>16 Deploying</module>
+        <module>17 Autoconfiguration</module>
+        <module>18 Custom Starter</module>
+        <module>19 Kotlin Scala Groovy</module>
+        <module>20 JHipster</module>
+        <module>21 Spring Native</module>
     </modules>
 
     <properties>
