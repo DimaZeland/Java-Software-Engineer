@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.apress</groupId>
-    <artifactId>beginning-spring-boot-3</artifactId>
+    <groupId>com</groupId>
+    <artifactId>spring-boot-3</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <parent>
@@ -15,27 +15,27 @@
     </parent>
 
     <modules>
-        <module>01 Introduction</module>
-        <module>02 Getting Started</module>
-        <module>03 Essentials</module>
-        <module>04 Web Applications</module>
-        <module>05 JDBC</module>
-        <module>06 MyBatis</module>
-        <module>07 JOOQ</module>
-        <module>08 JPA</module>
-        <module>09 MongoDB</module>
-        <module>10 REST API</module>
-        <module>11 WebFlux</module>
-        <module>12 Security</module>
-        <module>13 Actuator</module>
-        <module>14 Testing</module>
-        <module>15 GraphQL</module>
-        <module>16 Deploying</module>
-        <module>17 Autoconfiguration</module>
-        <module>18 Custom Starter</module>
-        <module>19 Kotlin Scala Groovy</module>
-        <module>20 JHipster</module>
-        <module>21 Spring Native</module>
+        <module>01-Introduction</module>
+        <module>02-Getting Started</module>
+        <module>03-Essentials</module>
+        <module>04-Web-Applications</module>
+        <module>05-JDBC</module>
+        <module>06-MyBatis</module>
+        <module>07-JOOQ</module>
+        <module>08-JPA</module>
+        <module>09-MongoDB</module>
+        <module>10-REST-API</module>
+        <module>11-WebFlux</module>
+        <module>12-Security</module>
+        <module>13-Actuator</module>
+        <module>14-Testing</module>
+        <module>15-GraphQL</module>
+        <module>16-Deploying</module>
+        <module>17-Autoconfiguration</module>
+        <module>18-Custom-Starter</module>
+        <module>19-Kotlin-Scala-Groovy</module>
+        <module>20-JHipster</module>
+        <module>21-Spring-Native</module>
     </modules>
 
     <properties>
