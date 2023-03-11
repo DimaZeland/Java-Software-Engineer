@@ -1,12 +1,12 @@
-import com.dmdev.task.ReleaseTask
+import com.demo.task.ReleaseTask
 
 plugins {
     id 'java-library'
     id 'jacoco'
-    id 'custom-dmdev'
+    id 'custom-demo'
 }
 
-//apply plugin: com.dmdev.plugin.CustomPlugin
+//apply plugin: com.demo.plugin.CustomPlugin
 
 repositories {
     mavenCentral()

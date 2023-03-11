@@ -23,7 +23,7 @@ test {
 }
 
 war {
-    archiveName "dmdev.war"
+    archiveName "demo.war"
 }
 
 task deployTomcat(type: Copy) {

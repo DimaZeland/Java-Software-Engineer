@@ -14,7 +14,7 @@ buildscript {
 apply from: 'script.gradle'
 
 allprojects {
-    group StringUtils.capitalize("dmdev")
+    group StringUtils.capitalize("demo")
 
     repositories {
         mavenCentral()
