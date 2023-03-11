@@ -1,4 +1,4 @@
-package com.dmdev;
+package com.demo;
 
 import java.util.function.Supplier;
 

@@ -1,6 +1,6 @@
-package com.dmdev.database.dao;
+package com.demo.database.dao;
 
-import com.dmdev.database.entity.User;
+import com.demo.database.entity.User;
 
 import java.util.Optional;
 

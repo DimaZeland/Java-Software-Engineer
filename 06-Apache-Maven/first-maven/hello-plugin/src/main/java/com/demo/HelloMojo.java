@@ -1,4 +1,4 @@
-package com.dmdev;
+package com.demo;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;

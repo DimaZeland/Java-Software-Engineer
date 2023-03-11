@@ -1,4 +1,4 @@
-package com.dmdev;
+package com.demo;
 
 import static org.junit.Assert.assertTrue;
 

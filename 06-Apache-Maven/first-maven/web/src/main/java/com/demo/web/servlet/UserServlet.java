@@ -1,7 +1,7 @@
-package com.dmdev.web.servlet;
+package com.demo.web.servlet;
 
-import com.dmdev.service.dto.UserDto;
-import com.dmdev.service.service.UserService;
+import com.demo.service.dto.UserDto;
+import com.demo.service.service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

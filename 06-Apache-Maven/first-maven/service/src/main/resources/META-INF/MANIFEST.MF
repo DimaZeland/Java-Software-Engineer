@@ -1,2 +1,2 @@
-Main-Class: com.dmdev.service.AppRunner
+Main-Class: com.demo.service.AppRunner
 Class-Path:

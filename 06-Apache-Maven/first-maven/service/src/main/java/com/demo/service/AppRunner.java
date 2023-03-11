@@ -1,6 +1,6 @@
-package com.dmdev.service;
+package com.demo.service;
 
-import com.dmdev.service.service.UserService;
+import com.demo.service.service.UserService;
 
 public class AppRunner {
 

@@ -1,4 +1,4 @@
-package com.dmdev.servlet;
+package com.demo.servlet;
 
 import jakarta.servlet.http.HttpServlet;
 
