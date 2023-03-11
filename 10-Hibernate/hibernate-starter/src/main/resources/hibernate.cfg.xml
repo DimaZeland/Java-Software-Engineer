@@ -4,30 +4,28 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:postgresql://localhost:5433/postgres</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password">Invest12!</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
         <property name="show_sql">true</property> <!-- в консоле видеть какой SQL формирует нам Hibernate-->
         <property name="format_sql">true</property> <!-- форматировать красиво-->
         <property name="hibernate.hbm2ddl.auto">validate</property>
         <property name="hibernate.cache.use_second_level_cache">true</property>
         <property name="hibernate.cache.use_query_cache">true</property>
         <property name="hibernate.generate_statistics">false</property>
-        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory
-        </property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
         <property name="hibernate.javax.cache.uri">/ehcache-config.xml</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <!--        <property name="hibernate.connection.isolation">8</property> уровни изолирования транзакций-->
         <!-- SQLDialect позволяет Hibernaet сконфигурировать дополнительные типы, функции, view и т.д., которые специфичные для конкретной БД-->
-        <mapping class="com.dmdev.entity.User"/> <!-- добавить сущность в конфигурацию SessionFactory-->
-        <mapping class="com.dmdev.entity.Company"/>
-        <mapping class="com.dmdev.entity.Profile"/>
-        <mapping
-                class="com.dmdev.entity.Chat"/><!--все сущности добавляются сюда в маппинг, чтобы Hibernate мог с ней работать-->
-        <mapping class="com.dmdev.entity.UserChat"/>
-        <mapping class="com.dmdev.entity.Payment"/>
+        <mapping class="com.demo.entity.User"/> <!-- добавить сущность в конфигурацию SessionFactory-->
+        <mapping class="com.demo.entity.Company"/>
+        <mapping class="com.demo.entity.Profile"/>
+        <mapping class="com.demo.entity.Chat"/><!--все сущности добавляются сюда в маппинг, чтобы Hibernate мог с ней работать-->
+        <mapping class="com.demo.entity.UserChat"/>
+        <mapping class="com.demo.entity.Payment"/>
         <!-- DB schema will be updated if needed -->
     </session-factory>
 </hibernate-configuration>

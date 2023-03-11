@@ -29,7 +29,7 @@
         </filter>
     </appender>
     <!-- additivity="false" не будем дублировать сообщение, если другой логгер в нашей иерархии также его отображает-->
-    <logger name="com.dmdev" additivity="false"> <!-- name - отслеживать логи в пакете com.dmdev-->
+    <logger name="com.demo" additivity="false"> <!-- name - отслеживать логи в пакете com.demo-->
         <level value="info"/>
         <appender-ref ref="console"/>
     </logger>

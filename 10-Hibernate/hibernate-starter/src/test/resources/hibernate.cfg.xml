@@ -12,11 +12,11 @@
         <property name="hibernate.hbm2ddl.auto">create
         </property> <!-- таблицы inMemory БД в ОП создадутся автоматически-->
 
-        <mapping class="com.dmdev.entity.User"/>
-        <mapping class="com.dmdev.entity.Company"/>
-        <mapping class="com.dmdev.entity.Profile"/>
-        <mapping class="com.dmdev.entity.Chat"/>
-        <mapping class="com.dmdev.entity.UserChat"/>
-        <mapping class="com.dmdev.entity.Payment"/>
+        <mapping class="com.demo.entity.User"/>
+        <mapping class="com.demo.entity.Company"/>
+        <mapping class="com.demo.entity.Profile"/>
+        <mapping class="com.demo.entity.Chat"/>
+        <mapping class="com.demo.entity.UserChat"/>
+        <mapping class="com.demo.entity.Payment"/>
     </session-factory>
 </hibernate-configuration>
