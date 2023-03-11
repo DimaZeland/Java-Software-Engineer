@@ -1,6 +1,6 @@
-<%--<%@ page import="com.dmdev.http.servlet.TicketServlet" %>--%>
-<%--<%@ page import="com.dmdev.http.service.TicketService" %>--%>
-<%--<%@ page import="com.dmdev.http.dto.TicketDto" %>--%>
+<%--<%@ page import="TicketServlet" %>--%>
+<%--<%@ page import="TicketService" %>--%>
+<%--<%@ page import="TicketDto" %>--%>
 <%--<%@ page import="java.util.List" %>&lt;%&ndash;--%>
   Created by IntelliJ IDEA.
   User: Admin
