@@ -35,3 +35,11 @@ hs_err_pid*
 # gradle files
 **/.gradle/
 **/build/
+
+# git files of subprojects
+.gitattributes
+# don't ignore .gitattributes file in root directory
+!/.gitattributes
+.gitignore
+# don't ignore .gitignore file in root directory
+!/.gitignore
