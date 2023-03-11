@@ -1,4 +1,4 @@
-package com.tasks.sendEmail;
+package com.tasks.emailSender;
 
 import java.util.Properties;
 import javax.mail.Message;
