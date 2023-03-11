@@ -1,4 +1,4 @@
-package com.dmdev.junit.dao;
+package com.demo.junit.dao;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,9 +1,12 @@
-package com.dmdev.junit.service;
+package com.demo.junit.service;
 
-import com.dmdev.junit.TestBase;
-import com.dmdev.junit.dao.UserDao;
-import com.dmdev.junit.dto.User;
-import com.dmdev.junit.extension.*;
+import com.demo.junit.extension.ConditionalExtension;
+import com.demo.junit.extension.PostProcessingExtension;
+import com.demo.junit.TestBase;
+import com.demo.junit.dao.UserDao;
+import com.demo.junit.dto.User;
+import com.demo.junit.extension.UserServiceParamResolver;
+import com.demo.junit.extension.*;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.collection.IsMapContaining;
 import org.junit.jupiter.api.AfterAll;
@@ -254,7 +257,7 @@ public class UserServiceTest extends TestBase {
 //        @NullAndEmptySource
 //        @ValueSource(strings = {"Ivan", "Petr"})
 //        @EnumSource
-        @MethodSource("com.dmdev.junit.service.UserServiceTest#getArgumentsForLoginTest")
+        @MethodSource("com.demo.junit.service.UserServiceTest#getArgumentsForLoginTest")
 //        @CsvFileSource(resources = "/login-test-data.csv", delimiter = ',', numLinesToSkip = 1)
 //        @CsvSource({
 //                "Ivan,123",

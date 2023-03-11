@@ -1,4 +1,4 @@
-package com.dmdev.junit.extension;
+package com.demo.junit.extension;
 
 import org.junit.jupiter.api.extension.ConditionEvaluationResult;
 import org.junit.jupiter.api.extension.ExecutionCondition;

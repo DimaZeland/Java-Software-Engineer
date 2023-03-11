@@ -1,4 +1,4 @@
-package com.dmdev.junit.dto;
+package com.demo.junit.dto;
 
 import lombok.Value;
 

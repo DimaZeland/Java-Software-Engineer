@@ -1,4 +1,4 @@
-package com.dmdev.junit.extension;
+package com.demo.junit.extension;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;

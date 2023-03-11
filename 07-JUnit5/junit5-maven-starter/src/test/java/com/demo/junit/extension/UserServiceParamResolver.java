@@ -1,7 +1,7 @@
-package com.dmdev.junit.extension;
+package com.demo.junit.extension;
 
-import com.dmdev.junit.dao.UserDao;
-import com.dmdev.junit.service.UserService;
+import com.demo.junit.dao.UserDao;
+import com.demo.junit.service.UserService;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;

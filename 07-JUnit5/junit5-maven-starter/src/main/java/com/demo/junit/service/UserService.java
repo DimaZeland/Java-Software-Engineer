@@ -1,7 +1,7 @@
-package com.dmdev.junit.service;
+package com.demo.junit.service;
 
-import com.dmdev.junit.dao.UserDao;
-import com.dmdev.junit.dto.User;
+import com.demo.junit.dao.UserDao;
+import com.demo.junit.dto.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;

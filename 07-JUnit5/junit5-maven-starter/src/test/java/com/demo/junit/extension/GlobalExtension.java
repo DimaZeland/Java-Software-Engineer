@@ -1,4 +1,4 @@
-package com.dmdev.junit.extension;
+package com.demo.junit.extension;
 
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.BeforeAllCallback;

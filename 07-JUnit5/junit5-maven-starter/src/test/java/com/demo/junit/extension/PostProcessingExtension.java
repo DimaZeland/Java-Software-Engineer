@@ -1,6 +1,6 @@
-package com.dmdev.junit.extension;
+package com.demo.junit.extension;
 
-import com.dmdev.junit.service.UserService;
+import com.demo.junit.service.UserService;
 import lombok.Getter;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestInstancePostProcessor;

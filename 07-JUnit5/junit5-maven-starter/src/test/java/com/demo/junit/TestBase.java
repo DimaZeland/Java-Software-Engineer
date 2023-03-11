@@ -1,6 +1,6 @@
-package com.dmdev.junit;
+package com.demo.junit;
 
-import com.dmdev.junit.extension.GlobalExtension;
+import com.demo.junit.extension.GlobalExtension;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({
