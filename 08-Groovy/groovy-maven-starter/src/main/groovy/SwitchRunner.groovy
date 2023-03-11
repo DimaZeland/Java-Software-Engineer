@@ -1,3 +1,5 @@
+import com.demo.Person
+
 class SwitchRunner {
 
     static void main(String[] args) {
