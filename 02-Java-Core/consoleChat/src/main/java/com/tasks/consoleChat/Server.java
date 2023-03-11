@@ -7,8 +7,6 @@ import java.util.LinkedList;
 /**
  * проект реализует консольный многопользовательский чат.
  * вход в программу запуска сервера - в классе Server.
- * @author izotopraspadov, the tech
- * @version 2.0
  */
 
 class ServerSomthing extends Thread {

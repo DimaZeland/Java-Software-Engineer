@@ -7,6 +7,7 @@ import java.util.Date;
 
 /**
  * создание клиента со всеми необходимыми утилитами, точка входа в программу в классе Client
+ description: https://javarush.ru/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh
  */
 
 class ClientSomthing {
