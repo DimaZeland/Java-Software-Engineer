@@ -15,7 +15,7 @@ sourceSets {
     }
 }
 
-group 'com.dmdev'
+group 'com.demo'
 version '1.0-SNAPSHOT'
 
 repositories {
