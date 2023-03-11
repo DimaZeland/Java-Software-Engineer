@@ -1,4 +1,4 @@
-package com.skillbox.redisdemo;
+package com.redis.demo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

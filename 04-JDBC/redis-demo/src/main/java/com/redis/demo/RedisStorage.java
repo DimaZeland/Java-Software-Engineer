@@ -1,4 +1,4 @@
-package com.skillbox.redisdemo;
+package com.redis.demo;
 
 import org.redisson.Redisson;
 import org.redisson.api.RKeys;
