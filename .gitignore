@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+# add .jar files in under folders
 !**/lib/*jar
 !**/wrapper/*jar
 *.war
@@ -21,17 +22,16 @@
 *.tar.gz
 *.rar
 
-
-
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
 # idea files
-#.idea/
+**/.idea/
 *.iml
 
-# maven target
-target/
-**/.idea/**
-**/.gradle/**
-**/build/**
+# maven compile code
+**/target/
+
+# gradle files
+**/.gradle/
+**/build/
