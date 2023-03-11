@@ -1,11 +1,10 @@
-package com.dmdev.jdbc.starter.dao;
+package com.demo.jdbc.starter.dao;
 
-import com.dmdev.jdbc.starter.dto.TicketFilter;
-import com.dmdev.jdbc.starter.entity.Flight;
-import com.dmdev.jdbc.starter.entity.Ticket;
-import com.dmdev.jdbc.starter.exception.DaoException;
-import com.dmdev.jdbc.starter.util.ConnectionManager;
-import com.dmdev.jdbc.starter.util.ConnectionPool;
+import com.demo.jdbc.starter.dto.TicketFilter;
+import com.demo.jdbc.starter.entity.Flight;
+import com.demo.jdbc.starter.entity.Ticket;
+import com.demo.jdbc.starter.exception.DaoException;
+import com.demo.jdbc.starter.util.ConnectionPool;
 
 import java.sql.*;
 import java.util.ArrayList;

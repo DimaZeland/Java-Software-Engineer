@@ -1,4 +1,4 @@
-package com.dmdev.jdbc.starter.entity;
+package com.demo.jdbc.starter.entity;
 
 import java.math.BigDecimal;
 

@@ -1,6 +1,4 @@
-package com.dmdev.jdbc.starter.dao;
-
-import com.dmdev.jdbc.starter.entity.Ticket;
+package com.demo.jdbc.starter.dao;
 
 import java.util.List;
 import java.util.Optional;

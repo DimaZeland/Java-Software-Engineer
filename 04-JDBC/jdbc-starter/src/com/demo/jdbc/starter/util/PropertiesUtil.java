@@ -1,4 +1,4 @@
-package com.dmdev.jdbc.starter.util;
+package com.demo.jdbc.starter.util;
 
 import java.io.IOException;
 import java.util.Properties;

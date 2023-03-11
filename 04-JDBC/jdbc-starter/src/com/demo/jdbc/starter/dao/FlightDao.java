@@ -1,8 +1,8 @@
-package com.dmdev.jdbc.starter.dao;
+package com.demo.jdbc.starter.dao;
 
-import com.dmdev.jdbc.starter.entity.Flight;
-import com.dmdev.jdbc.starter.exception.DaoException;
-import com.dmdev.jdbc.starter.util.ConnectionPool;
+import com.demo.jdbc.starter.entity.Flight;
+import com.demo.jdbc.starter.exception.DaoException;
+import com.demo.jdbc.starter.util.ConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

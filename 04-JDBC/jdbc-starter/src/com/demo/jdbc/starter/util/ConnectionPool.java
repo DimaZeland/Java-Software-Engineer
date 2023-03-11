@@ -1,4 +1,4 @@
-package com.dmdev.jdbc.starter.util;
+package com.demo.jdbc.starter.util;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

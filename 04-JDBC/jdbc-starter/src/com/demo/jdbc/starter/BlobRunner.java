@@ -1,7 +1,6 @@
-package com.dmdev.jdbc.starter;
+package com.demo.jdbc.starter;
 
-import com.dmdev.jdbc.starter.util.ConnectionManager;
-import com.dmdev.jdbc.starter.util.ConnectionPool;
+import com.demo.jdbc.starter.util.ConnectionPool;
 
 import java.io.IOException;
 import java.nio.file.Files;

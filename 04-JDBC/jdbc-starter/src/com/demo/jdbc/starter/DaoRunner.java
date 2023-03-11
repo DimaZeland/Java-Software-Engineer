@@ -1,8 +1,8 @@
-package com.dmdev.jdbc.starter;
+package com.demo.jdbc.starter;
 
-import com.dmdev.jdbc.starter.dao.TicketDao;
-import com.dmdev.jdbc.starter.dto.TicketFilter;
-import com.dmdev.jdbc.starter.entity.Ticket;
+import com.demo.jdbc.starter.dao.TicketDao;
+import com.demo.jdbc.starter.dto.TicketFilter;
+import com.demo.jdbc.starter.entity.Ticket;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public class DaoRunner {
     }
 
     private static void filterTest() {
-        var ticketFilter = new TicketFilter(3, 0, "Евгений Кудрявцев", "A1");
+        var ticketFilter = new TicketFilter(3, 0, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "A1");
         var tickets = TicketDao.getInstance().findAll(ticketFilter);
         System.out.println(tickets);
     }

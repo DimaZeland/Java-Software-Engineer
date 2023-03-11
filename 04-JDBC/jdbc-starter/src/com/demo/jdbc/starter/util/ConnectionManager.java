@@ -1,4 +1,4 @@
-package com.dmdev.jdbc.starter.util;
+package com.demo.jdbc.starter.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

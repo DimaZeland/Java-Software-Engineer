@@ -1,4 +1,4 @@
-package com.dmdev.jdbc.starter.entity;
+package com.demo.jdbc.starter.entity;
 
 import java.time.LocalDateTime;
 import java.util.List;
