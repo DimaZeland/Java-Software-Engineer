@@ -1,5 +1,3 @@
-import com.demo.Person
-
 class IteratesRunner {
 
     static void main(String[] args) {

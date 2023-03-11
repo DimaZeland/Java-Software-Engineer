@@ -22,10 +22,10 @@ class Student implements WithId {
     }
 
     static void main(String[] args) {
-//        Student.builder()
-//            .lastName("Ivanov")
-//            .firstName("Ivan")
-//            .build()
+        Student.builder()
+            .lastName("Ivanov")
+            .firstName("Ivan")
+            .build()
     }
 
     def methodMissing(String name, Object arguments){

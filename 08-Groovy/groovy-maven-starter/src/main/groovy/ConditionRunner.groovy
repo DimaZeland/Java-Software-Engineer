@@ -1,5 +1,3 @@
-import com.demo.Person
-
 class ConditionRunner {
 
     /**

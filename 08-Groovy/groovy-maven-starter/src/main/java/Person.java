@@ -1,5 +1,3 @@
-package com.demo;
-
 public class Person {
 
     private final Integer id;
