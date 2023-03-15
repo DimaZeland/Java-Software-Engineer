@@ -1,1 +1,2 @@
-A demo project that uses Spring Boot and provides practical examples of integrating with various tools, libraries, frameworks, relational and non-relational databases, writing REST APIs, validating requests and any other objects, writing integration tests, dynamically elevating docker containers, and much more.
+## Spring Boot Starter
+A demo project that uses Spring Boot and provides practical examples of integrating with various tools, libraries, frameworks, relational and non-relational databases, writing REST APIs, validating requests and any other objects, writing integration tests, dynamically elevating docker containers and much more.
