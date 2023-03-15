@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.demo</groupId>
+    <artifactId>java17</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>102environment</module>
+        <module>103structures</module>
+        <module>104classes</module>
+        <module>105inheritance</module>
+        <module>106interfaces</module>
+        <module>107exceptions</module>
+        <module>108generics</module>
+        <module>109collections</module>
+        <module>110gui</module>
+        <module>111swing</module>
+        <module>112concurency</module>
+        <module>113javafx</module>
+        <module>114deploying</module>
+        <module>201streams</module>
+        <module>202inoutput</module>
+        <module>203xml</module>
+        <module>204networking</module>
+        <module>205database</module>
+        <module>206datetimeapi</module>
+        <module>207i18n</module>
+        <module>208compiling</module>
+        <module>209modules</module>
+        <module>210security</module>
+        <module>211graphicsswing</module>
+        <module>212native</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+    </properties>
+</project>
