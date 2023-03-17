@@ -33,9 +33,9 @@
         <module>16-Deploying</module>
         <module>17-Autoconfiguration</module>
         <module>18-Custom-Starter</module>
-        <!--<module>19-Kotlin-Scala-Groovy</module>
-        <module>20-JHipster</module>
-        <module>21-Spring-Native</module>-->
+        <module>19-Kotlin-Scala-Groovy</module>
+        <module>20-Spring-Native</module>
+
     </modules>
 
     <properties>
