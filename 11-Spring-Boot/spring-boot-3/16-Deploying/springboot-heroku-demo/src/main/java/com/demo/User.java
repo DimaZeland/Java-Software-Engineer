@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.demo;
 
 import jakarta.persistence.*;

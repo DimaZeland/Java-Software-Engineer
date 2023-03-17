@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.demo;
 
 import java.util.Map;
