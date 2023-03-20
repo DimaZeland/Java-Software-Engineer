@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>spring-beginner</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>01-IoC-DI</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>05-IoC-DI</module>
+        <module>07-DI-using-constructor</module>
+        <module>08-DI-using-setters</module>
+        <module>09-Introduction-string-and-other-types</module>
+        <module>10-Introduction-from-properties-file</module>
+        <module>12-Bean-scope-singleton-prototype</module>
+        <module>13-Init-destroy-methods</module>
+        <module>14-Using-annotations-for-configuration</module>
+        <module>15-Autowired-annotation-for-contructuor</module>
+        <module>16-Autowired-annotation-for-setter</module>
+        <module>17-Autowired-annotation-for-class-field</module>
+        <module>18-Qualifier-annotation</module>
+        <module>19-Value-annotation</module>
+        <module>20-Scope-PostConstuct-PreDestroy</module>
+        <module>21-Configuration-using-Java-code-1-way</module>
+        <module>22-Configuration-using-Java-code-2-way</module>
+        <module>23-PropertySource-annotation</module>
+    </modules>
+</project>
