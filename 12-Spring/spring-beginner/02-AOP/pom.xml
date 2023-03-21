@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>spring-beginner</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>02-AOP</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>25-Advice-Before-type</module>
+        <module>26-Pointcut-part-1</module>
+        <module>27-Pointcut-part-2</module>
+        <module>28-ad-Pointcut</module>
+        <module>29-Pointcut-combining</module>
+        <module>30-Aspects-execution-order</module>
+        <module>31-Join-Point</module>
+        <module>32-Advice-type-AfterReturning</module>
+        <module>33-Advice-type-AfterThrowing</module>
+        <module>34-Advice-type-After</module>
+        <module>35-Advice-type-Around-Part1</module>
+        <module>36-Advice-type-Around-Part2</module>
+    </modules>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.6</version>
+        </dependency>
+    </dependencies>
+</project>
