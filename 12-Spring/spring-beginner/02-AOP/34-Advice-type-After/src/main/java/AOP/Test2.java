@@ -15,9 +15,7 @@ public class Test2 {
         try {
             List<Student> studentList = university.getStudents();
             System.out.println(studentList);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("Поймано исключение: " + e);
         }
 

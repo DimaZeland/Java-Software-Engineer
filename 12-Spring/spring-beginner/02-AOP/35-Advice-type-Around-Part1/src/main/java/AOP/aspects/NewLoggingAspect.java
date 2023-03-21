@@ -24,7 +24,7 @@ public class NewLoggingAspect {
         //изменение результата тагрет метода
         targetMethodResult = "Не война и мир";
 
-        System.out.println("aroundReturnBookLoggingAdvice: Время работы returnBook = " + (end-begin) + " миллисекунд");
+        System.out.println("aroundReturnBookLoggingAdvice: Время работы returnBook = " + (end - begin) + " миллисекунд");
         System.out.println("aroundReturnBookLoggingAdvice: в библиотеку успешно вернули книгу");
 
         return targetMethodResult;

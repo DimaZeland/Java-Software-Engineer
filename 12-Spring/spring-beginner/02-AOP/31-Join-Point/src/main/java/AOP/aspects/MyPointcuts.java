@@ -7,5 +7,6 @@ import org.aspectj.lang.annotation.Pointcut;
 public class MyPointcuts {
     //используем pointcut сразу на 2 аспект класса
     @Pointcut("execution(* add*(..))")
-    public void allAddMethods(){}
+    public void allAddMethods() {
+    }
 }

@@ -14,7 +14,7 @@ public class UniLibrary {
 
     public String returnBook() {
         //Для проверки работы с исключением
-        int a = 10/0;
+        int a = 10 / 0;
         System.out.println("UniLibrary: Мы возвращаем книгу");
         return "Война и мир";
     }

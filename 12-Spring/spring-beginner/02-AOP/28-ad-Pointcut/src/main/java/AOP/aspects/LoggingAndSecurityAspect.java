@@ -11,7 +11,10 @@ public class LoggingAndSecurityAspect {
     //Скоращенный вариант записи pointcut'ов
     //ЕСли сделать данный метод public, то его можно будет использваоть и в других классах аспектах
     @Pointcut("execution(* get*(..))")
-    private void allGetMethods(){};
+    private void allGetMethods() {
+    }
+
+    ;
 
     @Before("allGetMethods()")
     public void beforeGetLoggingAdvice() {

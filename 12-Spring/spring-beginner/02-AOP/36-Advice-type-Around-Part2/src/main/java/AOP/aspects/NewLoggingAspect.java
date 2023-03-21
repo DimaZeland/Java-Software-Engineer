@@ -21,9 +21,7 @@ public class NewLoggingAspect {
         //Внутри Advice @Around можно обработать исключение
         try {
             targetMethodResult = proceedingJoinPoint.proceed();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("aroundReturnBookLoggingAdvice: залогированно исключение " + e);
             throw e;
         }

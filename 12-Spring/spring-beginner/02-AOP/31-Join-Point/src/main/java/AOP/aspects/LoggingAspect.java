@@ -25,18 +25,14 @@ public class LoggingAspect {
         System.out.println("Сигнатура.getName: " + methodSignature.getName());
 
         //отдельно для метода addBook
-        if (methodSignature.getName().equals("addBook"))
-        {
+        if (methodSignature.getName().equals("addBook")) {
             Object[] args = joinPoint.getArgs();
-            for (Object obj: args) {
-                if (obj instanceof Book)
-                {
+            for (Object obj : args) {
+                if (obj instanceof Book) {
                     Book myBook = (Book) obj;
                     System.out.println("информация о книге: название - " + myBook.getName() + ", author - "
                             + myBook.getAuthor() + ", год издания - " + myBook.getYearsOfPublication());
-                }
-                else if (obj instanceof String)
-                {
+                } else if (obj instanceof String) {
                     System.out.println("Книгу в библиотеку добавил: " + obj);
                 }
             }

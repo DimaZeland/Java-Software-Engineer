@@ -9,35 +9,36 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAndSecurityAspect {
     @Pointcut("execution(* AOP.UniLibrary.*(..))")
-    private void allMethodsFromUniLibrary() {}
+    private void allMethodsFromUniLibrary() {
+    }
 
     @Pointcut("execution(public void AOP.UniLibrary.returnMagazine())")
-    private void returnMagazineFromUniLibrary(){}
+    private void returnMagazineFromUniLibrary() {
+    }
 
     //Pointcut который подходит для всех методов, кроме returnMagazineFromUniLibrary()
     @Pointcut("allMethodsFromUniLibrary() && !returnMagazineFromUniLibrary()")
-    private void allMethodsExceptReturnMagazineFromUniLibrary() {}
+    private void allMethodsExceptReturnMagazineFromUniLibrary() {
+    }
 
     @Before("allMethodsExceptReturnMagazineFromUniLibrary()")
-    public void beforeAllMethodsExceptReturnMagazineAdvice(){
+    public void beforeAllMethodsExceptReturnMagazineAdvice() {
         System.out.println("beforeAllMethodsExceptReturnMagazineAdvice: writing Log#10");
     }
 
 
-
-
-
-
-
     @Pointcut("execution(* AOP.UniLibrary.get*(..))")
-    private void allGetMethodsFromUniLibrary(){}
+    private void allGetMethodsFromUniLibrary() {
+    }
 
     @Pointcut("execution(* AOP.UniLibrary.return*(..))")
-    private void allReturnMethodsFromUniLibrary(){}
+    private void allReturnMethodsFromUniLibrary() {
+    }
 
     //Pointcut можно комбинировать с помощью логических оперторов:
     @Pointcut("allGetMethodsFromUniLibrary() || allReturnMethodsFromUniLibrary()")
-    private void allGetAndReturnsMethodsFromUniLibrary(){}
+    private void allGetAndReturnsMethodsFromUniLibrary() {
+    }
 
 
     @Before("allGetMethodsFromUniLibrary()")
