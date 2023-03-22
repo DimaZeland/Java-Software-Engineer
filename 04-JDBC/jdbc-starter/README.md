@@ -1,2 +1,2 @@
-## JDBC
-A demo project for the practical implementation of the main features of working with JDBC, ConnectionPool, Transactions, DAO.
+## JDBC Starter
+A demo project for the practical implementation of the main features of working with JDBC, ConnectionPool, Transactions, DAO. The project use PostgreSQL database, Apache Maven build system.
