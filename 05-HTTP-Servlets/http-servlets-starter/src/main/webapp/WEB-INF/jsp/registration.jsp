@@ -19,7 +19,7 @@
 <%--<audio>src=""link< /audio>--%>
 <form action="${pageContext.request.contextPath}/registration" method="post" enctype="multipart/form-data">
     <label for="nameId">Name:
-    <input type="text" name="name" id="nameId">
+        <input type="text" name="name" id="nameId">
     </label><br>
     <label for="birthdayId">Birthday:
         <input type="date" name="birthday" id="birthdayId" required>
@@ -34,21 +34,21 @@
         <input type="password" name="password" id="passwordId">
     </label><br>
     <%-- ?role=USER--%>
-     <select name="role" id="roleId">
-         <c:forEach var="role" items="${requestScope.roles}">
-             <option value="${role}">${role}</option>
-         </c:forEach>
-     </select><br>
-        <c:forEach var="gender" items="${requestScope.genders}">
-            <input type="radio" name="gender" value="${gender}"> ${gender}
-            <br>
+    <select name="role" id="roleId">
+        <c:forEach var="role" items="${requestScope.roles}">
+            <option value="${role}">${role}</option>
         </c:forEach>
+    </select><br>
+    <c:forEach var="gender" items="${requestScope.genders}">
+        <input type="radio" name="gender" value="${gender}"> ${gender}
+        <br>
+    </c:forEach>
     <button type="submit">Send</button>
     <c:if test="${not empty requestScope.errors}">
         <div style="color: red">
-<c:forEach var="error" items="${requestScope.errors}">
-    <span>${error.message}</span>
-</c:forEach>
+            <c:forEach var="error" items="${requestScope.errors}">
+                <span>${error.message}</span>
+            </c:forEach>
         </div>
     </c:if>
 </form>

@@ -22,11 +22,11 @@
         <developerConnection>scm:git:git@github.com:dmdev2020/apache-maven-starter.git</developerConnection>
         <url>https://github.com/dmdev2020/apache-maven-starter</url>
     </scm>
-<!-- project.groupId-->
-<!-- settings.-->
-<!-- ${spring.version}.-->
-<!-- env.-->
-<!-- System.getProperty -D -->
+    <!-- project.groupId-->
+    <!-- settings.-->
+    <!-- ${spring.version}.-->
+    <!-- env.-->
+    <!-- System.getProperty -D -->
     <properties>
         <app.env>dev</app.env>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -85,14 +85,14 @@
             </resource>
         </resources>
         <plugins>
-          <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-release-plugin</artifactId>
-              <version>2.5.3</version>
-              <configuration>
-<!--                  <allowTimestampedSnapshots>true</allowTimestampedSnapshots>-->
-              </configuration>
-          </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <!--                  <allowTimestampedSnapshots>true</allowTimestampedSnapshots>-->
+                </configuration>
+            </plugin>
         </plugins>
 
         <pluginManagement>
@@ -209,40 +209,40 @@
         <profile>
             <id>prod</id>
             <activation>
-<!--                <os>-->
-<!--                    <family>windows</family>-->
-<!--                </os>-->
-<!--                <jdk>19</jdk>-->
-<!--                <file>-->
-<!--                    <exists>${basedir}/pom.xml</exists>-->
-<!--                    <missing>${basedir}/pom.xml</missing>-->
-<!--                </file>-->
-<!--                <activeByDefault>true</activeByDefault>-->
-    <!--                <property>-->
-        <!--                <name>test.prop</name>-->
-            <!--            <value>example</value>-->
+                <!--                <os>-->
+                <!--                    <family>windows</family>-->
+                <!--                </os>-->
+                <!--                <jdk>19</jdk>-->
+                <!--                <file>-->
+                <!--                    <exists>${basedir}/pom.xml</exists>-->
+                <!--                    <missing>${basedir}/pom.xml</missing>-->
+                <!--                </file>-->
+                <!--                <activeByDefault>true</activeByDefault>-->
+                <!--                <property>-->
+                <!--                <name>test.prop</name>-->
+                <!--            <value>example</value>-->
                 <!--    </property>-->
-                </activation>
-                <properties>
+            </activation>
+            <properties>
                 <app.env>prod</app.env>
-                    <example>test-test</example>
-                </properties>
-                <build>
-                    <plugins>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-compiler-plugin</artifactId>
-                            <version>3.10.1</version>
-                            <configuration>
-                                <debug>false</debug>
-                                <optimize>true</optimize>
-                            </configuration>
-                        </plugin>
-                    </plugins>
-                </build>
-            </profile>
-        </profiles>
-        <!-- M2_HOME/conf-->
+                <example>test-test</example>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.10.1</version>
+                        <configuration>
+                            <debug>false</debug>
+                            <optimize>true</optimize>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <!-- M2_HOME/conf-->
     <!-- ~/.m2/settings.xml-->
     <distributionManagement>
         <snapshotRepository>

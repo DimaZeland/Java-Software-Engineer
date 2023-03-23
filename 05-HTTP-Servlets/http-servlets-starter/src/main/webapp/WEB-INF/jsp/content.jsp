@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<%@ include file="header.jsp"%>
+<%@ include file="header.jsp" %>
 <div>
     <span>Content. Русский</span>
     <p>Size: ${requestScope.flights.size()}</p>
@@ -24,6 +24,6 @@
     <p>Param test: ${param.test}</p>
     <p>Empty list: ${not empty flights}</p>
 </div>
-<%@ include file="footer.jsp"%>
+<%@ include file="footer.jsp" %>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <title>Login</title>
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
 <form action="${pageContext.request.contextPath}/login" method="post">
     <label for="emailId"><fmt:message key="page.login.email"/>:
         <input type="text" name="email" id="emailId" value="${param.email}" required>
@@ -26,10 +26,10 @@
         <button type="button"><fmt:message key="page.login.register.button"/></button>
     </a>
     <c:if test="${param.error != null}">
-    <div style="color : red">
-<%--<span>Email or password is not correct</span>--%>
-        <span><fmt:message key="page.login.error"/></span>
-    </div>
+        <div style="color : red">
+                <%--<span>Email or password is not correct</span>--%>
+            <span><fmt:message key="page.login.error"/></span>
+        </div>
     </c:if>
 </form>
 </body>

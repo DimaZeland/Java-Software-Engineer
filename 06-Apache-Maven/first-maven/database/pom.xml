@@ -25,9 +25,9 @@
                         <phase>validate</phase>
                     </execution>
                 </executions>
-<!--                <configuration>-->
-<!--                    <message>Message from config!!!</message>-->
-<!--                </configuration>-->
+                <!--                <configuration>-->
+                <!--                    <message>Message from config!!!</message>-->
+                <!--                </configuration>-->
             </plugin>
         </plugins>
     </build>

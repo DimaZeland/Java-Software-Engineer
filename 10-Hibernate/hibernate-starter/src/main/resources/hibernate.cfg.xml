@@ -15,7 +15,8 @@
         <property name="hibernate.cache.use_second_level_cache">true</property>
         <property name="hibernate.cache.use_query_cache">true</property>
         <property name="hibernate.generate_statistics">false</property>
-        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory
+        </property>
         <property name="hibernate.javax.cache.uri">/ehcache-config.xml</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <!--        <property name="hibernate.connection.isolation">8</property> уровни изолирования транзакций-->
@@ -23,7 +24,8 @@
         <mapping class="com.demo.entity.User"/> <!-- добавить сущность в конфигурацию SessionFactory-->
         <mapping class="com.demo.entity.Company"/>
         <mapping class="com.demo.entity.Profile"/>
-        <mapping class="com.demo.entity.Chat"/><!--все сущности добавляются сюда в маппинг, чтобы Hibernate мог с ней работать-->
+        <mapping
+                class="com.demo.entity.Chat"/><!--все сущности добавляются сюда в маппинг, чтобы Hibernate мог с ней работать-->
         <mapping class="com.demo.entity.UserChat"/>
         <mapping class="com.demo.entity.Payment"/>
         <!-- DB schema will be updated if needed -->
