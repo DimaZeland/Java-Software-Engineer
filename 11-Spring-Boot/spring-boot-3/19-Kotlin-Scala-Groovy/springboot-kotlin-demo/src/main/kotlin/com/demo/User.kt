@@ -4,13 +4,13 @@ package com.demo
 import jakarta.persistence.*
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 class User(
-        @Id @GeneratedValue(strategy = GenerationType.AUTO)
-        var id: Long = -1,
-        var name: String = "",
-        var email: String = ""
-        ) {
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    var id: Long = -1,
+    var name: String = "",
+    var email: String = ""
+) {
 
     override fun toString(): String {
         return "User(id=$id, name='$name', email='$email')"

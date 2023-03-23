@@ -1,2 +1,2 @@
 ## Apache Maven
-A demo project showing all aspects of working with the Apache Maven project build system.
+The project showing all aspects of working with the Apache Maven project build system.
