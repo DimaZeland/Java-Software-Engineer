@@ -29,17 +29,19 @@ class Task3 {
         closure.delegate = valueHolder
         closure.resolveStrategy = Closure.DELEGATE_ONLY
         closure()
-        ["when": { Closure whenClosure -> {
-            whenClosure.delegate = valueHolder
-            whenClosure.resolveStrategy = Closure.DELEGATE_ONLY
-            whenClosure()
-            [then: { Closure thenClosure -> {
-                thenClosure.delegate = valueHolder
-                thenClosure.resolveStrategy = Closure.DELEGATE_ONLY
-                assert thenClosure()
+        ["when": { Closure whenClosure ->
+            {
+                whenClosure.delegate = valueHolder
+                whenClosure.resolveStrategy = Closure.DELEGATE_ONLY
+                whenClosure()
+                [then: { Closure thenClosure ->
+                    {
+                        thenClosure.delegate = valueHolder
+                        thenClosure.resolveStrategy = Closure.DELEGATE_ONLY
+                        assert thenClosure()
+                    }
+                }]
             }
-            }]
-        }
         }]
     }
 }

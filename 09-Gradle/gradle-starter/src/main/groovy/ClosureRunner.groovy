@@ -23,7 +23,7 @@ class ClosureRunner {
 
         int x = 10
         check(x > 0) {
-            println (++x)
+            println(++x)
         }
 
         println x

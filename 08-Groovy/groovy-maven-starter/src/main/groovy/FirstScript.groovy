@@ -1,3 +1,3 @@
 println "Hello world"
 
- new ArrayList<>()
+new ArrayList<>()

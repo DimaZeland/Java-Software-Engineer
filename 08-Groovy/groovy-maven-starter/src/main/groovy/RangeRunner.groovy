@@ -7,10 +7,10 @@ class RangeRunner {
         assert range.get(3) == 5
         assert !range.contains(8)
 
-        range.each { println it}
+        range.each { println it }
 
-        ('a'..'d').each { println it}
+        ('a'..'d').each { println it }
 
-        (WeekDay.WE..WeekDay.MO).each { println it}
+        (WeekDay.WE..WeekDay.MO).each { println it }
     }
 }

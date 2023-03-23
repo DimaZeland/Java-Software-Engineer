@@ -21,7 +21,7 @@ class MapRunner {
         assert map.subMap("one", "two") == [one: 111, "two": 2]
 
 //        new operator
-        def newMap = ["q": 22, "rt": 99, *:map]
+        def newMap = ["q": 22, "rt": 99, *: map]
         println newMap
     }
 }

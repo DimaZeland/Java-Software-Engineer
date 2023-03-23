@@ -28,14 +28,14 @@ class Student implements WithId {
 //            .build()
     }
 
-    def methodMissing(String name, Object arguments){
+    def methodMissing(String name, Object arguments) {
         println "missing method $name is invoked: $arguments"
         def field = name - 'findBy'
         def fieldValue = this."$field"
         println "select * from Student where $field = $fieldValue"
     }
 
-    def propertyMissing(String name){
+    def propertyMissing(String name) {
         println "missing property $name"
         "default value"
     }

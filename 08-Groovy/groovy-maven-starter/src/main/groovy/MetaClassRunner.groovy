@@ -25,7 +25,7 @@ class MetaClassRunner {
             println "It's a new method"
         }
         student.test()
-        student.class.metaClass.newMethod = {int value ->
+        student.class.metaClass.newMethod = { int value ->
             println "New method in class Student, $value"
         }
 //        student.newMethod(28)

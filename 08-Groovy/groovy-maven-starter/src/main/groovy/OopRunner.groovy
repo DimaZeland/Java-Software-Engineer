@@ -11,7 +11,7 @@ class OopRunner {
         def student1 = new Student(firstName: "Petr", lastName: "Petrov", age: 18, id: 222)
         println student1
 
-        student1.properties.each {println it}
+        student1.properties.each { println it }
 
         Student student2 = ['Sveta', 'Svetikova', 30]
         println student2
@@ -28,7 +28,7 @@ class OopRunner {
         "Ivan".printStr()
     }
 
-    static def printStr(String self){
+    static def printStr(String self) {
         println "It's mixin $self"
     }
 }
