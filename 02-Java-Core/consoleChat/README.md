@@ -1,2 +1,3 @@
 ## Console chat
-A program that implements a multi-user chat.
+
+ℹ️ A program that implements a multi-user chat.

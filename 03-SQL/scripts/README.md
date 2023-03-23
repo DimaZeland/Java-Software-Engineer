@@ -1,2 +1,3 @@
 ## SQL Scripts
-Structured Query Language dump files examples.
+
+ℹ️ Structured Query Language dump files examples.

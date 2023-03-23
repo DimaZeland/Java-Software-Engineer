@@ -1,2 +1,3 @@
 ## Email sender
-A program for sending email messages.
+
+ℹ️ A program for sending email messages.
