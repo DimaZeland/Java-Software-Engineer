@@ -1,4 +1,4 @@
-package com.redis.demo;
+package com.demo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -32,7 +32,7 @@ public class RedisTest {
 
     public static void main(String[] args) throws InterruptedException {
 
-        RedisStorage redis = new RedisStorage();
+        com.demo.RedisStorage redis = new com.demo.RedisStorage();
         redis.init();
         // Эмулируем 10 секунд работы сайта
         for (int seconds = 0; seconds <= 10; seconds++) {

@@ -1,4 +1,4 @@
-package com.redis.demo;
+package com.demo;
 
 import org.redisson.Redisson;
 import org.redisson.api.RKeys;
