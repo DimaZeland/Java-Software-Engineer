@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Use a comparator to sort accounts by last name.
+
 import java.util.*;
 
 // Compare last whole words in two strings.
@@ -13,7 +14,7 @@ class TComp implements Comparator<String> {
         j = bStr.lastIndexOf(' ');
 
         k = aStr.substring(i).compareToIgnoreCase(bStr.substring(j));
-        if(k==0) // last names match, check entire name
+        if (k == 0) // last names match, check entire name
             return aStr.compareToIgnoreCase(bStr);
         else
             return k;
@@ -38,14 +39,14 @@ class TreeMapDemo2 {
         Set<Map.Entry<String, Double>> set = tm.entrySet();
 
         // Display the elements.
-        for(Map.Entry<String, Double> me : set) {
+        for (Map.Entry<String, Double> me : set) {
             System.out.print(me.getKey() + ": ");
             System.out.println(me.getValue());
         }
         System.out.println();
 
         // Deposit 1000 into John Doe's account.
-        double balance =  tm.get("John Doe");
+        double balance = tm.get("John Doe");
         tm.put("John Doe", balance + 1000);
 
         System.out.println("John Doe's new balance: " +

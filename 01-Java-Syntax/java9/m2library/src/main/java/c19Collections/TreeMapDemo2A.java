@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Use thenComparing() to sort by last, then first name.
+
 import java.util.*;
 
 // A comparator that compares last names.
@@ -48,14 +49,14 @@ class TreeMapDemo2A {
         Set<Map.Entry<String, Double>> set = tm.entrySet();
 
         // Display the elements.
-        for(Map.Entry<String, Double> me : set) {
+        for (Map.Entry<String, Double> me : set) {
             System.out.print(me.getKey() + ": ");
             System.out.println(me.getValue());
         }
         System.out.println();
 
         // Deposit 1000 into John Doe's account.
-        double balance =  tm.get("John Doe");
+        double balance = tm.get("John Doe");
         tm.put("John Doe", balance + 1000);
 
         System.out.println("John Doe's new balance: " +

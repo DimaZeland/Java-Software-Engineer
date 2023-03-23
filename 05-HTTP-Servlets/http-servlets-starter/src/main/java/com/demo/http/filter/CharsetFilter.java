@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 @WebFilter(value = "/*",
 //        servletNames = {"RegistrationServlet"},
         initParams = {@WebInitParam(name = "param1", value = "paramValue")},
-dispatcherTypes = DispatcherType.REQUEST)
+        dispatcherTypes = DispatcherType.REQUEST)
 public class CharsetFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {

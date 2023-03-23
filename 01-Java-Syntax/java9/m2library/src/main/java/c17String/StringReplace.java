@@ -12,13 +12,13 @@ class StringReplace {
         do { // replace all matching substrings
             System.out.println(org);
             i = org.indexOf(search);
-            if(i != -1) {
+            if (i != -1) {
                 result = org.substring(0, i);
                 result = result + sub;
                 result = result + org.substring(i + search.length());
                 org = result;
             }
-        } while(i != -1);
+        } while (i != -1);
 
     }
 }

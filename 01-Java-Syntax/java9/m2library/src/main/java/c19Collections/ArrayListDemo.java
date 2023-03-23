@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate ArrayList.
+
 import java.util.*;
 
 class ArrayListDemo {

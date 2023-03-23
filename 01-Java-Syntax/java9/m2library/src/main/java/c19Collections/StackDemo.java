@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate the Stack class.
+
 import java.util.*;
 
 class StackDemo {

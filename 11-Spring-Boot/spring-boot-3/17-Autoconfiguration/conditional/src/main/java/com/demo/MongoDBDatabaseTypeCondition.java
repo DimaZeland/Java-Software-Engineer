@@ -5,14 +5,12 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 
-public class MongoDBDatabaseTypeCondition implements Condition
-{
+public class MongoDBDatabaseTypeCondition implements Condition {
 
-	@Override
-	public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata metadata)
-	{
-		String enabledDBType = System.getProperty("dbType","MYSQL");
-		return (enabledDBType != null && enabledDBType.equalsIgnoreCase("MONGODB"));
-	}
-	
+    @Override
+    public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata metadata) {
+        String enabledDBType = System.getProperty("dbType", "MYSQL");
+        return (enabledDBType != null && enabledDBType.equalsIgnoreCase("MONGODB"));
+    }
+
 }

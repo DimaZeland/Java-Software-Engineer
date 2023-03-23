@@ -1,14 +1,19 @@
 package c15Lambda;
 
 // Use a method reference to help find the maximum value in a collection.
+
 import java.util.*;
 
 class MyClass {
     private int val;
 
-    MyClass(int v) { val = v; }
+    MyClass(int v) {
+        val = v;
+    }
 
-    int getVal() { return val; }
+    int getVal() {
+        return val;
+    }
 }
 
 class UseMethodRef {
@@ -17,8 +22,7 @@ class UseMethodRef {
         return a.getVal() - b.getVal();
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         ArrayList<MyClass1> al = new ArrayList<MyClass1>();
 
         al.add(new MyClass1(1));

@@ -1,48 +1,55 @@
 package com.demo.java8.p07AbstractClasses;
 
-// Интерфейс:
-interface Base2{
-   // Объявление метода:
-   void show();
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface Base2 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    void show();
 }
-// Класс реализует интерфейс Base:
-class Alpha2 implements Base2{
-   // Текстовое поле:
-   String word;
-   // Конструктор:
-   Alpha2(String txt){
-      word=txt;
-   }
-   // Описание метода из интерфейса:
-   public void show(){
-      System.out.println("Объект класса Alpha");
-      System.out.println("Текстовое поле: "+word);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Base:
+class Alpha2 implements Base2 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+    String word;
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    Alpha2(String txt) {
+        word = txt;
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    public void show() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Alpha");
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: " + word);
+    }
 }
-// Класс реализует интерфейс Base:
-class Bravo2 implements Base2{
-   // Целочисленное поле:
-   int number;
-   // Конструктор:
-   Bravo2(int n){
-      number=n;
-   }
-   // Описание метода из интерфейса:
-   public void show(){
-      System.out.println("Объект класса Bravo");
-      System.out.println("Целочисленное поле: "+number);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Base:
+class Bravo2 implements Base2 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+    int number;
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    Bravo2(int n) {
+        number = n;
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    public void show() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Bravo");
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: " + number);
+    }
 }
-// Главный класс:
-class UsingInterfaceVarsDemo{
-   public static void main(String[] args){
-      // Интерфейсная переменная:
-      Base2 ref;
-      // Объект класса Alpha:
-      ref=new Alpha2("текст");
-      ref.show();
-      // Объект класса Bravo:
-      ref=new Bravo2(123);
-      ref.show();
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class UsingInterfaceVarsDemo {
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        Base2 ref;
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Alpha:
+        ref = new Alpha2("пїЅпїЅпїЅпїЅпїЅ");
+        ref.show();
+        // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Bravo:
+        ref = new Bravo2(123);
+        ref.show();
+    }
 }

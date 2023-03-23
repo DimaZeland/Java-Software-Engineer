@@ -1,6 +1,7 @@
 package c25AWTwindows;
 
 // Draw graphics elements.
+
 import java.awt.event.*;
 import java.awt.*;
 

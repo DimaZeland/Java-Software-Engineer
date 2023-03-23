@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.demo.healthchecks;
 
@@ -13,29 +13,28 @@ import org.springframework.web.client.RestTemplate;
 
 
 @Component
-public class FeedServerHealthIndicator implements HealthIndicator
-{
-	@Override
-	public Health health() {
-		RestTemplate restTemplate = new RestTemplate();
-		String url = "http://feedserver.com/ping";
-		try {
-			String resp = restTemplate.getForObject(url, String.class);
-			if("OK".equalsIgnoreCase(resp)){
-				return Health.up().
-						build();
-			} else {
-				return Health.down()
-						.withDetail("ping_url", url)
-						.withDetail("ping_time", new Date())
-						.build();
-			}
-		} catch (RestClientException e) {
-			return Health.down(e)
-					.withDetail("ping_url", url)
-					.withDetail("ping_time", new Date())
-					.build();
-		}
-	}
+public class FeedServerHealthIndicator implements HealthIndicator {
+    @Override
+    public Health health() {
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://feedserver.com/ping";
+        try {
+            String resp = restTemplate.getForObject(url, String.class);
+            if ("OK".equalsIgnoreCase(resp)) {
+                return Health.up().
+                        build();
+            } else {
+                return Health.down()
+                        .withDetail("ping_url", url)
+                        .withDetail("ping_time", new Date())
+                        .build();
+            }
+        } catch (RestClientException e) {
+            return Health.down(e)
+                    .withDetail("ping_url", url)
+                    .withDetail("ping_time", new Date())
+                    .build();
+        }
+    }
 
 }

@@ -1,13 +1,14 @@
 package c32Buttons;
 
 // Demonstrate JComboBox.
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class JComboBoxDemo {
 
-    String timepieces[] = { "Hourglass", "Analog", "Digital", "Stopwatch" };
+    String timepieces[] = {"Hourglass", "Analog", "Digital", "Stopwatch"};
 
     public JComboBoxDemo() {
 

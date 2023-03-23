@@ -13,32 +13,28 @@ import java.util.List;
 
 @Service
 @Transactional
-public class UsersImportService
-{
-	
-	@Autowired
-	private UsersImporter usersImporter;
-	
-	
-	public UsersImportResponse importUsers() {
-		int retryCount = 0;
-		int maxRetryCount = 3;
-		for (int i = 0; i < maxRetryCount; i++)
-		{
-			try
-			{
-				List<User> importUsers = usersImporter.importUsers();
-				System.out.println("Import Users: "+importUsers);
-				break;
-			} catch (UserImportServiceCommunicationFailure e)
-			{
-				retryCount++;
-				System.err.println("Error: "+e.getMessage());
-			}
-		}
-		if(retryCount >= maxRetryCount)
-			return new UsersImportResponse(retryCount, "FAILURE");
-		else
-			return new UsersImportResponse(0, "SUCCESS");
-	}
+public class UsersImportService {
+
+    @Autowired
+    private UsersImporter usersImporter;
+
+
+    public UsersImportResponse importUsers() {
+        int retryCount = 0;
+        int maxRetryCount = 3;
+        for (int i = 0; i < maxRetryCount; i++) {
+            try {
+                List<User> importUsers = usersImporter.importUsers();
+                System.out.println("Import Users: " + importUsers);
+                break;
+            } catch (UserImportServiceCommunicationFailure e) {
+                retryCount++;
+                System.err.println("Error: " + e.getMessage());
+            }
+        }
+        if (retryCount >= maxRetryCount)
+            return new UsersImportResponse(retryCount, "FAILURE");
+        else
+            return new UsersImportResponse(0, "SUCCESS");
+    }
 }

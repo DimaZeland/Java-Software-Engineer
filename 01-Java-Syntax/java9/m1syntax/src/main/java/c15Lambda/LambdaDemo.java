@@ -8,8 +8,7 @@ interface MyNumber {
 }
 
 class LambdaDemo {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         MyNumber myNum;  // declare an interface reference
 
         // Here, the lambda expression is simply a constant expression.

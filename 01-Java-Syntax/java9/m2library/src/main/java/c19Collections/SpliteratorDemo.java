@@ -1,6 +1,7 @@
 package c19Collections;
 
 // A simple Spliterator demonstration.
+
 import java.util.*;
 
 class SpliteratorDemo {
@@ -19,13 +20,13 @@ class SpliteratorDemo {
         // Use tryAdvance() to display contents of vals.
         System.out.print("Contents of vals:\n");
         Spliterator<Double> spltitr = vals.spliterator();
-        while(spltitr.tryAdvance((n) -> System.out.println(n)));
+        while (spltitr.tryAdvance((n) -> System.out.println(n))) ;
         System.out.println();
 
         // Create new list that contains square roots.
         spltitr = vals.spliterator();
         ArrayList<Double> sqrs = new ArrayList<>();
-        while(spltitr.tryAdvance((n) -> sqrs.add(Math.sqrt(n))));
+        while (spltitr.tryAdvance((n) -> sqrs.add(Math.sqrt(n)))) ;
 
         // Use forEachRemaining to display contents of sqrs.
         System.out.print("Contents of sqrs:\n");

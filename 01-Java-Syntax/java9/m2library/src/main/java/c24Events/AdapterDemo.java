@@ -1,6 +1,7 @@
 package c24Events;
 
 // Demonstrate adaptor classes.
+
 import java.awt.*;
 import java.awt.event.*;
 

@@ -1,6 +1,7 @@
 package c32Buttons;
 
 // Demonstrate JToggleButton.
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -19,12 +20,12 @@ public class JToggleButtonDemo {
         JLabel jlab = new JLabel("Button is off.");
 
         // Make a toggle button.
-        JToggleButton jtbn =  new JToggleButton("On/Off");
+        JToggleButton jtbn = new JToggleButton("On/Off");
 
         // Add an item listener for the toggle button.
         jtbn.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent ie) {
-                if(jtbn.isSelected())
+                if (jtbn.isSelected())
                     jlab.setText("Button is on.");
                 else
                     jlab.setText("Button is off.");

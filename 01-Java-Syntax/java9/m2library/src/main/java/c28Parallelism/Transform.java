@@ -2,6 +2,7 @@ package c28Parallelism;
 
 // A simple program that lets you experiment with the effects of
 // changing the threshold and parallelism of a ForkJoinTak.
+
 import java.util.concurrent.*;
 
 // A ForkJoinTask (via RecursiveAction) that performs a
@@ -17,7 +18,7 @@ class Transform extends RecursiveAction {
     // Deterines what part of data to process.
     int start, end;
 
-    Transform(double[] vals, int s, int e, int t ) {
+    Transform(double[] vals, int s, int e, int t) {
         data = vals;
         start = s;
         end = e;
@@ -29,20 +30,19 @@ class Transform extends RecursiveAction {
 
         // If number of elements is below the sequential threshold,
         // then process sequentially.
-        if((end - start) < seqThreshold) {
+        if ((end - start) < seqThreshold) {
             // The following code assigns an element at even an index the
             // square root of its original value. An elements at an odd
             // index is assigned its cube root. This code is designed
             // to simply consume CPU time so that the effects of concurrent
             // execution are more readily observable.
-            for(int i = start; i < end; i++) {
-                if((data[i] % 2) == 0)
+            for (int i = start; i < end; i++) {
+                if ((data[i] % 2) == 0)
                     data[i] = Math.sqrt(data[i]);
                 else
                     data[i] = Math.cbrt(data[i]);
             }
-        }
-        else {
+        } else {
             // Otherwise, continue to break the data into smaller peices.
 
             // Find the midpoint.
@@ -62,7 +62,7 @@ class FJExperiment {
         int pLevel;
         int threshold;
 
-        if(args.length !=  2) {
+        if (args.length != 2) {
             System.out.println("Usage: FJExperiment threshold parallism");
             return;
         }
@@ -78,7 +78,7 @@ class FJExperiment {
 
         double[] nums = new double[1000000];
 
-        for(int i = 0; i < nums.length; i++)
+        for (int i = 0; i < nums.length; i++)
             nums[i] = (double) i;
 
         Transform task = new Transform(nums, 0, nums.length, threshold);

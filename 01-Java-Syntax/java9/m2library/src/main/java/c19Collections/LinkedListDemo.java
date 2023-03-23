@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate LinkedList.
+
 import java.util.*;
 
 class LinkedListDemo {

@@ -16,7 +16,7 @@ class ChainExcDemo {
     public static void main(String args[]) {
         try {
             demoproc();
-        } catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             // display top level exception
             System.out.println("Caught: " + e);
 

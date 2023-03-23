@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use find() to find multiple subsequences.
+
 import java.util.regex.*;
 
 class RegExpr3 {
@@ -8,7 +9,7 @@ class RegExpr3 {
         Pattern pat = Pattern.compile("test");
         Matcher mat = pat.matcher("test 1 2 3 test");
 
-        while(mat.find()) {
+        while (mat.find()) {
             System.out.println("test found at index " +
                     mat.start());
         }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.demo.web.controllers;
 
@@ -10,15 +10,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HomeController
-{
-	@Autowired
+public class HomeController {
+    @Autowired
     UserRepository userRepo;
-	
-	@RequestMapping("/")
-	public String home(Model model)
-	{
-		model.addAttribute("users", userRepo.findAll());
-		return "index";
-	}
+
+    @RequestMapping("/")
+    public String home(Model model) {
+        model.addAttribute("users", userRepo.findAll());
+        return "index";
+    }
 }

@@ -1,6 +1,7 @@
 package c32Buttons;
 
 // Demonstrate JScrollPane.
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -18,8 +19,8 @@ public class JScrollPaneDemo {
         jp.setLayout(new GridLayout(20, 20));
 
         int b = 0;
-        for(int i = 0; i < 20; i++) {
-            for(int j = 0; j < 20; j++) {
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
                 jp.add(new JButton("Button " + b));
                 ++b;
             }

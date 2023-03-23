@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use find() to find a subsequence.
+
 import java.util.regex.*;
 
 class RegExpr2 {
@@ -10,7 +11,7 @@ class RegExpr2 {
 
         System.out.println("Looking for Java in Java 9.");
 
-        if(mat.find()) System.out.println("subsequence found");
+        if (mat.find()) System.out.println("subsequence found");
         else System.out.println("No Match");
     }
 }

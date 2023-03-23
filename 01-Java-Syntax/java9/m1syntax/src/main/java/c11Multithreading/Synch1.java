@@ -26,7 +26,7 @@ class Caller1 implements Runnable {
 
     // synchronize calls to call()
     public void run() {
-        synchronized(target) { // synchronized block
+        synchronized (target) { // synchronized block
             target.call(msg);
         }
     }
@@ -49,7 +49,7 @@ class Synch1 {
             ob1.t.join();
             ob2.t.join();
             ob3.t.join();
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println("Interrupted");
         }
     }

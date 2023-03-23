@@ -61,7 +61,7 @@ public class BlobRunner {
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setInt(1, 1);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
+            if (resultSet.next()) {
                 byte[] image = resultSet.getBytes("image");
                 Files.write(Path.of("resources", "boing777_new.jpg"), image, StandardOpenOption.CREATE);
             }

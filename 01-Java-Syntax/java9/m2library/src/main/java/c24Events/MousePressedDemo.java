@@ -1,6 +1,7 @@
 package c24Events;
 
 // This program does NOT use an inner class.
+
 import java.awt.*;
 import java.awt.event.*;
 

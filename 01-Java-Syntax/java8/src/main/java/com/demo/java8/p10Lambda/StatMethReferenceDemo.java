@@ -1,42 +1,47 @@
 package com.demo.java8.p10Lambda;
 
-// Класс со статическими методами:
-class MyClass5{
-   // Методом отображается сообщение:
-   static void show(){
-      System.out.println("Метод класса MyClass5");
-   }
-   // Методом вычисляется сумма чисел:
-   static int sum(int n){
-      int k,s=0;
-      for(k=1;k<=n;k++){
-         s+=k;
-      }
-      return s;
-   }
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+class MyClass5 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    static void show() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ MyClass5");
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+    static int sum(int n) {
+        int k, s = 0;
+        for (k = 1; k <= n; k++) {
+            s += k;
+        }
+        return s;
+    }
 }
-// Первый интерфейс:
-interface MyShow{
-   void myshow();
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface MyShow {
+    void myshow();
 }
-// Второй интерфейс:
-interface MySum{
-   int mysum(int n);
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface MySum {
+    int mysum(int n);
 }
-// Третий интерфейс:
-interface MyPrinter{
-   void myprint(Object t);
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface MyPrinter {
+    void myprint(Object t);
 }
-// Главный класс:
-class StatMethReferenceDemo{
-   // Главный метод:
-   public static void main(String[] args){
-      // Использование ссылок на статические методы:
-      MyShow A=MyClass5::show;
-      MySum B=MyClass5::sum;
-      MyPrinter P=System.out::println;
-      // Вызов методов из интерфейсных переменных:
-      A.myshow();
-      P.myprint("Сумма чисел: "+B.mysum(10));
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class StatMethReferenceDemo {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+        MyShow A = MyClass5::show;
+        MySum B = MyClass5::sum;
+        MyPrinter P = System.out::println;
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        A.myshow();
+        P.myprint("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ: " + B.mysum(10));
+    }
 }

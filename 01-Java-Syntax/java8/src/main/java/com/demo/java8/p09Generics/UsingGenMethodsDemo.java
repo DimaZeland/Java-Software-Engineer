@@ -1,31 +1,34 @@
 package com.demo.java8.p09Generics;
 
-// Класс с обобщенным методом:
-class MyClass6{
-   // Текстовое поле:
-   String name;
-   // Обобщенный метод:
-   <X> void show(X arg){
-      System.out.println(name+": "+arg);
-   }
-   // Конструктор:
-   MyClass6(String txt){
-      name=txt;
-   }
+// пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+class MyClass6 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+    String name;
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+    <X> void show(X arg) {
+        System.out.println(name + ": " + arg);
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    MyClass6(String txt) {
+        name = txt;
+    }
 }
-// Главный класс:
-class UsingGenMethodsDemo{
-   // Главный метод:
-   public static void main(String[] args){
-      // Создание объектов:
-      MyClass6 A=new MyClass6("Объект A");
-      MyClass6 B=new MyClass6("Объект B");
-      // Вызов обобщенных методов из разных объектов:
-      A.show(123);
-      A.show("Alpha");
-      A.show('A');
-      B.show(123);
-      B.show("Bravo");
-      B.show('B');
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class UsingGenMethodsDemo {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        MyClass6 A = new MyClass6("пїЅпїЅпїЅпїЅпїЅпїЅ A");
+        MyClass6 B = new MyClass6("пїЅпїЅпїЅпїЅпїЅпїЅ B");
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        A.show(123);
+        A.show("Alpha");
+        A.show('A');
+        B.show(123);
+        B.show("Bravo");
+        B.show('B');
+    }
 }

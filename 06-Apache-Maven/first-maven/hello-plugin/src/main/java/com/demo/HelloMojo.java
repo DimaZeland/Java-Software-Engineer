@@ -11,8 +11,9 @@ public class HelloMojo extends AbstractMojo {
 
     @Parameter(defaultValue = "Hello from plugin!", property = "hello.message")
     private String message;
+
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
-getLog().info(message);
+        getLog().info(message);
     }
 }

@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use a quantifier.
+
 import java.util.regex.*;
 
 class RegExpr4 {
@@ -8,7 +9,7 @@ class RegExpr4 {
         Pattern pat = Pattern.compile("W+");
         Matcher mat = pat.matcher("W WW WWW");
 
-        while(mat.find())
+        while (mat.find())
             System.out.println("Match: " + mat.group());
     }
 }

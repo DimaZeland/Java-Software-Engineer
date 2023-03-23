@@ -16,7 +16,7 @@ class MyClass2 {
     }
 
     // give a and b default values of 0
-    MyClass2( ) {
+    MyClass2() {
         this(0); // invokes MyClass(0)
     }
 }

@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate Lists.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -59,7 +60,7 @@ public class ListDemo extends Frame implements ActionListener {
 
         msg = "Current OS: ";
         idx = os.getSelectedIndexes();
-        for(int i=0; i<idx.length; i++)
+        for (int i = 0; i < idx.length; i++)
             msg += os.getItem(idx[i]) + "  ";
         g.drawString(msg, 6, 120);
         msg = "Current Browser: ";

@@ -20,11 +20,11 @@ public class FlightService {
         return flightDao.findAll().stream()
                 .map(flight -> FlightDto.builder()
                         .id(flight.getId())
-                                .description(
-                        """
-                            %s - %s - %s
-                        """.formatted(flight.getDepartureAirportCode(), flight.getArrivalAirportCode(), flight.getStatus())
-                ).build()
+                        .description(
+                                """
+                                            %s - %s - %s
+                                        """.formatted(flight.getDepartureAirportCode(), flight.getArrivalAirportCode(), flight.getStatus())
+                        ).build()
                 )
                 .collect(toList());
     }

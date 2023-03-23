@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate GridLayout
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -14,10 +15,10 @@ public class GridLayoutDemo extends Frame {
 
         setFont(new Font("SansSerif", Font.BOLD, 24));
 
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < n; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
                 int k = i * n + j;
-                if(k > 0)
+                if (k > 0)
                     add(new Button("" + k));
             }
         }

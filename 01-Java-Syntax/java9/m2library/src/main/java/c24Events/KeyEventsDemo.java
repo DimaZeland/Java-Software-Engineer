@@ -1,6 +1,7 @@
 package c24Events;
 
 // Demonstrate some virutal key codes.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -20,7 +21,7 @@ public class KeyEventsDemo extends Frame
         keyState = "Key Down";
 
         int key = ke.getKeyCode();
-        switch(key) {
+        switch (key) {
             case KeyEvent.VK_F1:
                 msg += "<F1>";
                 break;

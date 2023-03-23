@@ -1,12 +1,14 @@
 package c12Annotations;
 
 // Show all annotations for a class and a method.
+
 import java.lang.annotation.*;
 import java.lang.reflect.*;
 
 @Retention(RetentionPolicy.RUNTIME)
 @interface MyAnno2 {
     String str();
+
     int val();
 }
 
@@ -29,17 +31,17 @@ class Meta2 {
 
             // Display all annotations for Meta2.
             System.out.println("All annotations for Meta2:");
-            for(Annotation a : annos)
+            for (Annotation a : annos)
                 System.out.println(a);
 
             System.out.println();
 
             // Display all annotations for myMeth.
-            Method m = ob.getClass( ).getMethod("myMeth");
+            Method m = ob.getClass().getMethod("myMeth");
             annos = m.getAnnotations();
 
             System.out.println("All annotations for myMeth:");
-            for(Annotation a : annos)
+            for (Annotation a : annos)
                 System.out.println(a);
 
         } catch (NoSuchMethodException exc) {

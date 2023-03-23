@@ -1,6 +1,7 @@
 package c39Applets;
 
 // An AWT-based Applet skeleton.
+
 import java.awt.*;
 import java.applet.*;
 /*

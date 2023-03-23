@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use split().
+
 import java.util.regex.*;
 
 class RegExpr9 {
@@ -11,7 +12,7 @@ class RegExpr9 {
 
         String strs[] = pat.split("one two,alpha9 12!done.");
 
-        for(int i=0; i < strs.length; i++)
+        for (int i = 0; i < strs.length; i++)
             System.out.println("Next token: " + strs[i]);
 
     }

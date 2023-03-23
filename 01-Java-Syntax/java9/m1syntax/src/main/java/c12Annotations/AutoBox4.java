@@ -3,7 +3,8 @@ package c12Annotations;
 class AutoBox4 {
     public static void main(String args[]) {
 
-        Integer iOb = 100;;
+        Integer iOb = 100;
+        ;
         Double dOb = 98.6;
 
 

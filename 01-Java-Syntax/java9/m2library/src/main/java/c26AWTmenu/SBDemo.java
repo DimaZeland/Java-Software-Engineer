@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate scroll bars.
+
 import java.awt.*;
 import java.awt.event.*;
 

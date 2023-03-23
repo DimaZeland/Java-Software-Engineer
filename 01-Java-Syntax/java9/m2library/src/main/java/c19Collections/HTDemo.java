@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate a Hashtable.
+
 import java.util.*;
 
 class HTDemo {
@@ -20,7 +21,7 @@ class HTDemo {
 
         // Show all balances in hashtable.
         names = balance.keys();
-        while(names.hasMoreElements()) {
+        while (names.hasMoreElements()) {
             str = names.nextElement();
             System.out.println(str + ": " +
                     balance.get(str));
@@ -30,7 +31,7 @@ class HTDemo {
 
         // Deposit 1,000 into John Doe's account.
         bal = balance.get("John Doe");
-        balance.put("John Doe", bal+1000);
+        balance.put("John Doe", bal + 1000);
         System.out.println("John Doe's new balance: " +
                 balance.get("John Doe"));
     }

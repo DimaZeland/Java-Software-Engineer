@@ -1,6 +1,7 @@
 package c25AWTwindows;
 
 // Demonstrate color.
+
 import java.awt.*;
 import java.awt.event.*;
 

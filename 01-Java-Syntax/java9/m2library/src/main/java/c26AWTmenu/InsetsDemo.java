@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate BorderLayout with insets.
+
 import java.awt.*;
 import java.awt.event.*;
 

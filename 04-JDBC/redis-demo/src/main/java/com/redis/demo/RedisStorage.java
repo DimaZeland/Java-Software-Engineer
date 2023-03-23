@@ -31,7 +31,7 @@ public class RedisStorage {
     // Пример вывода всех ключей
     public void listKeys() {
         Iterable<String> keys = rKeys.getKeys();
-        for(String key: keys) {
+        for (String key : keys) {
             out.println("KEY: " + key + ", type:" + rKeys.getType(key));
         }
     }
@@ -55,22 +55,20 @@ public class RedisStorage {
     }
 
     // Фиксирует посещение пользователем страницы
-    void logPageVisit(int user_id)
-    {
+    void logPageVisit(int user_id) {
         //ZADD ONLINE_USERS
         onlineUsers.add(getTs(), String.valueOf(user_id));
     }
 
     // Удаляет
-    void deleteOldEntries(int secondsAgo)
-    {
+    void deleteOldEntries(int secondsAgo) {
         //ZREVRANGEBYSCORE ONLINE_USERS 0 <time_5_seconds_ago>
         onlineUsers.removeRangeByScore(0, true, getTs() - secondsAgo, true);
 
 
     }
-    int calculateUsersNumber()
-    {
+
+    int calculateUsersNumber() {
         //ZCOUNT ONLINE_USERS
         return onlineUsers.count(Double.NEGATIVE_INFINITY, true, Double.POSITIVE_INFINITY, true);
     }

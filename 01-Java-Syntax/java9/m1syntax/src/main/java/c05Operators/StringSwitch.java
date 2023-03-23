@@ -7,7 +7,7 @@ class StringSwitch {
 
         String str = "two";
 
-        switch(str) {
+        switch (str) {
             case "one":
                 System.out.println("one");
                 break;

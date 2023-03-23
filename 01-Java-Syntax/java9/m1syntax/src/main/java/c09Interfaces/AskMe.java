@@ -13,6 +13,7 @@ interface SharedConstants {
 
 class Question implements SharedConstants {
     Random rand = new Random();
+
     int ask() {
         int prob = (int) (100 * rand.nextDouble());
         if (prob < 30)
@@ -30,7 +31,7 @@ class Question implements SharedConstants {
 
 class AskMe implements SharedConstants {
     static void answer(int result) {
-        switch(result) {
+        switch (result) {
             case NO:
                 System.out.println("No");
                 break;

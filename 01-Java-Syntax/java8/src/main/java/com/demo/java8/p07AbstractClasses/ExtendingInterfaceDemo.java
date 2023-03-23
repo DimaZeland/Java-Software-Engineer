@@ -1,55 +1,66 @@
 package com.demo.java8.p07AbstractClasses;
-// Наследуемый интерфейс:
-interface First1{
-   // Метод с кодом по умолчанию:
-   default void alpha(){
-      System.out.println("Интерфейс First: метод alpha()");
-   }
-   // Метод с кодом по умолчанию:
-   default void bravo(){
-      System.out.println("Интерфейс First: метод bravo()");
-   }
-   // Метод с кодом по умолчанию:
-   default void charlie(){
-      System.out.println("Интерфейс First: метод charlie()");
-   }
-   // Метод без кода по умолчанию:
-   void delta();
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface First1 {
+    // пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void alpha() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First: пїЅпїЅпїЅпїЅпїЅ alpha()");
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void bravo() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First: пїЅпїЅпїЅпїЅпїЅ bravo()");
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void charlie() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First: пїЅпїЅпїЅпїЅпїЅ charlie()");
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    void delta();
 }
-// Интерфейс-наследник:
-interface Second1 extends First1{
-   // Объявление метода:
-   void bravo();
-   // Метод с кодом по умолчанию:
-   default void charlie(){
-      System.out.println("Интерфейс Second: метод charlie()");
-   }
-   // Объявление метода:
-   void echo();
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface Second1 extends First1 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    void bravo();
+
+    // пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void charlie() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Second: пїЅпїЅпїЅпїЅпїЅ charlie()");
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    void echo();
 }
-// Класс реализует интерфейс:
-class MyClass1 implements Second1{
-   // Описание методов:
-   public void bravo(){
-      System.out.println("Класс MyClass: метод bravo()");
-   }
-   public void delta(){
-      System.out.println("Класс MyClass: метод delta()");
-   }
-   public void echo(){
-      System.out.println("Класс MyClass: метод echo()");
-   }
+
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+class MyClass1 implements Second1 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    public void bravo() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ MyClass: пїЅпїЅпїЅпїЅпїЅ bravo()");
+    }
+
+    public void delta() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ MyClass: пїЅпїЅпїЅпїЅпїЅ delta()");
+    }
+
+    public void echo() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ MyClass: пїЅпїЅпїЅпїЅпїЅ echo()");
+    }
 }
-// Главный класс:
-class ExtendingInterfaceDemo{
-   public static void main(String[] args){
-      // Создание объекта:
-      MyClass1 obj=new MyClass1();
-      // Вызов методов:
-      obj.alpha();
-      obj.bravo();
-      obj.charlie();
-      obj.delta();
-      obj.echo();
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class ExtendingInterfaceDemo {
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        MyClass1 obj = new MyClass1();
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        obj.alpha();
+        obj.bravo();
+        obj.charlie();
+        obj.delta();
+        obj.echo();
+    }
 }

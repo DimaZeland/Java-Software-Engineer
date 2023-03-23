@@ -14,7 +14,7 @@ import lombok.Value;
 public final class FlightDto {
 
     Long id;
-     String description;
+    String description;
 
 //    public FlightDto(Long id, String description) {
 //        this.id = id;

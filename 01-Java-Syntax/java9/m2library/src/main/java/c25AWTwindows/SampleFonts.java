@@ -1,6 +1,7 @@
 package c25AWTwindows;
 
 // Display fonts.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -47,7 +48,7 @@ class MyMouseAdapter extends MouseAdapter {
         // Switch fonts with each mouse click.
         sampleFonts.next++;
 
-        switch(sampleFonts.next) {
+        switch (sampleFonts.next) {
             case 0:
                 sampleFonts.f = new Font("Dialog", Font.PLAIN, 12);
                 sampleFonts.msg = "Dialog";
@@ -70,7 +71,7 @@ class MyMouseAdapter extends MouseAdapter {
                 break;
         }
 
-        if(sampleFonts.next == 4) sampleFonts.next = -1;
+        if (sampleFonts.next == 4) sampleFonts.next = -1;
         sampleFonts.setFont(sampleFonts.f);
         sampleFonts.repaint();
     }

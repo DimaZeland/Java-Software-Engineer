@@ -1,6 +1,7 @@
 package c28Parallelism;
 
 // A simple example that uses RecursiveTask<V>.
+
 import java.util.concurrent.*;
 
 // A RecursiveTask that computes the summation of an array of doubles.
@@ -15,7 +16,7 @@ class Sum1 extends RecursiveTask<Double> {
     // Deterines what part of data to process.
     int start, end;
 
-    Sum1(double[] vals, int s, int e ) {
+    Sum1(double[] vals, int s, int e) {
         data = vals;
         start = s;
         end = e;
@@ -27,11 +28,10 @@ class Sum1 extends RecursiveTask<Double> {
 
         // If number of elements is below the sequential threshold,
         // then process sequentially.
-        if((end - start) < seqThresHold) {
+        if ((end - start) < seqThresHold) {
             // Sum the elements.
-            for(int i = start; i < end; i++) sum += data[i];
-        }
-        else {
+            for (int i = start; i < end; i++) sum += data[i];
+        } else {
             // Otherwise, continue to break the data into smaller peices.
 
             // Find the midpoint.
@@ -63,8 +63,8 @@ class RecurTaskDemo {
 
         // Initialize nums with values that alternate between
         // positive and negative.
-        for(int i=0; i < nums.length; i++)
-            nums[i] = (double) (((i%2) == 0) ? i : -i) ;
+        for (int i = 0; i < nums.length; i++)
+            nums[i] = (double) (((i % 2) == 0) ? i : -i);
 
         Sum1 task = new Sum1(nums, 0, nums.length);
 

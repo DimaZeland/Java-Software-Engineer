@@ -19,7 +19,7 @@ class OverloadDemo {
     // overload test for a double parameter
     double test(double a) {
         System.out.println("double a: " + a);
-        return a*a;
+        return a * a;
     }
 }
 

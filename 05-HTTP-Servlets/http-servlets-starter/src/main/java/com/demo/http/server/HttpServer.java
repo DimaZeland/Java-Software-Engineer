@@ -24,7 +24,7 @@ public class HttpServer {
     public void run() {
         try {
             ServerSocket server = new ServerSocket(port);
-            while(!stopped) {
+            while (!stopped) {
                 Socket socket = server.accept();
                 System.out.println("Socket accepted");
                 pool.submit(() -> processSocket(socket));
@@ -37,7 +37,7 @@ public class HttpServer {
     private void processSocket(Socket socket) {
         try (socket;
              DataInputStream inputStream = new DataInputStream(socket.getInputStream());
-             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream())){
+             DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream())) {
             // step 1 handle request
             System.out.println("Request: " + new String(inputStream.readNBytes(400)));
 

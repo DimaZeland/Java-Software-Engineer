@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate HashSet.
+
 import java.util.*;
 
 class HashSetDemo {

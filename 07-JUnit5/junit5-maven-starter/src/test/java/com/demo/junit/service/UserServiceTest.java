@@ -68,7 +68,7 @@ public class UserServiceTest extends TestBase {
     private static final User IVAN = User.of(1, "Ivan", "123");
     private static final User PETR = User.of(2, "Petr", "111");
 
-//    @Rule
+    //    @Rule
 //    ExpectedException
     @Captor
     private ArgumentCaptor<Integer> argumentCaptor;
@@ -204,7 +204,7 @@ public class UserServiceTest extends TestBase {
             assertTrue(maybeUser.isEmpty());
         }
 
-//        @Test
+        //        @Test
         @RepeatedTest(value = 5, name = RepeatedTest.LONG_DISPLAY_NAME)
         void loginFailIfUserDoesNotExist(RepetitionInfo repetitionInfo) {
             userService.add(IVAN);
@@ -219,9 +219,9 @@ public class UserServiceTest extends TestBase {
             System.out.println(Thread.currentThread().getName());
             var result = assertTimeoutPreemptively(Duration.ofMillis(200L), () -> {
                 System.out.println(Thread.currentThread().getName());
-               // Thread.sleep(300L);
+                // Thread.sleep(300L);
                 Thread.sleep(100L);
-                return  userService.login("dummy", IVAN.getPassword());
+                return userService.login("dummy", IVAN.getPassword());
             });
         }
 
@@ -239,7 +239,7 @@ public class UserServiceTest extends TestBase {
         }
 
         @Test
-    @org.junit.Test(expected = IllegalArgumentException.class)
+        @org.junit.Test(expected = IllegalArgumentException.class)
         void throwExceptionIfUsernameOrPasswordIsNull() {
             assertAll(
                     () -> {

@@ -1,3 +1,5 @@
-sealed class Point {}
+sealed class Point {
+}
 
-final class Pointless extends Point {}
+final class Pointless extends Point {
+}

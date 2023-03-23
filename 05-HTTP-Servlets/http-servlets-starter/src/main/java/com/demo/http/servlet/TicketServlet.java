@@ -21,7 +21,7 @@ public class TicketServlet extends HttpServlet {
         req.setAttribute("tickets", ticketService.findAllByFlightId(flightId));
 
         req.getRequestDispatcher(JspHelper.getPath("tickets"))
-                .forward(req,resp);
+                .forward(req, resp);
 
 //        resp.setContentType("text/html");
 //        resp.setCharacterEncoding(StandardCharsets.UTF_8.name());

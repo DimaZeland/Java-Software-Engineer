@@ -10,7 +10,7 @@ class StreamDemo3 {
     public static void main(String[] args) {
 
         // This is now a list of double values.
-        ArrayList<Double> myList = new ArrayList<>( );
+        ArrayList<Double> myList = new ArrayList<>();
 
         myList.add(7.0);
         myList.add(18.0);
@@ -21,8 +21,8 @@ class StreamDemo3 {
 
         double productOfSqrRoots = myList.parallelStream().reduce(
                 1.0,
-                (a,b) -> a * Math.sqrt(b),
-                (a,b) -> a * b
+                (a, b) -> a * Math.sqrt(b),
+                (a, b) -> a * b
         );
 
         System.out.println("Product of square roots: " + productOfSqrRoots);

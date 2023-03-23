@@ -11,10 +11,9 @@ class PushbackInputStreamDemo {
         ByteArrayInputStream in = new ByteArrayInputStream(buf);
         int c;
 
-        try ( PushbackInputStream f = new PushbackInputStream(in) )
-        {
+        try (PushbackInputStream f = new PushbackInputStream(in)) {
             while ((c = f.read()) != -1) {
-                switch(c) {
+                switch (c) {
                     case '=':
                         if ((c = f.read()) == '=')
                             System.out.print(".eq.");
@@ -28,7 +27,7 @@ class PushbackInputStreamDemo {
                         break;
                 }
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("I/O Error: " + e);
         }
     }

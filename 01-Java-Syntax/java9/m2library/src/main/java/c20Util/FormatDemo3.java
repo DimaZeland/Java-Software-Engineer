@@ -1,6 +1,7 @@
 package c20Util;
 
 // Demonstrate the %n and %% format specifiers.
+
 import java.util.*;
 
 class FormatDemo3 {

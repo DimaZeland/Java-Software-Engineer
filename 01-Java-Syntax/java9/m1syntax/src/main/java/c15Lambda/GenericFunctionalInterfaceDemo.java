@@ -8,15 +8,14 @@ interface SomeFunc<T> {
 }
 
 class GenericFunctionalInterfaceDemo {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
 
         // Use a String-based version of SomeFunc.
-        SomeFunc<String> reverse = (str) ->  {
+        SomeFunc<String> reverse = (str) -> {
             String result = "";
             int i;
 
-            for(i = str.length()-1; i >= 0; i--)
+            for (i = str.length() - 1; i >= 0; i--)
                 result += str.charAt(i);
 
             return result;
@@ -28,10 +27,10 @@ class GenericFunctionalInterfaceDemo {
                 reverse.func("Expression"));
 
         // Now, use an Integer-based version of SomeFunc.
-        SomeFunc<Integer> factorial = (n) ->  {
+        SomeFunc<Integer> factorial = (n) -> {
             int result = 1;
 
-            for(int i=1; i <= n; i++)
+            for (int i = 1; i <= n; i++)
                 result = i * result;
 
             return result;

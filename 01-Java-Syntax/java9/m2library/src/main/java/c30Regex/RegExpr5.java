@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use wildcard and quantifier.
+
 import java.util.regex.*;
 
 class RegExpr5 {
@@ -8,7 +9,7 @@ class RegExpr5 {
         Pattern pat = Pattern.compile("e.+d");
         Matcher mat = pat.matcher("extend cup end table");
 
-        while(mat.find())
+        while (mat.find())
             System.out.println("Match: " + mat.group());
     }
 }

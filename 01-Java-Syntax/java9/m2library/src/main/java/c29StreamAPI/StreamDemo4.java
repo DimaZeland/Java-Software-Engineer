@@ -10,7 +10,7 @@ class StreamDemo4 {
     public static void main(String[] args) {
 
         // A list of double values.
-        ArrayList<Double> myList = new ArrayList<>( );
+        ArrayList<Double> myList = new ArrayList<>();
 
         myList.add(7.0);
         myList.add(18.0);
@@ -23,7 +23,7 @@ class StreamDemo4 {
         Stream<Double> sqrtRootStrm = myList.stream().map((a) -> Math.sqrt(a));
 
         // Find the product to the square roots.
-        double productOfSqrRoots = sqrtRootStrm.reduce(1.0, (a,b) -> a*b);
+        double productOfSqrRoots = sqrtRootStrm.reduce(1.0, (a, b) -> a * b);
 
         System.out.println("Product of square roots is " + productOfSqrRoots);
     }

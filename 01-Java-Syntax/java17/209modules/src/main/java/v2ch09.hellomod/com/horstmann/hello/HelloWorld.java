@@ -7,10 +7,8 @@ java --module-path v2ch09.hellomod --module v2ch09.hellomod/com.horstmann.hello.
 
 */
 
-public class HelloWorld
-{
-   public static void main(String[] args)
-   {
-      System.out.println("Hello, Modular World!");
-   }
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Modular World!");
+    }
 }

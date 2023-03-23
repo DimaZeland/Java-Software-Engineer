@@ -13,7 +13,7 @@ public class SocketRunner {
              DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream());
              DataInputStream inputStream = new DataInputStream(socket.getInputStream());
              Scanner scanner = new Scanner(System.in)) {
-            while (scanner.hasNext()){
+            while (scanner.hasNext()) {
                 String request = scanner.nextLine();
                 outputStream.writeUTF(request);
                 System.out.println("Response from server: " + inputStream.readUTF());

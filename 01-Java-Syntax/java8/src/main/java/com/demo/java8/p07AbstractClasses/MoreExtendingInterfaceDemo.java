@@ -1,39 +1,44 @@
 package com.demo.java8.p07AbstractClasses;
-// Первый интерфейс:
-interface First3{
-   // Описание метода:
-   default void alpha(){
-      System.out.println("Интерфейс First: метод alpha()");
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface First3 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void alpha() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First: пїЅпїЅпїЅпїЅпїЅ alpha()");
+    }
 }
-// Второй интерфейс:
-interface Second3 extends First3{
-   // Описание методов:
-   default void alpha(){
-      // Вызов версии метода из интерфейса First:
-      First3.super.alpha();
-      System.out.println("Интерфейс Bravo: метод alpha()");
-   }
-   default void bravo(){
-      System.out.println("Интерфейс Bravo: метод bravo()");
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface Second3 extends First3 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void alpha() {
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First:
+        First3.super.alpha();
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Bravo: пїЅпїЅпїЅпїЅпїЅ alpha()");
+    }
+
+    default void bravo() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Bravo: пїЅпїЅпїЅпїЅпїЅ bravo()");
+    }
 }
-// Класс реализует интерфейс:
-class MyClass3 implements Second3{
-   // Описание метода:
-   public void bravo(){
-      // Вызов версии метода из интерфейса Second:
-      Second3.super.bravo();
-      System.out.println("Класс MyClass: метод bravo()");
-   }
+
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+class MyClass3 implements Second3 {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    public void bravo() {
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Second:
+        Second3.super.bravo();
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ MyClass: пїЅпїЅпїЅпїЅпїЅ bravo()");
+    }
 }
-// Главный класс:
-class MoreExtendingInterfaceDemo{
-   public static void main(String[] args){
-      // Создание объекта:
-      MyClass3 obj=new MyClass3();
-      // Вызов методов:
-      obj.alpha();
-      obj.bravo();
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class MoreExtendingInterfaceDemo {
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        MyClass3 obj = new MyClass3();
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        obj.alpha();
+        obj.bravo();
+    }
 }

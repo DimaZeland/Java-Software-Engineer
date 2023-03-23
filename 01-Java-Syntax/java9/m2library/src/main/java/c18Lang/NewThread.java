@@ -13,11 +13,11 @@ class NewThread extends Thread {
     // This is the entry point for thread.
     public void run() {
         try {
-            for(int i = 5; i > 0; i--) {
+            for (int i = 5; i > 0; i--) {
                 System.out.println(getName() + ": " + i);
                 Thread.sleep(1000);
-                synchronized(this) {
-                    while(suspendFlag) {
+                synchronized (this) {
+                    while (suspendFlag) {
                         wait();
                     }
                 }
@@ -61,8 +61,8 @@ class ThreadGroupDemo {
         System.out.println("Suspending Group A");
         Thread tga[] = new Thread[groupA.activeCount()];
         groupA.enumerate(tga); // get threads in group
-        for(int i = 0; i < tga.length; i++) {
-            ((NewThread)tga[i]).mysuspend(); // suspend each thread
+        for (int i = 0; i < tga.length; i++) {
+            ((NewThread) tga[i]).mysuspend(); // suspend each thread
         }
 
         try {
@@ -72,8 +72,8 @@ class ThreadGroupDemo {
         }
 
         System.out.println("Resuming Group A");
-        for(int i = 0; i < tga.length; i++) {
-            ((NewThread)tga[i]).myresume(); // resume threads in group
+        for (int i = 0; i < tga.length; i++) {
+            ((NewThread) tga[i]).myresume(); // resume threads in group
         }
 
         // wait for threads to finish

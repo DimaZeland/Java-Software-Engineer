@@ -39,14 +39,14 @@ class SequenceInputStreamDemo {
         try {
             while ((c = input.read()) != -1)
                 System.out.print((char) c);
-        } catch(NullPointerException e) {
+        } catch (NullPointerException e) {
             System.out.println("Error Opening File.");
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("I/O Error: " + e);
         } finally {
             try {
                 input.close();
-            } catch(IOException e) {
+            } catch (IOException e) {
                 System.out.println("Error Closing SequenceInputStream");
             }
         }

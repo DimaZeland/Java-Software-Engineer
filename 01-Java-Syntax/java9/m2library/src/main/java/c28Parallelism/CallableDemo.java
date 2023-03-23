@@ -23,8 +23,7 @@ class CallableDemo {
             System.out.println(f3.get());
         } catch (InterruptedException exc) {
             System.out.println(exc);
-        }
-        catch (ExecutionException exc) {
+        } catch (ExecutionException exc) {
             System.out.println(exc);
         }
 
@@ -38,11 +37,13 @@ class CallableDemo {
 class Sum implements Callable<Integer> {
     int stop;
 
-    Sum(int v) { stop = v; }
+    Sum(int v) {
+        stop = v;
+    }
 
     public Integer call() {
         int sum = 0;
-        for(int i = 1; i <= stop; i++) {
+        for (int i = 1; i <= stop; i++) {
             sum += i;
         }
         return sum;
@@ -58,7 +59,7 @@ class Hypot implements Callable<Double> {
     }
 
     public Double call() {
-        return Math.sqrt((side1*side1) + (side2*side2));
+        return Math.sqrt((side1 * side1) + (side2 * side2));
     }
 }
 
@@ -66,11 +67,13 @@ class Hypot implements Callable<Double> {
 class Factorial implements Callable<Integer> {
     int stop;
 
-    Factorial(int v) { stop = v; }
+    Factorial(int v) {
+        stop = v;
+    }
 
     public Integer call() {
         int fact = 1;
-        for(int i = 2; i <= stop; i++) {
+        for (int i = 2; i <= stop; i++) {
             fact *= i;
         }
         return fact;

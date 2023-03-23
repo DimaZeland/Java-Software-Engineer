@@ -1,22 +1,24 @@
 package com.demo.java8.p13GUI;
 
-// Импорт класса JFrame:
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ JFrame:
+
 import javax.swing.JFrame;
-// Главный класс:
-class JustAWindowDemo{
-   // Главный метод:
-   public static void main(String[] args){
-      // Создание объекта окна:
-      JFrame wnd=new JFrame("Обычное окно");
-      // Размеры окна:
-      wnd.setSize(300,200);
-      // Положение окна на экране:
-      wnd.setLocation(250,250);
-      // Окно постоянных размеров:
-      wnd.setResizable(false);
-      // Реакция на щелчок системной пиктограммы:
-      wnd.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      // Отображение окна на экране:
-      wnd.setVisible(true);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class JustAWindowDemo {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+        JFrame wnd = new JFrame("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+        wnd.setSize(300, 200);
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+        wnd.setLocation(250, 250);
+        // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        wnd.setResizable(false);
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        wnd.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+        wnd.setVisible(true);
+    }
 }

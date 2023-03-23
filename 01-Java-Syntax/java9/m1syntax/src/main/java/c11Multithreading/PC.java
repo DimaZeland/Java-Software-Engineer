@@ -6,11 +6,11 @@ class Q {
     boolean valueSet = false;
 
     synchronized int get() {
-        while(!valueSet)
+        while (!valueSet)
             try {
                 wait();
 
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println("InterruptedException caught");
             }
 
@@ -21,10 +21,10 @@ class Q {
     }
 
     synchronized void put(int n) {
-        while(valueSet)
+        while (valueSet)
             try {
                 wait();
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println("InterruptedException caught");
             }
 
@@ -47,7 +47,7 @@ class Producer implements Runnable {
     public void run() {
         int i = 0;
 
-        while(true) {
+        while (true) {
             q.put(i++);
         }
     }
@@ -63,7 +63,7 @@ class Consumer implements Runnable {
     }
 
     public void run() {
-        while(true) {
+        while (true) {
             q.get();
         }
     }

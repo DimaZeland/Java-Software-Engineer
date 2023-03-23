@@ -47,7 +47,7 @@ public class ComboBoxDemo extends Application {
 
         // Create an ObservableList of entries for the combo box.
         ObservableList<String> transportTypes =
-                FXCollections.observableArrayList( "Train", "Car", "Airplane" );
+                FXCollections.observableArrayList("Train", "Car", "Airplane");
 
         // Create a combo box.
         cbTransport = new ComboBox<String>(transportTypes);

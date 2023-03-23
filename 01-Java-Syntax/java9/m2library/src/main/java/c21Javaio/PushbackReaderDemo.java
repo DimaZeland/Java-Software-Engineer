@@ -13,10 +13,9 @@ class PushbackReaderDemo {
 
         int c;
 
-        try ( PushbackReader f = new PushbackReader(in) )
-        {
+        try (PushbackReader f = new PushbackReader(in)) {
             while ((c = f.read()) != -1) {
-                switch(c) {
+                switch (c) {
                     case '=':
                         if ((c = f.read()) == '=')
                             System.out.print(".eq.");
@@ -30,7 +29,7 @@ class PushbackReaderDemo {
                         break;
                 }
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("I/O Error: " + e);
         }
     }

@@ -1,7 +1,9 @@
 package c37JavaBeans;
 
 // A Bean information class.
+
 import java.beans.*;
+
 public class ColorsBeanInfo extends SimpleBeanInfo {
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {
@@ -9,8 +11,7 @@ public class ColorsBeanInfo extends SimpleBeanInfo {
                     PropertyDescriptor("rectangular", Colors.class);
             PropertyDescriptor pd[] = {rectangular};
             return pd;
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Exception caught. " + e);
         }
         return null;

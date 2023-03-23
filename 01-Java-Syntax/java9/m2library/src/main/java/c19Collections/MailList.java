@@ -1,6 +1,7 @@
 package c19Collections;
 
 // A simple mailing list example.
+
 import java.util.*;
 
 class Address {
@@ -38,7 +39,7 @@ class MailList {
                 "Champaign", "IL", "61820"));
 
         // Display the mailing list.
-        for(Address element : ml)
+        for (Address element : ml)
             System.out.println(element + "\n");
 
         System.out.println();

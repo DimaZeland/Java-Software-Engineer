@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Illustrate a dialog box.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -12,7 +13,7 @@ class DialogDemo extends Frame {
     public DialogDemo() {
 
         // Create the dialog box.
-        myDialog  = new SampleDialog(this, "New Dialog Box");
+        myDialog = new SampleDialog(this, "New Dialog Box");
 
         // Create menu bar and add it to frame.
         MenuBar mbar = new MenuBar();
@@ -81,12 +82,12 @@ class DialogDemo extends Frame {
     public void paint(Graphics g) {
         g.drawString(msg, 10, 220);
 
-        if(debug.getState())
+        if (debug.getState())
             g.drawString("Debug is on.", 10, 240);
         else
             g.drawString("Debug is off.", 10, 240);
 
-        if(test.getState())
+        if (test.getState())
             g.drawString("Testing is on.", 10, 260);
         else
             g.drawString("Testing is off.", 10, 260);
@@ -109,31 +110,30 @@ class DialogDemo extends Frame {
             msg = "You selected ";
             String arg = ae.getActionCommand();
 
-            if(arg.equals("New...")) {
+            if (arg.equals("New...")) {
                 msg += "New.";
                 myDialog.setVisible(true);
-            }
-            else if(arg.equals("Open..."))
+            } else if (arg.equals("Open..."))
                 msg += "Open.";
-            else if(arg.equals("Close"))
+            else if (arg.equals("Close"))
                 msg += "Close.";
-            else if(arg.equals("Edit"))
+            else if (arg.equals("Edit"))
                 msg += "Edit.";
-            else if(arg.equals("Cut"))
+            else if (arg.equals("Cut"))
                 msg += "Cut.";
-            else if(arg.equals("Copy"))
+            else if (arg.equals("Copy"))
                 msg += "Copy.";
-            else if(arg.equals("Paste"))
+            else if (arg.equals("Paste"))
                 msg += "Paste.";
-            else if(arg.equals("First"))
+            else if (arg.equals("First"))
                 msg += "First.";
-            else if(arg.equals("Second"))
+            else if (arg.equals("Second"))
                 msg += "Second.";
-            else if(arg.equals("Third"))
+            else if (arg.equals("Third"))
                 msg += "Third.";
-            else if(arg.equals("Debug"))
+            else if (arg.equals("Debug"))
                 msg += "Debug.";
-            else if(arg.equals("Testing"))
+            else if (arg.equals("Testing"))
                 msg += "Testing.";
 
             repaint();

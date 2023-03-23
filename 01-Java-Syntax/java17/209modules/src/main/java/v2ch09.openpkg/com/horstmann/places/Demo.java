@@ -12,14 +12,13 @@ Remove the opens clause in the module descriptor and recompile/run to
 see the failure
 
 */
+
 import com.horstmann.util.com.horstmann.util.ObjectAnalyzer;
 
-public class Demo
-{
-   public static void main(String[] args) throws ReflectiveOperationException
-   {
-      Country belgium = new Country("Belgium", 30510);
-      ObjectAnalyzer analyzer = new ObjectAnalyzer();
-      System.out.println(analyzer.toString(belgium));
-   }
+public class Demo {
+    public static void main(String[] args) throws ReflectiveOperationException {
+        Country belgium = new Country("Belgium", 30510);
+        ObjectAnalyzer analyzer = new ObjectAnalyzer();
+        System.out.println(analyzer.toString(belgium));
+    }
 }

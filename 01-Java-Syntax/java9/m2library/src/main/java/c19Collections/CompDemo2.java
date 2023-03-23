@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Use a lambda expression to create a reverse comparator.
+
 import java.util.*;
 
 class CompDemo2 {
@@ -20,7 +21,7 @@ class CompDemo2 {
         ts.add("D");
 
         // Display the elements.
-        for(String element : ts)
+        for (String element : ts)
             System.out.print(element + " ");
 
         System.out.println();

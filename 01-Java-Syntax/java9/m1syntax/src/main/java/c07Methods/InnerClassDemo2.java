@@ -12,6 +12,7 @@ class Outer2 {
     // this is an innner class
     class Inner {
         int y = 10; // y is local to Inner
+
         void display() {
             System.out.println("display: outer_x = " + outer_x);
         }

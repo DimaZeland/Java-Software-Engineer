@@ -1,6 +1,7 @@
 package c37JavaBeans;
 
 // Show properties and events.
+
 import java.awt.*;
 import java.beans.*;
 
@@ -13,18 +14,17 @@ public class IntrospectorDemo {
             System.out.println("Properties:");
             PropertyDescriptor propertyDescriptor[] =
                     beanInfo.getPropertyDescriptors();
-            for(int i = 0; i < propertyDescriptor.length; i++) {
+            for (int i = 0; i < propertyDescriptor.length; i++) {
                 System.out.println("\t" + propertyDescriptor[i].getName());
             }
 
             System.out.println("Events:");
             EventSetDescriptor eventSetDescriptor[] =
                     beanInfo.getEventSetDescriptors();
-            for(int i = 0; i < eventSetDescriptor.length; i++) {
+            for (int i = 0; i < eventSetDescriptor.length; i++) {
                 System.out.println("\t" + eventSetDescriptor[i].getName());
             }
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Exception caught. " + e);
         }
     }

@@ -5,7 +5,8 @@ import java.lang.reflect.*;
 
 // A marker annotation.
 @Retention(RetentionPolicy.RUNTIME)
-@interface MyMarker { }
+@interface MyMarker {
+}
 
 class Marker {
 
@@ -19,7 +20,7 @@ class Marker {
             Method m = ob.getClass().getMethod("myMeth");
 
             // Determine if the annotation is present.
-            if(m.isAnnotationPresent(MyMarker.class))
+            if (m.isAnnotationPresent(MyMarker.class))
                 System.out.println("MyMarker is present.");
 
         } catch (NoSuchMethodException exc) {

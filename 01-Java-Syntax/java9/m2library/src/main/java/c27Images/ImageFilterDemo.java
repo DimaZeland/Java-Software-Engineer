@@ -1,6 +1,7 @@
 package c27Images;
 
 // Demonstrate image filters.
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.imageio.*;
@@ -17,8 +18,8 @@ public class ImageFilterDemo extends Frame implements ActionListener {
     Button reset;
 
     // Names of the filters.
-    String[] filters = { "Grayscale", "Invert", "Contrast",
-            "Blur", "Sharpen" };
+    String[] filters = {"Grayscale", "Invert", "Contrast",
+            "Blur", "Sharpen"};
 
     public ImageFilterDemo() {
         Panel p = new Panel();
@@ -30,7 +31,7 @@ public class ImageFilterDemo extends Frame implements ActionListener {
         p.add(reset);
 
         // Add the filter buttons.
-        for(String fstr: filters) {
+        for (String fstr : filters) {
             Button b = new Button(fstr);
             b.addActionListener(this);
             p.add(b);
@@ -70,8 +71,7 @@ public class ImageFilterDemo extends Frame implements ActionListener {
             if (a.equals("Reset")) {
                 lim.set(img);
                 lab.setText("Normal");
-            }
-            else {
+            } else {
                 // Get the selected filter.
                 pif = (PlugInFilter)
                         (Class.forName(a)).getConstructor().newInstance();

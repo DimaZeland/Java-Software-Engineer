@@ -1,11 +1,11 @@
 package c13InOutput;
 
 // Read a string from console using a BufferedReader.
+
 import java.io.*;
 
 class BRReadLines {
-    public static void main(String args[]) throws IOException
-    {
+    public static void main(String args[]) throws IOException {
         // create a BufferedReader using System.in
         BufferedReader br = new BufferedReader(new
                 InputStreamReader(System.in));
@@ -15,6 +15,6 @@ class BRReadLines {
         do {
             str = br.readLine();
             System.out.println(str);
-        } while(!str.equals("stop"));
+        } while (!str.equals("stop"));
     }
 }

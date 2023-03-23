@@ -7,14 +7,17 @@ enum Apple2 {
     private int price; // price of each apple
 
     // Constructor
-    Apple2(int p) { price = p; }
+    Apple2(int p) {
+        price = p;
+    }
 
-    int getPrice() { return price; }
+    int getPrice() {
+        return price;
+    }
 }
 
 class EnumDemo3 {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Apple2 ap;
 
         // Display price of Winesap.
@@ -24,7 +27,7 @@ class EnumDemo3 {
 
         // Display all apples and prices.
         System.out.println("All apple prices:");
-        for(Apple2 a : Apple2.values())
+        for (Apple2 a : Apple2.values())
             System.out.println(a + " costs " + a.getPrice() +
                     " cents.");
     }

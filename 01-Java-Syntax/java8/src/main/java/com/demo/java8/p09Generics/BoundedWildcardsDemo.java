@@ -1,86 +1,98 @@
 package com.demo.java8.p09Generics;
 
-// Первый класс:
-class Alpha{
-   // Закрытое текстовое поле:
-   private String name;
-   // Конструктор:
-   Alpha(String txt){
-      name=txt;
-   }
-   // Переопределение метода toString():
-   public String toString(){
-      return name;
-   }
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class Alpha {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+    private String name;
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    Alpha(String txt) {
+        name = txt;
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ toString():
+    public String toString() {
+        return name;
+    }
 }
-// Второй класс:
-class Bravo extends Alpha{
-   // Конструктор:
-   Bravo(String txt){
-      // Вызов конструктора суперкласса:
-      super(txt);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class Bravo extends Alpha {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    Bravo(String txt) {
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        super(txt);
+    }
 }
-// Третий класс:
-class Charlie extends Bravo{
-   Charlie(String txt){
-      super(txt);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class Charlie extends Bravo {
+    Charlie(String txt) {
+        super(txt);
+    }
 }
-// Четвертый класс:
-class Delta extends Charlie{
-   Delta(String txt){
-      super(txt);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class Delta extends Charlie {
+    Delta(String txt) {
+        super(txt);
+    }
 }
-// Пятый класс:
-class Echo extends Delta{
-   Echo(String txt){
-      super(txt);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class Echo extends Delta {
+    Echo(String txt) {
+        super(txt);
+    }
 }
-// Обобщенный класс:
-class MyClass<T>{
-   // Закрытое поле обобщенного типа:
-   private T obj;
-   // Переопределение метода toString():
-   public String toString(){
-      return obj.toString();
-   }
-   // Конструктор:
-   MyClass(T arg){
-      obj=arg;
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class MyClass<T> {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+    private T obj;
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ toString():
+    public String toString() {
+        return obj.toString();
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+    MyClass(T arg) {
+        obj = arg;
+    }
 }
-// Главный класс:
-class BoundedWildcardsDemo{
-   // Статический метод для отображения текстового
-   // представления объекта, созданного с использованием
-   // подкласса для класса Charlie:
-   static void show(MyClass<? extends Charlie> obj){
-      System.out.println(obj);
-   }
-   // Статический метод для отображения текстового
-   // представления объекта, созданного с использованием
-   // суперкласса для класса Charlie:
-   static void display(MyClass<? super Charlie> obj){
-      System.out.println(obj);
-   }
-   // Главный метод:
-   public static void main(String[] args){
-      // Создание объектов:
-      MyClass<Alpha> A=new MyClass<>(new Alpha("Объект A"));
-      MyClass<Bravo> B=new MyClass<>(new Bravo("Объект B"));
-      MyClass<Charlie> C=new MyClass<>(new Charlie("Объект C"));
-      MyClass<Delta> D=new MyClass<>(new Delta("Объект D"));
-      MyClass<Echo> E=new MyClass<>(new Echo("Объект E"));
-      // Вызов методов display() и show() с передачей
-      // аргументом одного из созданных объектов:
-      display(A);
-      display(B);
-      display(C);
-      show(C);
-      show(D);
-      show(E);
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class BoundedWildcardsDemo {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Charlie:
+    static void show(MyClass<? extends Charlie> obj) {
+        System.out.println(obj);
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Charlie:
+    static void display(MyClass<? super Charlie> obj) {
+        System.out.println(obj);
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        MyClass<Alpha> A = new MyClass<>(new Alpha("пїЅпїЅпїЅпїЅпїЅпїЅ A"));
+        MyClass<Bravo> B = new MyClass<>(new Bravo("пїЅпїЅпїЅпїЅпїЅпїЅ B"));
+        MyClass<Charlie> C = new MyClass<>(new Charlie("пїЅпїЅпїЅпїЅпїЅпїЅ C"));
+        MyClass<Delta> D = new MyClass<>(new Delta("пїЅпїЅпїЅпїЅпїЅпїЅ D"));
+        MyClass<Echo> E = new MyClass<>(new Echo("пїЅпїЅпїЅпїЅпїЅпїЅ E"));
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ display() пїЅ show() пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        display(A);
+        display(B);
+        display(C);
+        show(C);
+        show(D);
+        show(E);
+    }
 }

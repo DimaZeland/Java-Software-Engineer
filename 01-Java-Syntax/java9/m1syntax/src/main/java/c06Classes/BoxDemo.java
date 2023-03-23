@@ -1,7 +1,7 @@
 package c06Classes;
 
 /* A program that uses the Box class.
-*/
+ */
 // This class declares an object of type Box.
 class BoxDemo {
     public static void main(String args[]) {

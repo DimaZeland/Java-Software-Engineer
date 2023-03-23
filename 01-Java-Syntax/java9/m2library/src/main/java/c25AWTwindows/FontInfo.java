@@ -1,6 +1,7 @@
 package c25AWTwindows;
 
 // Display font info.
+
 import java.awt.event.*;
 import java.awt.*;
 
@@ -26,11 +27,11 @@ public class FontInfo extends Frame {
         msg += ", Font: " + fontFamily;
         msg += ", Size: " + fontSize + ", Style: ";
 
-        if((fontStyle & Font.BOLD) == Font.BOLD)
+        if ((fontStyle & Font.BOLD) == Font.BOLD)
             msg += "Bold ";
-        if((fontStyle & Font.ITALIC) == Font.ITALIC)
+        if ((fontStyle & Font.ITALIC) == Font.ITALIC)
             msg += "Italic ";
-        if((fontStyle & Font.PLAIN) == Font.PLAIN)
+        if ((fontStyle & Font.PLAIN) == Font.PLAIN)
             msg += "Plain ";
 
         g.drawString(msg, 10, 60);

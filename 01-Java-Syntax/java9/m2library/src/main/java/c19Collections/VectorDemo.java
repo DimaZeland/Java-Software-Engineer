@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate various Vector operations.
+
 import java.util.*;
 
 class VectorDemo {
@@ -40,14 +41,14 @@ class VectorDemo {
         System.out.println("First element: " + v.firstElement());
         System.out.println("Last element: " + v.lastElement());
 
-        if(v.contains(3))
+        if (v.contains(3))
             System.out.println("Vector contains 3.");
 
         // Enumerate the elements in the vector.
         Enumeration<Integer> vEnum = v.elements();
 
         System.out.println("\nElements in vector:");
-        while(vEnum.hasMoreElements())
+        while (vEnum.hasMoreElements())
             System.out.print(vEnum.nextElement() + " ");
         System.out.println();
     }

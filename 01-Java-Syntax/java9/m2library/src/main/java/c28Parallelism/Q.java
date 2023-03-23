@@ -15,7 +15,7 @@ class Q {
     void get() {
         try {
             semCon.acquire();
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println("InterruptedException caught");
         }
 
@@ -26,7 +26,7 @@ class Q {
     void put(int n) {
         try {
             semProd.acquire();
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println("InterruptedException caught");
         }
 
@@ -44,7 +44,7 @@ class Producer implements Runnable {
     }
 
     public void run() {
-        for(int i=0; i < 20; i++) q.put(i);
+        for (int i = 0; i < 20; i++) q.put(i);
     }
 }
 
@@ -56,7 +56,7 @@ class Consumer implements Runnable {
     }
 
     public void run() {
-        for(int i=0; i < 20; i++)  q.get();
+        for (int i = 0; i < 20; i++) q.get();
     }
 }
 

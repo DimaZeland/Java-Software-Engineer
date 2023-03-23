@@ -1,6 +1,7 @@
 package c20Util;
 
 // Demonstrate GregorianCalendar
+
 import java.util.*;
 
 class GregorianCalendarDemo {
@@ -28,10 +29,9 @@ class GregorianCalendarDemo {
         System.out.println(gcalendar.get(Calendar.SECOND));
 
         // Test if the current year is a leap year
-        if(gcalendar.isLeapYear(year)) {
+        if (gcalendar.isLeapYear(year)) {
             System.out.println("The current year is a leap year");
-        }
-        else {
+        } else {
             System.out.println("The current year is not a leap year");
         }
     }

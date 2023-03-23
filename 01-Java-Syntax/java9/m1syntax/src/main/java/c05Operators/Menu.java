@@ -15,11 +15,11 @@ class Menu {
             System.out.println("  5. for\n");
             System.out.println("Choose one:");
             choice = (char) System.in.read();
-        } while( choice < '1' || choice > '5');
+        } while (choice < '1' || choice > '5');
 
         System.out.println("\n");
 
-        switch(choice) {
+        switch (choice) {
             case '1':
                 System.out.println("The if:\n");
                 System.out.println("if(condition) statement;");

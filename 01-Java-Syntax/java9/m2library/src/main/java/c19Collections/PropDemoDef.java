@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Use a default property list.
+
 import java.util.*;
 
 class PropDemoDef {
@@ -21,10 +22,10 @@ class PropDemoDef {
         Set<?> states = capitals.keySet();
 
         // Show all of the states and capitals.
-        for(Object name : states)
+        for (Object name : states)
             System.out.println("The capital of " +
                     name + " is " +
-                    capitals.getProperty((String)name)
+                    capitals.getProperty((String) name)
                     + ".");
 
         System.out.println();

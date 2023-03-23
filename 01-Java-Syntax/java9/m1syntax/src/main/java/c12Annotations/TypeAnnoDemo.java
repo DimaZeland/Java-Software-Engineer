@@ -1,12 +1,14 @@
 package c12Annotations;
 
 // Demonstrate several type annotations.
+
 import java.lang.annotation.*;
 import java.lang.reflect.*;
 
 // A marker annotation that can be applied to a type.
 @Target(ElementType.TYPE_USE)
-@interface TypeAnno { }
+@interface TypeAnno {
+}
 
 // Another marker annotation that can be applied to a type.
 @Target(ElementType.TYPE_USE)
@@ -14,8 +16,9 @@ import java.lang.reflect.*;
 }
 
 // Still another marker annotation that can be applied to a type.
-@Target( ElementType.TYPE_USE )
-@interface Unique { }
+@Target(ElementType.TYPE_USE)
+@interface Unique {
+}
 
 // A parameterized annotation that can be applied to a type.
 @Target(ElementType.TYPE_USE)
@@ -31,33 +34,38 @@ import java.lang.reflect.*;
 
 // An annotation that can be applied to a field declaration.
 @Target(ElementType.FIELD)
-@interface EmptyOK { }
+@interface EmptyOK {
+}
 
 // An annotation that can be applied to a method declaration.
 @Target(ElementType.METHOD)
-@interface Recommended { }
+@interface Recommended {
+}
 
 
 // Use an annotation on a type parameter.
 class TypeAnnoDemo<@What1(description = "Generic data type") T> {
 
     // Use a type annotation on a constructor.
-    public @Unique TypeAnnoDemo() {}
+    public @Unique TypeAnnoDemo() {
+    }
 
     // Annotate the type (in this case String), not the field.
-    @TypeAnno String str;
+    @TypeAnno
+    String str;
 
     // This annotates the field test.
-    @EmptyOK String test;
+    @EmptyOK
+    String test;
 
     // Use a type annotation to annotate this (the receiver).
-    public int f(@TypeAnno TypeAnnoDemo<T> this, int x) {
+    public int f(@TypeAnno TypeAnnoDemo<T>this, int x) {
         return 10;
     }
 
     // Annotate the return type.
     public @TypeAnno Integer f2(int j, int k) {
-        return j+k;
+        return j + k;
     }
 
     // Annotate the method declaration.
@@ -74,7 +82,8 @@ class TypeAnnoDemo<@What1(description = "Generic data type") T> {
     String @MaxLen(10) [] @NotZeroLen [] w;
 
     // Annotate the array element type.
-    @TypeAnno Integer[] vec;
+    @TypeAnno
+    Integer[] vec;
 
     public static void myMeth(int i) {
 
@@ -97,5 +106,6 @@ class TypeAnnoDemo<@What1(description = "Generic data type") T> {
     }
 
     // Use type annotation with inheritance clause.
-    class SomeClass extends @TypeAnno TypeAnnoDemo<Boolean> {}
+    class SomeClass extends @TypeAnno TypeAnnoDemo<Boolean> {
+    }
 }

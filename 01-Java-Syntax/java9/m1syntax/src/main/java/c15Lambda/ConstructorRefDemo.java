@@ -12,19 +12,26 @@ class MyClass1 {
     private int val;
 
     // This constructor takes an argument.
-    MyClass1(int v) { val = v; }
+    MyClass1(int v) {
+        val = v;
+    }
 
     // This is the default constructor.
-    MyClass1() { val = 0; }
+    MyClass1() {
+        val = 0;
+    }
 
     // ...
 
-    int getVal() { return val; };
+    int getVal() {
+        return val;
+    }
+
+    ;
 }
 
 class ConstructorRefDemo {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         // Create a reference to the MyClass constructor.
         // Because func() in MyFunc takes an argument, new
         // refers to the parameterized constructor in MyClass,
@@ -35,6 +42,6 @@ class ConstructorRefDemo {
         MyClass1 mc = myClassCons.func(100);
 
         // Use the instance of MyClass just created.
-        System.out.println("val in mc is " + mc.getVal( ));
+        System.out.println("val in mc is " + mc.getVal());
     }
 }

@@ -10,7 +10,7 @@ class StreamDemo10 {
     public static void main(String[] args) {
 
         // Create a list of Strings.
-        ArrayList<String> myList = new ArrayList<>( );
+        ArrayList<String> myList = new ArrayList<>();
         myList.add("Alpha");
         myList.add("Beta");
         myList.add("Gamma");
@@ -28,7 +28,7 @@ class StreamDemo10 {
         Spliterator<String> splitItr2 = splitItr.trySplit();
 
         // If splitItr could be split, use splitItr2 first.
-        if(splitItr2 != null) {
+        if (splitItr2 != null) {
             System.out.println("Output from splitItr2: ");
             splitItr2.forEachRemaining((n) -> System.out.println(n));
         }

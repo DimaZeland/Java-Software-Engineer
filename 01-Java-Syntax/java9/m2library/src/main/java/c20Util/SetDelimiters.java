@@ -2,6 +2,7 @@ package c20Util;
 
 // Use Scanner to compute an average a list of
 // comma-separated values.
+
 import java.util.*;
 import java.io.*;
 
@@ -27,14 +28,13 @@ class SetDelimiters {
         src.useDelimiter(", *");
 
         // Read and sum numbers.
-        while(src.hasNext()) {
-            if(src.hasNextDouble()) {
+        while (src.hasNext()) {
+            if (src.hasNextDouble()) {
                 sum += src.nextDouble();
                 count++;
-            }
-            else {
+            } else {
                 String str = src.next();
-                if(str.equals("done")) break;
+                if (str.equals("done")) break;
                 else {
                     System.out.println("File format error.");
                     return;

@@ -17,17 +17,17 @@ public class AuthorizationFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-         var uri = ((HttpServletRequest) servletRequest).getRequestURI();
-        if(isPublicPath(uri) || isUserLoggedIn(servletRequest)) {
+        var uri = ((HttpServletRequest) servletRequest).getRequestURI();
+        if (isPublicPath(uri) || isUserLoggedIn(servletRequest)) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             var prevPage = ((HttpServletRequest) servletRequest).getHeader("referer");
-            ((HttpServletResponse) servletResponse).sendRedirect(prevPage!= null ? prevPage : UrlPath.LOGIN);
+            ((HttpServletResponse) servletResponse).sendRedirect(prevPage != null ? prevPage : UrlPath.LOGIN);
         }
     }
 
     private boolean isUserLoggedIn(ServletRequest servletRequest) {
-        var user = (UserDto)((HttpServletRequest) servletRequest).getSession().getAttribute("user");
+        var user = (UserDto) ((HttpServletRequest) servletRequest).getSession().getAttribute("user");
         return user != null /*&& user.getRole() == Role.ADMIN*/;
     }
 

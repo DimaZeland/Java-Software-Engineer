@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate check box group.
+
 import java.awt.*;
 import java.awt.event.*;
 

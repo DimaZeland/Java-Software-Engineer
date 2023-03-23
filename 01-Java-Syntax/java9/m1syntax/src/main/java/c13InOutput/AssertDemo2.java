@@ -10,11 +10,10 @@ class AssertDemo2 {
         return val--;
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         int n = 0;
 
-        for(int i=0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
 
             assert (n = getnum()) > 0; // This is not a good idea!
 

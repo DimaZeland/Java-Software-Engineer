@@ -1,11 +1,13 @@
 package c27Images;
 
 // Grayscale filter.
+
 import java.awt.*;
 import java.awt.image.*;
 
 class Grayscale extends RGBImageFilter implements PlugInFilter {
-    public Grayscale() {}
+    public Grayscale() {
+    }
 
     public Image filter(Frame f, Image in) {
         return f.createImage(new FilteredImageSource(in.getSource(), this));

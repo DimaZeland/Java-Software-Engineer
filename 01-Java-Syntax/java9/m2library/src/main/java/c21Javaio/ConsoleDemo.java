@@ -1,6 +1,7 @@
 package c21Javaio;
 
 // Demonstrate Console.
+
 import java.io.*;
 
 class ConsoleDemo {
@@ -11,7 +12,7 @@ class ConsoleDemo {
         // Obtain a reference to the console.
         con = System.console();
         // If no console available, exit.
-        if(con == null) return;
+        if (con == null) return;
 
         // Read a string and then display it.
         str = con.readLine("Enter a string: ");

@@ -20,29 +20,29 @@ class FileOutputStreamDemo {
             f2 = new FileOutputStream("file3.txt");
 
             // write to first file
-            for (int i=0; i < buf.length; i += 2) f0.write(buf[i]);
+            for (int i = 0; i < buf.length; i += 2) f0.write(buf[i]);
 
             // write to second file
             f1.write(buf);
 
             // write to third file
-            f2.write(buf, buf.length-buf.length/4, buf.length/4);
-        } catch(IOException e) {
+            f2.write(buf, buf.length - buf.length / 4, buf.length / 4);
+        } catch (IOException e) {
             System.out.println("An I/O Error Occured");
         } finally {
             try {
-                if(f0 != null) f0.close();
-            } catch(IOException e) {
+                if (f0 != null) f0.close();
+            } catch (IOException e) {
                 System.out.println("Error Closing file1.txt");
             }
             try {
-                if(f1 != null) f1.close();
-            } catch(IOException e) {
+                if (f1 != null) f1.close();
+            } catch (IOException e) {
                 System.out.println("Error Closing file2.txt");
             }
             try {
-                if(f2 != null) f2.close();
-            } catch(IOException e) {
+                if (f2 != null) f2.close();
+            } catch (IOException e) {
                 System.out.println("Error Closing file3.txt");
             }
         }

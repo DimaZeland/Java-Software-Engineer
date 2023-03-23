@@ -1,6 +1,7 @@
 package c22Nio;
 
 // Copy a file using NIO.
+
 import java.io.*;
 import java.nio.file.*;
 
@@ -8,7 +9,7 @@ public class NIOCopy {
 
     public static void main(String args[]) {
 
-        if(args.length != 2) {
+        if (args.length != 2) {
             System.out.println("Usage: Copy from to");
             return;
         }
@@ -20,7 +21,7 @@ public class NIOCopy {
             // Copy the file.
             Files.copy(source, target, StandardCopyOption.REPLACE_EXISTING);
 
-        } catch(InvalidPathException e) {
+        } catch (InvalidPathException e) {
             System.out.println("Path Error " + e);
         } catch (IOException e) {
             System.out.println("I/O Error " + e);

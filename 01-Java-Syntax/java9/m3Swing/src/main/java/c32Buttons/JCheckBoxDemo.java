@@ -1,6 +1,7 @@
 package c32Buttons;
 
 // Demonstrate JCheckbox.
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -43,9 +44,9 @@ public class JCheckBoxDemo implements ItemListener {
 
     // Handle item events for the check boxes.
     public void itemStateChanged(ItemEvent ie) {
-        JCheckBox cb = (JCheckBox)ie.getItem();
+        JCheckBox cb = (JCheckBox) ie.getItem();
 
-        if(cb.isSelected())
+        if (cb.isSelected())
             jlab.setText(cb.getText() + " is selected");
         else
             jlab.setText(cb.getText() + " is cleared");

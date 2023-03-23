@@ -1,6 +1,7 @@
 package c27Images;
 
 // Load and display an image.
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.imageio.*;

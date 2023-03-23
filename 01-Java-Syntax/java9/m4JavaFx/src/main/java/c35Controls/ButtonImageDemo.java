@@ -46,7 +46,7 @@ public class ButtonImageDemo extends Application {
         // Create two image-based buttons.
         Button btnHourglass = new Button("Hourglass",
                 new ImageView("hourglass.png"));
-        Button btnAnalogClock = new    Button("Analog Clock",
+        Button btnAnalogClock = new Button("Analog Clock",
                 new ImageView("analog.png"));
 
         // Position the text under the image.

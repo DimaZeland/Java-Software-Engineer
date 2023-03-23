@@ -3,8 +3,8 @@ package c05Operators;
 // In a switch, break statements are optional.
 class MissingBreak {
     public static void main(String args[]) {
-        for(int i=0; i<12; i++)
-            switch(i) {
+        for (int i = 0; i < 12; i++)
+            switch (i) {
                 case 0:
                 case 1:
                 case 2:

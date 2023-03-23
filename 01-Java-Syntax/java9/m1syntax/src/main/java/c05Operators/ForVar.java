@@ -7,9 +7,9 @@ class ForVar {
         boolean done = false;
 
         i = 0;
-        for( ; !done; ) {
+        for (; !done; ) {
             System.out.println("i is " + i);
-            if(i == 10) done = true;
+            if (i == 10) done = true;
             i++;
         }
     }

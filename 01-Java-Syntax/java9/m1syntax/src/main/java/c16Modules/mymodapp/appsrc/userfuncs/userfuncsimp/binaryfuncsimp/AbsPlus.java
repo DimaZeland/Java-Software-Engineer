@@ -13,5 +13,7 @@ public class AbsPlus implements BinaryFunc {
     }
 
     // Implement the AbsPlus function.
-    public int func(int a, int b) { return Math.abs(a) + Math.abs(b); }
+    public int func(int a, int b) {
+        return Math.abs(a) + Math.abs(b);
+    }
 }

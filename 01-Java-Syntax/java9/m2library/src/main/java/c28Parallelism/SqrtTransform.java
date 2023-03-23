@@ -2,6 +2,7 @@ package c28Parallelism;
 
 // A simple example of the basic divide-and-conquer strategy.
 // In this case, RecursiveAction is used.
+
 import java.util.concurrent.*;
 import java.util.*;
 
@@ -19,7 +20,7 @@ class SqrtTransform extends RecursiveAction {
     // Deterines what part of data to process.
     int start, end;
 
-    SqrtTransform(double[] vals, int s, int e ) {
+    SqrtTransform(double[] vals, int s, int e) {
         data = vals;
         start = s;
         end = e;
@@ -30,13 +31,12 @@ class SqrtTransform extends RecursiveAction {
 
         // If number of elements is below the sequential threshold,
         // then process sequentially.
-        if((end - start) < seqThreshold) {
+        if ((end - start) < seqThreshold) {
             // Transform each element into its square root.
-            for(int i = start; i < end; i++) {
+            for (int i = start; i < end; i++) {
                 data[i] = Math.sqrt(data[i]);
             }
-        }
-        else {
+        } else {
             // Otherwise, continue to break the data into smaller peices.
 
             // Find the midpoint.
@@ -58,12 +58,12 @@ class ForkJoinDemo {
         double[] nums = new double[100000];
 
         // Give nums some values.
-        for(int i = 0; i < nums.length; i++)
+        for (int i = 0; i < nums.length; i++)
             nums[i] = (double) i;
 
         System.out.println("A portion of the original sequence:");
 
-        for(int i=0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
             System.out.print(nums[i] + " ");
         System.out.println("\n");
 
@@ -74,7 +74,7 @@ class ForkJoinDemo {
 
         System.out.println("A portion of the transformed sequence" +
                 " (to four decimal places):");
-        for(int i=0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
             System.out.format("%.4f ", nums[i]);
         System.out.println();
     }

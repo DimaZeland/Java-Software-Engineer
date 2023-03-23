@@ -63,7 +63,7 @@ public class CheckboxDemo extends Application {
         // Handle action events for the checkboxes.
         cbWeb.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent ae) {
-                if(cbWeb.isSelected())
+                if (cbWeb.isSelected())
                     response.setText("Web deployment selected.");
                 else
                     response.setText("Web deployment cleared.");
@@ -74,7 +74,7 @@ public class CheckboxDemo extends Application {
 
         cbDesktop.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent ae) {
-                if(cbDesktop.isSelected())
+                if (cbDesktop.isSelected())
                     response.setText("Desktop deployment selected.");
                 else
                     response.setText("Desktop deployment cleared.");
@@ -85,7 +85,7 @@ public class CheckboxDemo extends Application {
 
         cbMobile.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent ae) {
-                if(cbMobile.isSelected())
+                if (cbMobile.isSelected())
                     response.setText("Mobile deployment selected.");
                 else
                     response.setText("Mobile deployment cleared.");
@@ -109,11 +109,11 @@ public class CheckboxDemo extends Application {
     // Update and show the targets list.
     void showAll() {
         targets = "";
-        if(cbWeb.isSelected()) targets = "Web ";
-        if(cbDesktop.isSelected()) targets += "Desktop ";
-        if(cbMobile.isSelected()) targets += "Mobile";
+        if (cbWeb.isSelected()) targets = "Web ";
+        if (cbDesktop.isSelected()) targets += "Desktop ";
+        if (cbMobile.isSelected()) targets += "Mobile";
 
-        if(targets.equals("")) targets = "<none>";
+        if (targets.equals("")) targets = "<none>";
 
         allTargets.setText("Target List: " + targets);
     }

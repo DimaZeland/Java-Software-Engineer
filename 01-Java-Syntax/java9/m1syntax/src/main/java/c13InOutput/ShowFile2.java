@@ -16,13 +16,12 @@ package c13InOutput;
 import java.io.*;
 
 class ShowFile2 {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         int i;
         FileInputStream fin = null;
 
         // First, confirm that a file name has been specified.
-        if(args.length != 1) {
+        if (args.length != 1) {
             System.out.println("Usage: ShowFile filename");
             return;
         }
@@ -34,18 +33,18 @@ class ShowFile2 {
 
             do {
                 i = fin.read();
-                if(i != -1) System.out.print((char) i);
-            } while(i != -1);
+                if (i != -1) System.out.print((char) i);
+            } while (i != -1);
 
-        } catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("File Not Found.");
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("An I/O Error Occurred");
         } finally {
             // Close file in all cases.
             try {
-                if(fin != null) fin.close();
-            } catch(IOException e) {
+                if (fin != null) fin.close();
+            } catch (IOException e) {
                 System.out.println("Error Closing File");
             }
         }

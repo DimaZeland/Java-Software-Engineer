@@ -13,7 +13,7 @@ public class TransactionRunner {
         Connection connection = null;
         PreparedStatement deleteFlightStatement = null;
         PreparedStatement deleteTicketsStatement = null;
-        try  {
+        try {
             connection = ConnectionPool.get();
             deleteFlightStatement = connection.prepareStatement(deleteFlightSql);
             deleteTicketsStatement = connection.prepareStatement(deleteTicketsSql);
@@ -24,21 +24,21 @@ public class TransactionRunner {
             deleteTicketsStatement.setLong(1, flightId);
 
             int deleteTicketsResult = deleteTicketsStatement.executeUpdate();
-            if(true) {
+            if (true) {
                 throw new RuntimeException("Oops");
             }
             int deleteFlightsResult = deleteFlightStatement.executeUpdate();
             connection.commit();
         } catch (Exception e) {
-            if(connection != null) {
+            if (connection != null) {
                 connection.rollback();
             }
             throw e;
         } finally {
-            if(connection != null) {
+            if (connection != null) {
                 connection.close();
             }
-            if(deleteFlightStatement != null) {
+            if (deleteFlightStatement != null) {
                 deleteFlightStatement.close();
             }
             if (deleteTicketsStatement != null) {
@@ -53,7 +53,7 @@ public class TransactionRunner {
         var deleteTicketsSql = "DELETE FROM ticket WHERE flight_id = " + flightId;
         Connection connection = null;
         Statement statement = null;
-        try  {
+        try {
             connection = ConnectionPool.get();
             connection.setAutoCommit(false);
 
@@ -65,15 +65,15 @@ public class TransactionRunner {
             int[] ints = statement.executeBatch();
             connection.commit();
         } catch (Exception e) {
-            if(connection != null) {
+            if (connection != null) {
                 connection.rollback();
             }
             throw e;
         } finally {
-            if(connection != null) {
+            if (connection != null) {
                 connection.close();
             }
-            if(statement != null) {
+            if (statement != null) {
                 statement.close();
             }
         }

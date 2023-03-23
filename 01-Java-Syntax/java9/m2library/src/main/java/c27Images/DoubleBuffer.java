@@ -1,6 +1,7 @@
 package c27Images;
 
 // Demonstrate the use of an off-screen buffer.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -19,6 +20,7 @@ public class DoubleBuffer extends Frame {
                 flicker = false;
                 repaint();
             }
+
             public void mouseMoved(MouseEvent me) {
                 mx = me.getX();
                 my = me.getY();
@@ -46,16 +48,16 @@ public class DoubleBuffer extends Frame {
         g.fillRect(0, 0, w, h);
 
         g.setColor(Color.red);
-        for (int i=0; i<w; i+=gap)
-            g.drawLine(i, 0, w-i, h);
-        for (int i=0; i<h; i+=gap)
-            g.drawLine(0, i, w, h-i);
+        for (int i = 0; i < w; i += gap)
+            g.drawLine(i, 0, w - i, h);
+        for (int i = 0; i < h; i += gap)
+            g.drawLine(0, i, w, h - i);
 
         g.setColor(Color.black);
-        g.drawString("Press mouse button to double buffer", 10, h/2);
+        g.drawString("Press mouse button to double buffer", 10, h / 2);
 
         g.setColor(Color.yellow);
-        g.fillOval(mx - gap, my - gap, gap*2+1, gap*2+1);
+        g.fillOval(mx - gap, my - gap, gap * 2 + 1, gap * 2 + 1);
 
         if (!flicker) {
             screengc.drawImage(buffer, 0, 0, null);

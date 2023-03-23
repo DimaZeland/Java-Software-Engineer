@@ -41,7 +41,7 @@ class IncThread implements Runnable {
             System.out.println(name + " gets a permit.");
 
             // Now, access shared resource.
-            for(int i=0; i < 5; i++) {
+            for (int i = 0; i < 5; i++) {
                 Shared1.count++;
                 System.out.println(name + ": " + Shared1.count);
 
@@ -79,7 +79,7 @@ class DecThread implements Runnable {
             System.out.println(name + " gets a permit.");
 
             // Now, access shared resource.
-            for(int i=0; i < 5; i++) {
+            for (int i = 0; i < 5; i++) {
                 Shared1.count--;
                 System.out.println(name + ": " + Shared1.count);
 

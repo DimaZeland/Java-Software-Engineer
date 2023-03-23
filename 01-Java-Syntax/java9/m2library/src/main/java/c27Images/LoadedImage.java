@@ -22,11 +22,11 @@ public class LoadedImage extends Canvas {
         }
     }
 
-    public Dimension getPreferredSize()  {
+    public Dimension getPreferredSize() {
         return new Dimension(img.getWidth(this), img.getHeight(this));
     }
 
-    public Dimension getMinimumSize()  {
+    public Dimension getMinimumSize() {
         return getPreferredSize();
     }
 }

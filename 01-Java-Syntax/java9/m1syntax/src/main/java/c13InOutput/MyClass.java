@@ -17,7 +17,7 @@ class MyClass {
     }
 
     // give a and b default values of 0
-    MyClass( ) {
+    MyClass() {
         a = 0;
         b = 0;
     }

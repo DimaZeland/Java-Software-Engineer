@@ -4,7 +4,8 @@ package c07Methods;
 class Test {
     int a, b;
 
-    Test() {}
+    Test() {
+    }
 
     Test(int i, int j) {
         a = i;
@@ -28,12 +29,12 @@ class Test {
 
     // pass an object
     void meth(Test o) {
-        o.a *=  2;
+        o.a *= 2;
         o.b /= 2;
     }
 
     Test incrByTen() {
-        Test temp = new Test(a+10);
+        Test temp = new Test(a + 10);
         return temp;
     }
 }

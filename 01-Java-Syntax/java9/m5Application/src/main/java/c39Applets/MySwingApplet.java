@@ -20,13 +20,13 @@ public class MySwingApplet extends JApplet {
     // Initialize the applet.
     public void init() {
         try {
-            SwingUtilities.invokeAndWait(new Runnable () {
+            SwingUtilities.invokeAndWait(new Runnable() {
                 public void run() {
                     makeGUI(); // initialize the GUI
                 }
             });
-        } catch(Exception exc) {
-            System.out.println("Can't create because of "+ exc);
+        } catch (Exception exc) {
+            System.out.println("Can't create because of " + exc);
         }
     }
 

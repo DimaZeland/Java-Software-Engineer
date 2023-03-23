@@ -6,6 +6,7 @@ import java.lang.reflect.*;
 @Retention(RetentionPolicy.RUNTIME)
 @interface MyAnno1 {
     String str();
+
     int val();
 }
 
@@ -13,8 +14,7 @@ class Meta1 {
 
     // myMeth now has two arguments.
     @MyAnno1(str = "Two Parameters", val = 19)
-    public static void myMeth(String str, int i)
-    {
+    public static void myMeth(String str, int i) {
         Meta1 ob = new Meta1();
 
         try {

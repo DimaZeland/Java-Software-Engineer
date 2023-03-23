@@ -45,7 +45,7 @@ public class ListViewDemo extends Application {
 
         // Create an ObservableList of entries for the list view.
         ObservableList<String> transportTypes =
-                FXCollections.observableArrayList( "Train", "Car", "Airplane" );
+                FXCollections.observableArrayList("Train", "Car", "Airplane");
 
         // Create the list view.
         ListView<String> lvTransport = new ListView<String>(transportTypes);

@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use a reluctant quantifier.
+
 import java.util.regex.*;
 
 class RegExpr6 {
@@ -9,7 +10,7 @@ class RegExpr6 {
         Pattern pat = Pattern.compile("e.+?d");
         Matcher mat = pat.matcher("extend cup end table");
 
-        while(mat.find())
+        while (mat.find())
             System.out.println("Match: " + mat.group());
     }
 }

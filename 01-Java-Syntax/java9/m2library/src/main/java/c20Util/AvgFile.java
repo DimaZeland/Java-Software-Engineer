@@ -1,6 +1,7 @@
 package c20Util;
 
 // Use Scanner to compute an average of the values in a file.
+
 import java.util.*;
 import java.io.*;
 
@@ -21,14 +22,13 @@ class AvgFile {
         Scanner src = new Scanner(fin);
 
         // Read and sum numbers.
-        while(src.hasNext()) {
-            if(src.hasNextDouble()) {
+        while (src.hasNext()) {
+            if (src.hasNextDouble()) {
                 sum += src.nextDouble();
                 count++;
-            }
-            else {
+            } else {
                 String str = src.next();
-                if(str.equals("done")) break;
+                if (str.equals("done")) break;
                 else {
                     System.out.println("File format error.");
                     return;

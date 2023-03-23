@@ -1,6 +1,7 @@
 package c23NetWorking;
 
 // Demonstrate Datagrams.
+
 import java.net.*;
 
 class WriteServer {
@@ -11,7 +12,7 @@ class WriteServer {
     public static byte buffer[] = new byte[buffer_size];
 
     public static void TheServer() throws Exception {
-        int pos=0;
+        int pos = 0;
         while (true) {
             int c = System.in.read();
             switch (c) {
@@ -22,9 +23,9 @@ class WriteServer {
                 case '\r':
                     break;
                 case '\n':
-                    ds.send(new DatagramPacket(buffer,pos,
-                            InetAddress.getLocalHost(),clientPort));
-                    pos=0;
+                    ds.send(new DatagramPacket(buffer, pos,
+                            InetAddress.getLocalHost(), clientPort));
+                    pos = 0;
                     break;
                 default:
                     buffer[pos++] = (byte) c;
@@ -33,7 +34,7 @@ class WriteServer {
     }
 
     public static void TheClient() throws Exception {
-        while(true) {
+        while (true) {
             DatagramPacket p = new DatagramPacket(buffer, buffer.length);
             ds.receive(p);
             System.out.println(new String(p.getData(), 0, p.getLength()));
@@ -41,7 +42,7 @@ class WriteServer {
     }
 
     public static void main(String args[]) throws Exception {
-        if(args.length == 1) {
+        if (args.length == 1) {
             ds = new DatagramSocket(serverPort);
             TheServer();
         } else {

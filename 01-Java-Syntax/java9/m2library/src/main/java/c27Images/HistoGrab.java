@@ -1,9 +1,10 @@
 package c27Images;
 
 // Demonstrate PixelGraber.
-import java.awt.* ;
+
+import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.* ;
+import java.awt.image.*;
 import javax.imageio.*;
 import java.io.*;
 
@@ -38,7 +39,7 @@ public class HistoGrab extends Frame {
             System.exit(0);
         }
 
-        for (int i=0; i<iw*ih; i++) {
+        for (int i = 0; i < iw * ih; i++) {
             int p = pixels[i];
             int r = 0xff & (p >> 16);
             int g = 0xff & (p >> 8);
@@ -46,7 +47,7 @@ public class HistoGrab extends Frame {
             int y = (int) (.33 * r + .56 * g + .11 * b);
             hist[y]++;
         }
-        for (int i=0; i<256; i++) {
+        for (int i = 0; i < 256; i++) {
             if (hist[i] > max_hist)
                 max_hist = hist[i];
         }
@@ -67,12 +68,12 @@ public class HistoGrab extends Frame {
         int x = (iw - 256) / 2;
         int lasty = ih - ih * hist[0] / max_hist;
 
-        for (int i=0; i<256; i++, x++) {
+        for (int i = 0; i < 256; i++, x++) {
             int y = ih - ih * hist[i] / max_hist;
             g.setColor(new Color(i, i, i));
-            g.fillRect(x+ins.left, y+ins.top, 1, ih-y);
+            g.fillRect(x + ins.left, y + ins.top, 1, ih - y);
             g.setColor(Color.red);
-            g.drawLine((x-1)+ins.left,lasty+ins.top,x+ins.left,y+ins.top);
+            g.drawLine((x - 1) + ins.left, lasty + ins.top, x + ins.left, y + ins.top);
             lasty = y;
         }
     }

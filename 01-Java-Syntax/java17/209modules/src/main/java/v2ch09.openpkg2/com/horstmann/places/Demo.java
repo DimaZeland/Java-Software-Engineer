@@ -16,21 +16,23 @@ import jakarta.json.bind.config.*;
 
 import java.lang.reflect.*;
 
-public class Demo
-{
-   public static void main(String[] args)
-   {
-      Country belgium = new Country("Belgium", 30510);
+public class Demo {
+    public static void main(String[] args) {
+        Country belgium = new Country("Belgium", 30510);
 
-      JsonbConfig config = new JsonbConfig()
-         .withPropertyVisibilityStrategy(
-            new PropertyVisibilityStrategy()
-            {
-               public boolean isVisible(Field field) { return true; }
-               public boolean isVisible(Method method) { return false; }
-            });
-      Jsonb jsonb = JsonbBuilder.create(config);
-      String json = jsonb.toJson(belgium);
-      System.out.println(json);
-   }
+        JsonbConfig config = new JsonbConfig()
+                .withPropertyVisibilityStrategy(
+                        new PropertyVisibilityStrategy() {
+                            public boolean isVisible(Field field) {
+                                return true;
+                            }
+
+                            public boolean isVisible(Method method) {
+                                return false;
+                            }
+                        });
+        Jsonb jsonb = JsonbBuilder.create(config);
+        String json = jsonb.toJson(belgium);
+        System.out.println(json);
+    }
 }

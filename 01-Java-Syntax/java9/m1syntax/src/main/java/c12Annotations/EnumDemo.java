@@ -6,8 +6,7 @@ enum Apple {
 }
 
 class EnumDemo {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Apple ap;
 
         ap = Apple.RedDel;
@@ -19,11 +18,11 @@ class EnumDemo {
         ap = Apple.GoldenDel;
 
         // Compare two enum values.
-        if(ap == Apple.GoldenDel)
+        if (ap == Apple.GoldenDel)
             System.out.println("ap contains GoldenDel.\n");
 
         // Use an enum to control a switch statement.
-        switch(ap) {
+        switch (ap) {
             case Jonathan:
                 System.out.println("Jonathan is red.");
                 break;

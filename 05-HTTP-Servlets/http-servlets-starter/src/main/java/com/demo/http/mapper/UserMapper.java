@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import static lombok.AccessLevel.*;
 
 @NoArgsConstructor(access = PRIVATE)
-public class UserMapper implements Mapper<User, UserDto>{
+public class UserMapper implements Mapper<User, UserDto> {
 
     private static final UserMapper INSTANCE = new UserMapper();
 

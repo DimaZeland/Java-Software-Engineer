@@ -57,7 +57,7 @@ public final class ConnectionPool {
         try {
             return DriverManager.getConnection(PropertiesUtil.get(URL_KEY),
                     PropertiesUtil.get(USERNAME_KEY),
-                    PropertiesUtil.get(PASSWORD_KEY)) ;
+                    PropertiesUtil.get(PASSWORD_KEY));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -73,9 +73,9 @@ public final class ConnectionPool {
 
     public static void closePool() {
         try {
-        for (Connection sourceConnection : sourceConnections) {
-            sourceConnection.close();
-        }
+            for (Connection sourceConnection : sourceConnections) {
+                sourceConnection.close();
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

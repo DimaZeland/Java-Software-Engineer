@@ -14,7 +14,7 @@ class NewThread2 implements Runnable {
     // This is the entry point for thread.
     public void run() {
         try {
-            for(int i = 5; i > 0; i--) {
+            for (int i = 5; i > 0; i--) {
                 System.out.println(name + ": " + i);
                 Thread.sleep(1000);
             }

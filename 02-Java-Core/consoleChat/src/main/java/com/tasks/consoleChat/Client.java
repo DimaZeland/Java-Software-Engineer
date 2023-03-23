@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * создание клиента со всеми необходимыми утилитами, точка входа в программу в классе Client
- description: https://javarush.ru/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh
+ * description: https://javarush.ru/groups/posts/654-klassih-socket-i-serversocket-ili-allo-server-tih-menja-slihshishjh
  */
 
 class ClientSomthing {
@@ -81,7 +81,8 @@ class ClientSomthing {
                 in.close();
                 out.close();
             }
-        } catch (IOException ignored) {}
+        } catch (IOException ignored) {
+        }
     }
 
     // нить чтения сообщений с сервера
@@ -142,6 +143,7 @@ public class Client {
 
     /**
      * создание клиент-соединения с узананными адресом и номером порта
+     *
      * @param args
      */
 

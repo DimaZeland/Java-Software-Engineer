@@ -1,9 +1,11 @@
 package com.demo.springblog.domain;
 
 import com.demo.springblog.validation.BlogPostTitleAlreadyExists;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
 import lombok.*;
 
 import java.time.LocalDateTime;

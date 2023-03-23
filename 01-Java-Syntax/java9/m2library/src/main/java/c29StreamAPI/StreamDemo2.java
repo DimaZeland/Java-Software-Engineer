@@ -10,7 +10,7 @@ class StreamDemo2 {
     public static void main(String[] args) {
 
         // Create a list of Integer values.
-        ArrayList<Integer> myList = new ArrayList<>( );
+        ArrayList<Integer> myList = new ArrayList<>();
 
         myList.add(7);
         myList.add(18);
@@ -21,11 +21,11 @@ class StreamDemo2 {
 
         // Two ways to obtain the integer product of the elements
         // in myList by use of reduce().
-        Optional<Integer> productObj = myList.stream().reduce((a,b) -> a*b);
-        if(productObj.isPresent())
+        Optional<Integer> productObj = myList.stream().reduce((a, b) -> a * b);
+        if (productObj.isPresent())
             System.out.println("Product as Optional: " + productObj.get());
 
-        int product = myList.stream().reduce(1, (a,b) -> a*b);
+        int product = myList.stream().reduce(1, (a, b) -> a * b);
         System.out.println("Product as int: " + product);
     }
 }

@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate iterators.
+
 import java.util.*;
 
 class IteratorDemo {
@@ -19,7 +20,7 @@ class IteratorDemo {
         // Use iterator to display contents of al.
         System.out.print("Original contents of al: ");
         Iterator<String> itr = al.iterator();
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             String element = itr.next();
             System.out.print(element + " ");
         }
@@ -27,14 +28,14 @@ class IteratorDemo {
 
         // Modify objects being iterated.
         ListIterator<String> litr = al.listIterator();
-        while(litr.hasNext()) {
+        while (litr.hasNext()) {
             String element = litr.next();
             litr.set(element + "+");
         }
 
         System.out.print("Modified contents of al: ");
         itr = al.iterator();
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             String element = itr.next();
             System.out.print(element + " ");
         }
@@ -42,7 +43,7 @@ class IteratorDemo {
 
         // Now, display the list backwards.
         System.out.print("Modified list backwards: ");
-        while(litr.hasPrevious()) {
+        while (litr.hasPrevious()) {
             String element = litr.previous();
             System.out.print(element + " ");
         }

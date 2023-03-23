@@ -1,11 +1,12 @@
 package c25AWTwindows;
 
 // Demonstrate multiline output.
+
 import java.awt.event.*;
 import java.awt.*;
 
 public class MultiLine extends Frame {
-    int curX=20, curY=40; // current position
+    int curX = 20, curY = 40; // current position
 
     public MultiLine() {
         Font f = new Font("SansSerif", Font.PLAIN, 12);
@@ -27,7 +28,8 @@ public class MultiLine extends Frame {
         sameLine(" This, too.", g);
         nextLine("This is on line three.", g);
 
-        curX = 20; curY = 40; // reset the coordinates for each repaint
+        curX = 20;
+        curY = 40; // reset the coordinates for each repaint
     }
 
     // Advance to next line.

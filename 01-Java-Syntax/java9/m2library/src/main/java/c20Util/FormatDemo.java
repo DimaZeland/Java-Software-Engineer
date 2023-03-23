@@ -1,6 +1,7 @@
 package c20Util;
 
 // A very simple example that uses Formatter.
+
 import java.util.*;
 
 class FormatDemo {

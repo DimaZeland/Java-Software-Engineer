@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Illustrate menus.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -77,12 +78,12 @@ class MenuDemo extends Frame {
     public void paint(Graphics g) {
         g.drawString(msg, 10, 220);
 
-        if(debug.getState())
+        if (debug.getState())
             g.drawString("Debug is on.", 10, 240);
         else
             g.drawString("Debug is off.", 10, 240);
 
-        if(test.getState())
+        if (test.getState())
             g.drawString("Testing is on.", 10, 260);
         else
             g.drawString("Testing is off.", 10, 260);
@@ -105,29 +106,29 @@ class MenuDemo extends Frame {
             msg = "You selected ";
             String arg = ae.getActionCommand();
 
-            if(arg.equals("New..."))
+            if (arg.equals("New..."))
                 msg += "New.";
-            else if(arg.equals("Open..."))
+            else if (arg.equals("Open..."))
                 msg += "Open.";
-            else if(arg.equals("Close"))
+            else if (arg.equals("Close"))
                 msg += "Close.";
-            else if(arg.equals("Edit"))
+            else if (arg.equals("Edit"))
                 msg += "Edit.";
-            else if(arg.equals("Cut"))
+            else if (arg.equals("Cut"))
                 msg += "Cut.";
-            else if(arg.equals("Copy"))
+            else if (arg.equals("Copy"))
                 msg += "Copy.";
-            else if(arg.equals("Paste"))
+            else if (arg.equals("Paste"))
                 msg += "Paste.";
-            else if(arg.equals("First"))
+            else if (arg.equals("First"))
                 msg += "First.";
-            else if(arg.equals("Second"))
+            else if (arg.equals("Second"))
                 msg += "Second.";
-            else if(arg.equals("Third"))
+            else if (arg.equals("Third"))
                 msg += "Third.";
-            else if(arg.equals("Debug"))
+            else if (arg.equals("Debug"))
                 msg += "Debug.";
-            else if(arg.equals("Testing"))
+            else if (arg.equals("Testing"))
                 msg += "Testing.";
 
             repaint();

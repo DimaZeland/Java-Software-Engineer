@@ -1,6 +1,7 @@
 package c13InOutput;
 
 // Use static import to bring sqrt() and pow() into view.
+
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 

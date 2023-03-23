@@ -107,7 +107,7 @@ class MenuDemo implements ActionListener {
         String comStr = ae.getActionCommand();
 
         // If user chooses Exit, then exit the program.
-        if(comStr.equals("Exit")) System.exit(0);
+        if (comStr.equals("Exit")) System.exit(0);
 
         // Otherwise, display the selection.
         jlab.setText(comStr + " Selected");

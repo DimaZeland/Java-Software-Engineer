@@ -96,12 +96,12 @@ public class TreeViewDemo extends Application {
                             TreeItem<String> oldVal, TreeItem<String> newVal) {
 
                         // Display the selection and its complete path from the root.
-                        if(newVal != null) {
+                        if (newVal != null) {
 
                             // Construct the entire path to the selected item.
                             String path = newVal.getValue();
                             TreeItem<String> tmp = newVal.getParent();
-                            while(tmp != null) {
+                            while (tmp != null) {
                                 path = tmp.getValue() + " -> " + path;
                                 tmp = tmp.getParent();
                             }

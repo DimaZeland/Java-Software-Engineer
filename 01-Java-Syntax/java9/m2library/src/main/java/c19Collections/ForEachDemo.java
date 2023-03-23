@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Use the for-each for loop to cycle through a collection.
+
 import java.util.*;
 
 class ForEachDemo {
@@ -17,13 +18,13 @@ class ForEachDemo {
 
         // Use for loop to display the values.
         System.out.print("Original contents of vals: ");
-        for(int v : vals)
+        for (int v : vals)
             System.out.print(v + " ");
         System.out.println();
 
         // Now, sum the values by using a for loop.
         int sum = 0;
-        for(int v : vals)
+        for (int v : vals)
             sum += v;
 
         System.out.println("Sum of values: " + sum);

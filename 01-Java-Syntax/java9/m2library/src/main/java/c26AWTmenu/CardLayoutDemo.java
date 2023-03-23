@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate CardLayout.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -26,7 +27,7 @@ public class CardLayoutDemo extends Frame {
         osCards = new Panel();
         osCards.setLayout(cardLO);
 
-        windows7 = new Checkbox("Windows 7",true);
+        windows7 = new Checkbox("Windows 7", true);
         windows8 = new Checkbox("Windows 8");
         windows10 = new Checkbox("Windows 10");
         android = new Checkbox("Android");

@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate TreeSet.
+
 import java.util.*;
 
 class TreeSetDemo {

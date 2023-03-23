@@ -10,7 +10,7 @@ class Balance {
     }
 
     void show() {
-        if(bal<0)
+        if (bal < 0)
             System.out.print("-->> ");
         System.out.println(name + ": $" + bal);
     }
@@ -24,6 +24,6 @@ class AccountBalance {
         current[1] = new Balance("Will Tell", 157.02);
         current[2] = new Balance("Tom Jackson", -12.33);
 
-        for(int i=0; i<3; i++) current[i].show();
+        for (int i = 0; i < 3; i++) current[i].show();
     }
 }

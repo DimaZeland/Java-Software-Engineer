@@ -1,64 +1,73 @@
 package com.demo.java8.p07AbstractClasses;
 
-// Первый интерфейс:
-interface First{
-   // Объявление метода:
-   String getFirst();
-   // Описание метода:
-   default void show(){
-      System.out.println("Интерфейс First: метод show()");
-   }
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface First {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    String getFirst();
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void show() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First: пїЅпїЅпїЅпїЅпїЅ show()");
+    }
 }
-// Второй интерфейс:
-interface Second{
-   // Объявление метода:
-   String getSecond();
-   // Описание метода:
-   default void show(){
-      System.out.println("Интерфейс Second: метод show()");
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+interface Second {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    String getSecond();
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    default void show() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Second: пїЅпїЅпїЅпїЅпїЅ show()");
+    }
 }
-// Суперкласс:
-class Base{
-   // Описание метода:
-   String getBase(){
-      return "Класс Base";
-   }
-   // Описание метода:
-   void show(){
-      System.out.println("Класс Base: метод show()");
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+class Base {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    String getBase() {
+        return "пїЅпїЅпїЅпїЅпїЅ Base";
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    void show() {
+        System.out.println("пїЅпїЅпїЅпїЅпїЅ Base: пїЅпїЅпїЅпїЅпїЅ show()");
+    }
 }
-// Подкласс наследует суперкласс и реализует интерфейсы:
-class MyClass extends Base implements First, Second{
-   // Описание метода:
-   public String getFirst(){
-      return "Интерфейс First";
-   }
-   // Описание метода:
-   public String getSecond(){
-      return "Интерфейс Bravo";
-   }
-   // Описание метода:
-   public void show(){
-      System.out.println("Мы используем:");
-      System.out.println(getFirst());
-      System.out.println(getSecond());
-      System.out.println(getBase());
-      // Вызов версии метода из интерфейса First:
-      First.super.show();
-      // Вызов версии метода из интерфейса Second:
-      Second.super.show();
-      // Вызов версии метода из суперкласса Base:
-      super.show();
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+class MyClass extends Base implements First, Second {
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    public String getFirst() {
+        return "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First";
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    public String getSecond() {
+        return "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Bravo";
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:
+    public void show() {
+        System.out.println("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
+        System.out.println(getFirst());
+        System.out.println(getSecond());
+        System.out.println(getBase());
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ First:
+        First.super.show();
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Second:
+        Second.super.show();
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Base:
+        super.show();
+    }
 }
-// Главный класс:
-class ExtendingAndImplementingDemo{
-   public static void main(String[] args){
-      // Создание объекта подкласса:
-      MyClass obj=new MyClass();
-      // Вызов метода из объекта:
-      obj.show();
-   }
+
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+class ExtendingAndImplementingDemo {
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        MyClass obj = new MyClass();
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        obj.show();
+    }
 }

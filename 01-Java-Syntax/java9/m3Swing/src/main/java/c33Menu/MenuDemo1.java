@@ -59,11 +59,12 @@ class MenuDemo1 implements ActionListener {
         // Add a listener for the popup trigger.
         jfrm.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent me) {
-                if(me.isPopupTrigger())
+                if (me.isPopupTrigger())
                     jpu.show(me.getComponent(), me.getX(), me.getY());
             }
+
             public void mouseReleased(MouseEvent me) {
-                if(me.isPopupTrigger())
+                if (me.isPopupTrigger())
                     jpu.show(me.getComponent(), me.getX(), me.getY());
             }
         });
@@ -90,7 +91,7 @@ class MenuDemo1 implements ActionListener {
         String comStr = ae.getActionCommand();
 
         // If user chooses Exit, then exit the program.
-        if(comStr.equals("Exit")) System.exit(0);
+        if (comStr.equals("Exit")) System.exit(0);
 
         // Otherwise, display the selection.
         jlab.setText(comStr + " Selected");
@@ -118,10 +119,10 @@ class MenuDemo1 implements ActionListener {
 
             // Toggle the enabled status of the
             // Set and Clear Breakpoint options.
-            if(comStr.equals("Set Breakpoint")) {
+            if (comStr.equals("Set Breakpoint")) {
                 clearAct.setEnabled(true);
                 setAct.setEnabled(false);
-            } else if(comStr.equals("Clear Breakpoint")) {
+            } else if (comStr.equals("Clear Breakpoint")) {
                 clearAct.setEnabled(false);
                 setAct.setEnabled(true);
             }

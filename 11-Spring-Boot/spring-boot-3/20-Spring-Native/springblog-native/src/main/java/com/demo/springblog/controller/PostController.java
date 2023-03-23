@@ -3,6 +3,7 @@ package com.demo.springblog.controller;
 import com.demo.springblog.domain.Post;
 import com.demo.springblog.exception.SpringBlogException;
 import com.demo.springblog.service.PostService;
+
 import javax.validation.Valid;
 
 import lombok.RequiredArgsConstructor;

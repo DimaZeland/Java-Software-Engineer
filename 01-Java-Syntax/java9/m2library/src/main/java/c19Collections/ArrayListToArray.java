@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Convert an ArrayList into an array.
+
 import java.util.*;
 
 class ArrayListToArray {
@@ -23,7 +24,7 @@ class ArrayListToArray {
         int sum = 0;
 
         // Sum the array.
-        for(int i : ia) sum += i;
+        for (int i : ia) sum += i;
 
         System.out.println("Sum is: " + sum);
     }

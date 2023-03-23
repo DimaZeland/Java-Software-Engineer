@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 
 class BarDemo {
     public static void main(String args[]) {
-        CyclicBarrier cb = new CyclicBarrier(3, new BarAction() );
+        CyclicBarrier cb = new CyclicBarrier(3, new BarAction());
 
         System.out.println("Starting");
 

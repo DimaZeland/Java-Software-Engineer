@@ -17,10 +17,10 @@ public /*final*/ class ConnectionManager {
         loadDriver();
     }
 
-//    @SneakyThrows
+    //    @SneakyThrows
     private static void loadDriver() {
         try {
-           Class.forName("org.postgresql.Driver");
+            Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -29,7 +29,7 @@ public /*final*/ class ConnectionManager {
 //    private ConnectionManager() {
 //    }
 
-//    @SneakyThrows
+    //    @SneakyThrows
     public static Connection get() {
         try {
             return DriverManager.getConnection(

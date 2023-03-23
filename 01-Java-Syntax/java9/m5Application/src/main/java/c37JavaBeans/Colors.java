@@ -1,6 +1,7 @@
 package c37JavaBeans;
 
 // A simple Bean.
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.Serializable;
@@ -35,9 +36,9 @@ public class Colors extends Canvas implements Serializable {
     }
 
     private Color randomColor() {
-        int r = (int)(255*Math.random());
-        int g = (int)(255*Math.random());
-        int b = (int)(255*Math.random());
+        int r = (int) (255 * Math.random());
+        int g = (int) (255 * Math.random());
+        int b = (int) (255 * Math.random());
         return new Color(r, g, b);
     }
 
@@ -46,11 +47,10 @@ public class Colors extends Canvas implements Serializable {
         int h = d.height;
         int w = d.width;
         g.setColor(color);
-        if(rectangular) {
-            g.fillRect(0, 0, w-1, h-1);
-        }
-        else {
-            g.fillOval(0, 0, w-1, h-1);
+        if (rectangular) {
+            g.fillRect(0, 0, w - 1, h - 1);
+        } else {
+            g.fillOval(0, 0, w - 1, h - 1);
         }
     }
 }

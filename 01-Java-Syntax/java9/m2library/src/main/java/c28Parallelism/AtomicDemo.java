@@ -29,7 +29,7 @@ class AtomThread implements Runnable {
 
         System.out.println("Starting " + name);
 
-        for(int i=1; i <= 3; i++)
+        for (int i = 1; i <= 3; i++)
             System.out.println(name + " got: " +
                     Shared2.ai.getAndSet(i));
     }

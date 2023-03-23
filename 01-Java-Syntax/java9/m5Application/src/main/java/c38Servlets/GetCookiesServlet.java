@@ -17,7 +17,7 @@ public class GetCookiesServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter pw = response.getWriter();
         pw.println("<B>");
-        for(int i = 0; i < cookies.length; i++) {
+        for (int i = 0; i < cookies.length; i++) {
             String name = cookies[i].getName();
             String value = cookies[i].getValue();
             pw.println("name = " + name +

@@ -1,6 +1,7 @@
 package c32Buttons;
 
 // Demonstrate JTabbedPane.
+
 import javax.swing.*;
 import java.awt.*;
 

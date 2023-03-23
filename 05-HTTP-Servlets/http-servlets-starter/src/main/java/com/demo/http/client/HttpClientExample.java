@@ -24,7 +24,7 @@ public class HttpClientExample {
                 .POST(BodyPublishers.ofFile(Path.of("path", "to", "file")))
                 .build();
 
-        HttpResponse<String> response = httpClient.send(request,  BodyHandlers.ofString());
+        HttpResponse<String> response = httpClient.send(request, BodyHandlers.ofString());
         System.out.println(response.body());
         System.out.println(response.headers());
     }

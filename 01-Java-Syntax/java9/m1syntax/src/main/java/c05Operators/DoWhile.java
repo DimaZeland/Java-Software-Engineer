@@ -8,6 +8,6 @@ class DoWhile {
         do {
             System.out.println("tick " + n);
             n--;
-        } while(n > 0);
+        } while (n > 0);
     }
 }

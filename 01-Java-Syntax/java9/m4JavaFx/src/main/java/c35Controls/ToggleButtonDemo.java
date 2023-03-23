@@ -49,7 +49,7 @@ public class ToggleButtonDemo extends Application {
         // Handle action events for the toggle button.
         tbOnOff.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent ae) {
-                if(tbOnOff.isSelected()) response.setText("Button is on.");
+                if (tbOnOff.isSelected()) response.setText("Button is on.");
                 else response.setText("Button is off.");
             }
         });

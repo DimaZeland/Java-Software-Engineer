@@ -18,6 +18,7 @@ class ServerSomthing extends Thread {
 
     /**
      * для общения с клиентом необходим сокет (адресные данные)
+     *
      * @param socket
      * @throws IOException
      */
@@ -31,6 +32,7 @@ class ServerSomthing extends Thread {
         // сооюбщений новому поключению
         start(); // вызываем run()
     }
+
     @Override
     public void run() {
         String word;
@@ -41,11 +43,12 @@ class ServerSomthing extends Thread {
                 out.write(word + "\n");
                 out.flush(); // flush() нужен для выталкивания оставшихся данных
                 // если такие есть, и очистки потока для дьнейших нужд
-            } catch (IOException ignored) {}
+            } catch (IOException ignored) {
+            }
             try {
                 while (true) {
                     word = in.readLine();
-                    if(word.equals("stop")) {
+                    if (word.equals("stop")) {
                         this.downService(); // харакири
                         break; // если пришла пустая строка - выходим из цикла прослушки
                     }
@@ -55,7 +58,8 @@ class ServerSomthing extends Thread {
                         vr.send(word); // отослать принятое сообщение с привязанного клиента всем остальным влючая его
                     }
                 }
-            } catch (NullPointerException ignored) {}
+            } catch (NullPointerException ignored) {
+            }
 
 
         } catch (IOException e) {
@@ -65,13 +69,15 @@ class ServerSomthing extends Thread {
 
     /**
      * отсылка одного сообщения клиенту по указанному потоку
+     *
      * @param msg
      */
     private void send(String msg) {
         try {
             out.write(msg + "\n");
             out.flush();
-        } catch (IOException ignored) {}
+        } catch (IOException ignored) {
+        }
 
     }
 
@@ -81,16 +87,17 @@ class ServerSomthing extends Thread {
      */
     private void downService() {
         try {
-            if(!socket.isClosed()) {
+            if (!socket.isClosed()) {
                 socket.close();
                 in.close();
                 out.close();
                 for (ServerSomthing vr : Server.serverList) {
-                    if(vr.equals(this)) vr.interrupt();
+                    if (vr.equals(this)) vr.interrupt();
                     Server.serverList.remove(this);
                 }
             }
-        } catch (IOException ignored) {}
+        } catch (IOException ignored) {
+        }
     }
 }
 
@@ -105,6 +112,7 @@ class Story {
 
     /**
      * добавить новый элемент в список
+     *
      * @param el
      */
 
@@ -122,11 +130,12 @@ class Story {
     /**
      * отсылаем последовательно каждое сообщение из списка
      * в поток вывода данному клиенту (новому подключению)
+     *
      * @param writer
      */
 
     public void printStory(BufferedWriter writer) {
-        if(story.size() > 0) {
+        if (story.size() > 0) {
             try {
                 writer.write("History messages" + "\n");
                 for (String vr : story) {
@@ -134,7 +143,8 @@ class Story {
                 }
                 writer.write("/...." + "\n");
                 writer.flush();
-            } catch (IOException ignored) {}
+            } catch (IOException ignored) {
+            }
 
         }
 

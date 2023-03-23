@@ -10,6 +10,7 @@ import java.lang.reflect.*;
 @Repeatable(MyRepeatedAnnos.class)
 @interface MyAnno4 {
     String str() default "Testing";
+
     int val() default 9000;
 }
 
@@ -24,8 +25,7 @@ class RepeatAnno {
     // Repeat MyAnno on myMeth().
     @MyAnno4(str = "First annotation", val = -1)
     @MyAnno4(str = "Second annotation", val = 100)
-    public static void myMeth(String str, int i)
-    {
+    public static void myMeth(String str, int i) {
         RepeatAnno ob = new RepeatAnno();
 
         try {

@@ -17,8 +17,7 @@ class LambdasAsArgumentsDemo {
         return sf.func(s);
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         String inStr = "Lambdas add power to Java";
         String outStr;
 
@@ -30,12 +29,12 @@ class LambdasAsArgumentsDemo {
         System.out.println("The string in uppercase: " + outStr);
 
         // This passes a block lambda that removes spaces.
-        outStr = stringOp((str) ->  {
+        outStr = stringOp((str) -> {
             String result = "";
             int i;
 
-            for(i = 0; i < str.length(); i++)
-                if(str.charAt(i) != ' ')
+            for (i = 0; i < str.length(); i++)
+                if (str.charAt(i) != ' ')
                     result += str.charAt(i);
 
             return result;
@@ -48,11 +47,11 @@ class LambdasAsArgumentsDemo {
         // created by an earlier lambda expression. For example,
         // after this declaration executes, reverse refers to a
         // synthetic instance of StringFunc.
-        StringFunc1 reverse = (str) ->  {
+        StringFunc1 reverse = (str) -> {
             String result = "";
             int i;
 
-            for(i = str.length()-1; i >= 0; i--)
+            for (i = str.length() - 1; i >= 0; i--)
                 result += str.charAt(i);
 
             return result;

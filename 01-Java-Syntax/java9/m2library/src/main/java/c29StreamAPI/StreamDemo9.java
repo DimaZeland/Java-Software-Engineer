@@ -10,7 +10,7 @@ class StreamDemo9 {
     public static void main(String[] args) {
 
         // Create a list of Strings.
-        ArrayList<String> myList = new ArrayList<>( );
+        ArrayList<String> myList = new ArrayList<>();
         myList.add("Alpha");
         myList.add("Beta");
         myList.add("Gamma");
@@ -25,6 +25,6 @@ class StreamDemo9 {
         Spliterator<String> splitItr = myStream.spliterator();
 
         // Iterate the elements of the stream.
-        while(splitItr.tryAdvance((n) -> System.out.println(n)));
+        while (splitItr.tryAdvance((n) -> System.out.println(n))) ;
     }
 }

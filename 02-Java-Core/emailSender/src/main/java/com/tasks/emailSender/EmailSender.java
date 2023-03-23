@@ -9,15 +9,16 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class EmailSender
-{
+public class EmailSender {
     static Properties mailServerProperties;
     static Session getMailSession;
     static MimeMessage generateMailMessage;
+
     public static void main(String args[]) throws AddressException, MessagingException {
         generateAndSendEmail();
         System.out.println("\n\n ===> Your Java Program has just sent an Email successfully. Check your email..");
     }
+
     public static void generateAndSendEmail() throws AddressException, MessagingException {
         // Step1
         System.out.println("\n 1st ===> setup Mail Server Properties..");

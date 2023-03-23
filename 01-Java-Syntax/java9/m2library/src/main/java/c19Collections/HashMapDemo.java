@@ -19,7 +19,7 @@ class HashMapDemo {
         Set<Map.Entry<String, Double>> set = hm.entrySet();
 
         // Display the set.
-        for(Map.Entry<String, Double> me : set) {
+        for (Map.Entry<String, Double> me : set) {
             System.out.print(me.getKey() + ": ");
             System.out.println(me.getValue());
         }

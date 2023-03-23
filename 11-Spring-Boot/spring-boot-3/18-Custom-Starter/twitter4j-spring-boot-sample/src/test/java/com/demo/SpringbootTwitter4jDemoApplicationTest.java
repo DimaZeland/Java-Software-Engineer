@@ -10,18 +10,15 @@ import twitter4j.TwitterException;
 
 @Disabled
 @SpringBootTest
-public class SpringbootTwitter4jDemoApplicationTest
-{
+public class SpringbootTwitter4jDemoApplicationTest {
     @Autowired
     private TweetService tweetService;
 
     @Test
-    public void testGetTweets() throws TwitterException
-    {
+    public void testGetTweets() throws TwitterException {
         List<String> tweets = tweetService.getLatestTweets();
 
-        for (String tweet : tweets)
-        {
+        for (String tweet : tweets) {
             System.err.println(tweet);
         }
     }

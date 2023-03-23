@@ -11,7 +11,7 @@ class TestClone2 implements Cloneable {
         try {
             // call clone in Object.
             return super.clone();
-        } catch(CloneNotSupportedException e) {
+        } catch (CloneNotSupportedException e) {
             System.out.println("Cloning not allowed.");
             return this;
         }

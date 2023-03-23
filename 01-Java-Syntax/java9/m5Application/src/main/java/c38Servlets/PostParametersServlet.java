@@ -18,7 +18,7 @@ public class PostParametersServlet
         Enumeration<String> e = request.getParameterNames();
 
         // Display parameter names and values.
-        while(e.hasMoreElements()) {
+        while (e.hasMoreElements()) {
             String pname = e.nextElement();
             pw.print(pname + " = ");
             String pvalue = request.getParameter(pname);

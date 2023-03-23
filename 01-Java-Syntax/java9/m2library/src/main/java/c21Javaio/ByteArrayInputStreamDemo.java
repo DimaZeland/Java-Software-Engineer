@@ -1,6 +1,7 @@
 package c21Javaio;
 
 // Demonstrate ByteArrayInputStream.
+
 import java.io.*;
 
 class ByteArrayInputStreamDemo {
@@ -9,6 +10,6 @@ class ByteArrayInputStreamDemo {
         byte b[] = tmp.getBytes();
 
         ByteArrayInputStream input1 = new ByteArrayInputStream(b);
-        ByteArrayInputStream input2 = new ByteArrayInputStream(b,0,3);
+        ByteArrayInputStream input2 = new ByteArrayInputStream(b, 0, 3);
     }
 }

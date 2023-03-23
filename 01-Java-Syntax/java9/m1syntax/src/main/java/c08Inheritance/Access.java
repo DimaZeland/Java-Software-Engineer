@@ -23,7 +23,7 @@ class B1 extends A1 {
     int total;
 
     void sum() {
-      //  total = i + j; // ERROR, j is not accessible here
+        //  total = i + j; // ERROR, j is not accessible here
     }
 }
 

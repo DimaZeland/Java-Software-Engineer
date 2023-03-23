@@ -20,8 +20,8 @@ public class DateServlet extends HttpServlet {
         pw.print("<B>");
 
         // Display date/time of last access.
-        Date date = (Date)hs.getAttribute("date");
-        if(date != null) {
+        Date date = (Date) hs.getAttribute("date");
+        if (date != null) {
             pw.print("Last access: " + date + "<br>");
         }
 

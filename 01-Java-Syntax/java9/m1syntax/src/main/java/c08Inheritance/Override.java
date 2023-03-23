@@ -4,7 +4,7 @@ package c08Inheritance;
 class A4 {
     int i, j;
 
-    A4 (int a, int b) {
+    A4(int a, int b) {
         i = a;
         j = b;
     }

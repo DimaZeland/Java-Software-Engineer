@@ -12,7 +12,7 @@ class NewThread1 extends Thread {
     // This is the entry point for the second thread.
     public void run() {
         try {
-            for(int i = 5; i > 0; i--) {
+            for (int i = 5; i > 0; i--) {
                 System.out.println("Child Thread: " + i);
                 Thread.sleep(500);
             }
@@ -30,7 +30,7 @@ class ExtendThread {
         nt.start(); // start the thread
 
         try {
-            for(int i = 5; i > 0; i--) {
+            for (int i = 5; i > 0; i--) {
                 System.out.println("Main Thread: " + i);
                 Thread.sleep(1000);
             }

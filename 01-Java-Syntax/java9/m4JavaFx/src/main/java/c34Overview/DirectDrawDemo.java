@@ -18,7 +18,7 @@ public class DirectDrawDemo extends Application {
 
     GraphicsContext gc;
 
-    Color[] colors = { Color.RED, Color.BLUE, Color.GREEN, Color.BLACK };
+    Color[] colors = {Color.RED, Color.BLUE, Color.GREEN, Color.BLACK};
     int colorIdx = 0;
 
     public static void main(String[] args) {
@@ -71,7 +71,7 @@ public class DirectDrawDemo extends Application {
 
                 // Change the color.
                 colorIdx++;
-                if(colorIdx == colors.length) colorIdx= 0;
+                if (colorIdx == colors.length) colorIdx = 0;
             }
         });
 

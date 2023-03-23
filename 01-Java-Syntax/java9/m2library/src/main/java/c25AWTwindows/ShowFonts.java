@@ -1,6 +1,7 @@
 package c25AWTwindows;
 
 // Display Fonts.
+
 import java.awt.event.*;
 import java.awt.*;
 
@@ -22,7 +23,7 @@ public class ShowFonts extends Frame {
         String[] fontList = ge.getAvailableFontFamilyNames();
 
         // Create a string of the first 5 fonts.
-        for(int i=0; (i < 5) && (i < fontList.length); i++)
+        for (int i = 0; (i < 5) && (i < fontList.length); i++)
             msg += fontList[i] + " ";
     }
 

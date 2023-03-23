@@ -22,7 +22,8 @@ class TTest {
 
         try {
             Thread.sleep(5000);
-        } catch (InterruptedException exc) {}
+        } catch (InterruptedException exc) {
+        }
 
         myTimer.cancel();
     }

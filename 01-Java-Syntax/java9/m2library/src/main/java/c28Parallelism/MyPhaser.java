@@ -23,7 +23,7 @@ class MyPhaser extends Phaser {
         System.out.println("Phase " + p + " completed.\n");
 
         // If all phases have completed, return true
-        if(p == numPhases || regParties == 0) return true;
+        if (p == numPhases || regParties == 0) return true;
 
         // Otherwise, return false.
         return false;
@@ -42,7 +42,7 @@ class PhaserDemo2 {
         new Thread(new MyThread3(phsr, "C")).start();
 
         // Wait for the specified number of phases to complete..
-        while(!phsr.isTerminated()) {
+        while (!phsr.isTerminated()) {
             phsr.arriveAndAwaitAdvance();
         }
 
@@ -63,7 +63,7 @@ class MyThread3 implements Runnable {
 
     public void run() {
 
-        while(!phsr.isTerminated()) {
+        while (!phsr.isTerminated()) {
             System.out.println("Thread " + name + " Beginning Phase " +
                     phsr.getPhase());
 
@@ -73,7 +73,7 @@ class MyThread3 implements Runnable {
             // only. It is not required for the proper opration of the phaser.
             try {
                 Thread.sleep(100);
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e);
             }
         }

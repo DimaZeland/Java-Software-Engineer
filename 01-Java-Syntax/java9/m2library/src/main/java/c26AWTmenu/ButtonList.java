@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Recognize Button objects.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -24,7 +25,7 @@ public class ButtonList extends Frame implements ActionListener {
         bList[2] = (Button) add(maybe);
 
         // Register to receive action events.
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             bList[i].addActionListener(this);
         }
 
@@ -37,8 +38,8 @@ public class ButtonList extends Frame implements ActionListener {
 
     // Handle button action events.
     public void actionPerformed(ActionEvent ae) {
-        for(int i = 0; i < 3; i++) {
-            if(ae.getSource() == bList[i]) {
+        for (int i = 0; i < 3; i++) {
+            if (ae.getSource() == bList[i]) {
                 msg = "You pressed " + bList[i].getLabel();
             }
         }

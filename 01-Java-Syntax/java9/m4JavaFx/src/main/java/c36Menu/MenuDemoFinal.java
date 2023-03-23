@@ -49,11 +49,11 @@ public class MenuDemoFinal extends Application {
         // Create one event handler for all menu action events.
         MEHandler = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent ae) {
-                String name = ((MenuItem)ae.getTarget()).getText();
+                String name = ((MenuItem) ae.getTarget()).getText();
 
-                if(name.equals("Exit")) Platform.exit();
+                if (name.equals("Exit")) Platform.exit();
 
-                response.setText( name + " selected");
+                response.setText(name + " selected");
             }
         };
 
@@ -106,7 +106,7 @@ public class MenuDemoFinal extends Application {
         separator.setPrefWidth(260);
 
         // Add the label, separator, and text field to the flow pane.
-        fpRoot.getChildren().addAll(response, separator,  tf);
+        fpRoot.getChildren().addAll(response, separator, tf);
 
         // Add the tool bar to the bottom of the border pane.
         rootNode.setBottom(tbDebug);
@@ -213,7 +213,7 @@ public class MenuDemoFinal extends Application {
         tg.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             public void changed(ObservableValue<? extends Toggle> changed,
                                 Toggle oldVal, Toggle newVal) {
-                if(newVal==null) return;
+                if (newVal == null) return;
 
                 // Cast newVal to RadioButton.
                 RadioMenuItem rmi = (RadioMenuItem) newVal;
@@ -290,7 +290,7 @@ public class MenuDemoFinal extends Application {
         // Create a handler for the tool bar buttons.
         EventHandler<ActionEvent> btnHandler = new EventHandler<ActionEvent>() {
             public void handle(ActionEvent ae) {
-                response.setText(((Button)ae.getTarget()).getText());
+                response.setText(((Button) ae.getTarget()).getText());
             }
         };
 

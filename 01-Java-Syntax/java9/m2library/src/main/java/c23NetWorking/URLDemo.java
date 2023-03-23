@@ -1,7 +1,9 @@
 package c23NetWorking;
 
 // Demonstrate URL.
+
 import java.net.*;
+
 class URLDemo {
     public static void main(String args[]) throws MalformedURLException {
         URL hp = new URL("http://www.HerbSchildt.com/WhatsNew");

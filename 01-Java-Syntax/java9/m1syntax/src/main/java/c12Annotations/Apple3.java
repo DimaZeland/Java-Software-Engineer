@@ -7,10 +7,16 @@ enum Apple3 {
     private int price; // price of each apple
 
     // Constructor
-    Apple3(int p) { price = p; }
+    Apple3(int p) {
+        price = p;
+    }
 
     // Overloaded constructor
-    Apple3() { price = -1; }
+    Apple3() {
+        price = -1;
+    }
 
-    int getPrice() { return price; }
+    int getPrice() {
+        return price;
+    }
 }

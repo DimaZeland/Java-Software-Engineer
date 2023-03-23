@@ -2,6 +2,7 @@ package com.demo.springblog.validation;
 
 import com.demo.springblog.domain.Post;
 import com.demo.springblog.service.PostService;
+
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 

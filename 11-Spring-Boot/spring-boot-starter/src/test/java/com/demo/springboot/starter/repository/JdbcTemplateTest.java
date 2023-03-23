@@ -5,6 +5,7 @@ import com.demo.springboot.starter.IntegrationTestBase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
+
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;

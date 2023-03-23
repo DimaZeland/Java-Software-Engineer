@@ -10,7 +10,7 @@ class AutoBox5 {
 
         // Below, b is auto-unboxed when used in
         // a conditional expression, such as an if.
-        if(b) System.out.println("b is true");
+        if (b) System.out.println("b is true");
 
         // Autobox/unbox a char.
         Character ch = 'x'; // box a char

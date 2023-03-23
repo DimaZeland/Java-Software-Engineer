@@ -1,6 +1,7 @@
 package c20Util;
 
 // Demonstrate left justification.
+
 import java.util.*;
 
 class LeftJustify {

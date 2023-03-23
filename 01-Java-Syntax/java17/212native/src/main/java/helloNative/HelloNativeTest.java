@@ -1,18 +1,15 @@
 package helloNative;
 
 /**
- *  @version 1.11 2007-10-26
- *  @author Cay Horstmann
+ * @author Cay Horstmann
+ * @version 1.11 2007-10-26
  */
-class HelloNativeTest
-{  
-   public static void main(String[] args)
-   {
-      HelloNative.greeting();
-   }
+class HelloNativeTest {
+    public static void main(String[] args) {
+        HelloNative.greeting();
+    }
 
-   static
-   {  
-      System.loadLibrary("HelloNative");
-   }
+    static {
+        System.loadLibrary("HelloNative");
+    }
 }

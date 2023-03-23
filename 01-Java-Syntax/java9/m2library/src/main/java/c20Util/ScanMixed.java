@@ -1,6 +1,7 @@
 package c20Util;
 
 // Use Scanner to read various types of data from a file.
+
 import java.util.*;
 import java.io.*;
 
@@ -24,20 +25,17 @@ class ScanMixed {
 
 
         // Read to end.
-        while(src.hasNext()) {
-            if(src.hasNextInt()) {
+        while (src.hasNext()) {
+            if (src.hasNextInt()) {
                 i = src.nextInt();
                 System.out.println("int: " + i);
-            }
-            else if(src.hasNextDouble()) {
+            } else if (src.hasNextDouble()) {
                 d = src.nextDouble();
                 System.out.println("double: " + d);
-            }
-            else if(src.hasNextBoolean()) {
+            } else if (src.hasNextBoolean()) {
                 b = src.nextBoolean();
                 System.out.println("boolean: " + b);
-            }
-            else {
+            } else {
                 str = src.next();
                 System.out.println("String: " + str);
             }

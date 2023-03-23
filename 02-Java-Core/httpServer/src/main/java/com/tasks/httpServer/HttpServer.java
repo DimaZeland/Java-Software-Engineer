@@ -59,9 +59,9 @@ public class HttpServer {
 
         private void readInputHeaders() throws Throwable {
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            while(true) {
+            while (true) {
                 String s = br.readLine();
-                if(s == null || s.trim().length() == 0) {
+                if (s == null || s.trim().length() == 0) {
                     break;
                 }
             }

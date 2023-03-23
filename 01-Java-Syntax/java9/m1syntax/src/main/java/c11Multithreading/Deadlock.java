@@ -9,7 +9,7 @@ class A {
 
         try {
             Thread.sleep(1000);
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("A Interrupted");
         }
 
@@ -29,7 +29,7 @@ class B {
 
         try {
             Thread.sleep(1000);
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("B Interrupted");
         }
 

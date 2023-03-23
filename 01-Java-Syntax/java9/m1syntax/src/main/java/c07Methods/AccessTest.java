@@ -12,6 +12,7 @@ class Test1 {
     void setc(int i) { // set c's value
         c = i;
     }
+
     int getc() { // get c's value
         return c;
     }

@@ -1,11 +1,13 @@
 package c27Images;
 
 // Invert colors filter.
+
 import java.awt.*;
 import java.awt.image.*;
 
 class Invert extends RGBImageFilter implements PlugInFilter {
-    public Invert() { }
+    public Invert() {
+    }
 
     public Image filter(Frame f, Image in) {
         return f.createImage(new FilteredImageSource(in.getSource(), this));

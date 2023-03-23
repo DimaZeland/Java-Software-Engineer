@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate TextArea.
+
 import java.awt.*;
 import java.awt.event.*;
 

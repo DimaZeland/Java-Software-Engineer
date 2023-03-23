@@ -12,7 +12,7 @@ class GenBase1<T> {
 
     // Return ob.
     T getob() {
-        System.out.print("Gen's getob(): " );
+        System.out.print("Gen's getob(): ");
         return ob;
     }
 }

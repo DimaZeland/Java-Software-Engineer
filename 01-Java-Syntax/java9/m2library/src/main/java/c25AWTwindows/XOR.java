@@ -1,19 +1,20 @@
 package c25AWTwindows;
 
 // Demonstrate XOR mode.
+
 import java.awt.*;
 import java.awt.event.*;
 
 public class XOR extends Frame {
-    int chsX=100, chsY=100;
+    int chsX = 100, chsY = 100;
 
     public XOR() {
         addMouseMotionListener(new MouseMotionAdapter() {
             public void mouseMoved(MouseEvent me) {
                 int x = me.getX();
                 int y = me.getY();
-                chsX = x-10;
-                chsY = y-10;
+                chsX = x - 10;
+                chsY = y - 10;
                 repaint();
             }
         });
@@ -41,8 +42,8 @@ public class XOR extends Frame {
 
         // XOR cross hairs
         g.setXORMode(Color.black);
-        g.drawLine(chsX-10, chsY, chsX+10, chsY);
-        g.drawLine(chsX, chsY-10, chsX, chsY+10);
+        g.drawLine(chsX - 10, chsY, chsX + 10, chsY);
+        g.drawLine(chsX, chsY - 10, chsX, chsY + 10);
         g.setPaintMode();
     }
 

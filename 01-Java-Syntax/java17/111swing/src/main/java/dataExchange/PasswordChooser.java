@@ -16,97 +16,94 @@ import javax.swing.SwingUtilities;
 /**
  * A password chooser that is shown inside a dialog.
  */
-public class PasswordChooser extends JPanel
-{
-   private JTextField username;
-   private JPasswordField password;
-   private JButton okButton;
-   private boolean ok;
-   private JDialog dialog;
+public class PasswordChooser extends JPanel {
+    private JTextField username;
+    private JPasswordField password;
+    private JButton okButton;
+    private boolean ok;
+    private JDialog dialog;
 
-   public PasswordChooser()
-   {
-      setLayout(new BorderLayout());
+    public PasswordChooser() {
+        setLayout(new BorderLayout());
 
-      // construct a panel with user name and password fields
+        // construct a panel with user name and password fields
 
-      var panel = new JPanel();
-      panel.setLayout(new GridLayout(2, 2));
-      panel.add(new JLabel("User name:"));
-      panel.add(username = new JTextField(""));
-      panel.add(new JLabel("Password:"));
-      panel.add(password = new JPasswordField(""));
-      add(panel, BorderLayout.CENTER);
+        var panel = new JPanel();
+        panel.setLayout(new GridLayout(2, 2));
+        panel.add(new JLabel("User name:"));
+        panel.add(username = new JTextField(""));
+        panel.add(new JLabel("Password:"));
+        panel.add(password = new JPasswordField(""));
+        add(panel, BorderLayout.CENTER);
 
-      // create Ok and Cancel buttons that terminate the dialog
+        // create Ok and Cancel buttons that terminate the dialog
 
-      okButton = new JButton("Ok");
-      okButton.addActionListener(event ->
-         {
+        okButton = new JButton("Ok");
+        okButton.addActionListener(event ->
+        {
             ok = true;
             dialog.setVisible(false);
-         });
- 
-      var cancelButton = new JButton("Cancel");
-      cancelButton.addActionListener(event -> dialog.setVisible(false));
+        });
 
-      // add buttons to southern border
+        var cancelButton = new JButton("Cancel");
+        cancelButton.addActionListener(event -> dialog.setVisible(false));
 
-      var buttonPanel = new JPanel();
-      buttonPanel.add(okButton);
-      buttonPanel.add(cancelButton);
-      add(buttonPanel, BorderLayout.SOUTH);
-   }
+        // add buttons to southern border
 
-   /**
-    * Sets the dialog defaults.
-    * @param u the default user information
-    */
-   public void setUser(User u)
-   {
-      username.setText(u.getName());
-   }
+        var buttonPanel = new JPanel();
+        buttonPanel.add(okButton);
+        buttonPanel.add(cancelButton);
+        add(buttonPanel, BorderLayout.SOUTH);
+    }
 
-   /**
-    * Gets the dialog entries.
-    * @return a User object whose state represents the dialog entries
-    */
-   public User getUser()
-   {
-      return new User(username.getText(), password.getPassword());
-   }
+    /**
+     * Sets the dialog defaults.
+     *
+     * @param u the default user information
+     */
+    public void setUser(User u) {
+        username.setText(u.getName());
+    }
 
-   /**
-    * Show the chooser panel in a dialog.
-    * @param parent a component in the owner frame or null
-    * @param title the dialog window title
-    */
-   public boolean showDialog(Component parent, String title)
-   {
-      ok = false;
+    /**
+     * Gets the dialog entries.
+     *
+     * @return a User object whose state represents the dialog entries
+     */
+    public User getUser() {
+        return new User(username.getText(), password.getPassword());
+    }
 
-      // locate the owner frame
+    /**
+     * Show the chooser panel in a dialog.
+     *
+     * @param parent a component in the owner frame or null
+     * @param title  the dialog window title
+     */
+    public boolean showDialog(Component parent, String title) {
+        ok = false;
 
-      Frame owner = null;
-      if (parent instanceof Frame)
-         owner = (Frame) parent;
-      else
-         owner = (Frame) SwingUtilities.getAncestorOfClass(Frame.class, parent);
+        // locate the owner frame
 
-      // if first time, or if owner has changed, make new dialog
+        Frame owner = null;
+        if (parent instanceof Frame)
+            owner = (Frame) parent;
+        else
+            owner = (Frame) SwingUtilities.getAncestorOfClass(Frame.class, parent);
 
-      if (dialog == null || dialog.getOwner() != owner)
-      {
-         dialog = new JDialog(owner, true);
-         dialog.add(this);
-         dialog.getRootPane().setDefaultButton(okButton);
-         dialog.pack();
-      }
+        // if first time, or if owner has changed, make new dialog
 
-      // set title and show dialog
+        if (dialog == null || dialog.getOwner() != owner) {
+            dialog = new JDialog(owner, true);
+            dialog.add(this);
+            dialog.getRootPane().setDefaultButton(okButton);
+            dialog.pack();
+        }
 
-      dialog.setTitle(title);
-      dialog.setVisible(true);
-      return ok;
-   }
+        // set title and show dialog
+
+        dialog.setTitle(title);
+        dialog.setVisible(true);
+        return ok;
+    }
 }

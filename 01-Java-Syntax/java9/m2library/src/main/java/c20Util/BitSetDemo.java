@@ -1,6 +1,7 @@
 package c20Util;
 
 // BitSet Demonstration.
+
 import java.util.BitSet;
 
 class BitSetDemo {
@@ -9,9 +10,9 @@ class BitSetDemo {
         BitSet bits2 = new BitSet(16);
 
         // set some bits
-        for(int i=0; i<16; i++) {
-            if((i%2) == 0) bits1.set(i);
-            if((i%5) != 0) bits2.set(i);
+        for (int i = 0; i < 16; i++) {
+            if ((i % 2) == 0) bits1.set(i);
+            if ((i % 5) != 0) bits2.set(i);
         }
 
         System.out.println("Initial pattern in bits1: ");

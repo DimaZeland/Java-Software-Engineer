@@ -8,15 +8,14 @@ enum Apple1 {
 }
 
 class EnumDemo2 {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         Apple1 ap;
 
         System.out.println("Here are all Apple constants");
 
         // use values()
         Apple1 allapples[] = Apple1.values();
-        for(Apple1 a : allapples)
+        for (Apple1 a : allapples)
             System.out.println(a);
 
         System.out.println();

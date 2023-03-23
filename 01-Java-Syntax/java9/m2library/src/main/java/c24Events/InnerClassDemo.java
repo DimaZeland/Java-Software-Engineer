@@ -1,6 +1,7 @@
 package c24Events;
 
 // Inner class demo.
+
 import java.awt.*;
 import java.awt.event.*;
 

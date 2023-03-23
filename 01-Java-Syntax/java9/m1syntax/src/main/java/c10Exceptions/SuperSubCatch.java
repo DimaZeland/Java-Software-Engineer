@@ -12,7 +12,7 @@ class SuperSubCatch {
         try {
             int a = 0;
             int b = 42 / a;
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Generic Exception catch.");
         }
     /* This catch is never reached because

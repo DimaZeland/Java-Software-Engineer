@@ -35,9 +35,9 @@ public class RedisTest {
         RedisStorage redis = new RedisStorage();
         redis.init();
         // Эмулируем 10 секунд работы сайта
-        for(int seconds=0; seconds <= 10; seconds++) {
+        for (int seconds = 0; seconds <= 10; seconds++) {
             // Выполним 500 запросов
-            for(int request = 0; request <= RPS; request++) {
+            for (int request = 0; request <= RPS; request++) {
                 int user_id = new Random().nextInt(USERS);
                 redis.logPageVisit(user_id);
                 Thread.sleep(SLEEP);

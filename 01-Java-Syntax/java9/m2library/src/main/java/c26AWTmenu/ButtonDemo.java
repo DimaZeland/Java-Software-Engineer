@@ -1,6 +1,7 @@
 package c26AWTmenu;
 
 // Demonstrate Buttons.
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -38,13 +39,11 @@ public class ButtonDemo extends Frame implements ActionListener {
     // Handle button action events.
     public void actionPerformed(ActionEvent ae) {
         String str = ae.getActionCommand();
-        if(str.equals("Yes")) {
+        if (str.equals("Yes")) {
             msg = "You pressed Yes.";
-        }
-        else if(str.equals("No")) {
+        } else if (str.equals("No")) {
             msg = "You pressed No.";
-        }
-        else {
+        } else {
             msg = "You pressed Undecided.";
         }
 

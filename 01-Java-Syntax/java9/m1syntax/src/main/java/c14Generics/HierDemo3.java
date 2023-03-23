@@ -36,31 +36,31 @@ class HierDemo3 {
         Gen5<String> strOb2 = new Gen5<String>("Generics Test");
 
         // See if iOb2 is some form of Gen2.
-        if(iOb2 instanceof Gen5<?>)
+        if (iOb2 instanceof Gen5<?>)
             System.out.println("iOb2 is instance of Gen2");
 
         // See if iOb2 is some form of Gen.
-        if(iOb2 instanceof GenB<?>)
+        if (iOb2 instanceof GenB<?>)
             System.out.println("iOb2 is instance of Gen");
 
         System.out.println();
 
         // See if strOb2 is a Gen2.
-        if(strOb2 instanceof Gen5<?>)
+        if (strOb2 instanceof Gen5<?>)
             System.out.println("strOb is instance of Gen2");
 
         // See if strOb2 is a Gen.
-        if(strOb2 instanceof GenB<?>)
+        if (strOb2 instanceof GenB<?>)
             System.out.println("strOb is instance of Gen");
 
         System.out.println();
 
         // See if iOb is an instance of Gen2, which it is not.
-        if(iOb instanceof Gen5<?>)
+        if (iOb instanceof Gen5<?>)
             System.out.println("iOb is instance of Gen2");
 
         // See if iOb is an instance of Gen, which it is.
-        if(iOb instanceof GenB<?>)
+        if (iOb instanceof GenB<?>)
             System.out.println("iOb is instance of Gen");
 
         // The following can't be compiled because

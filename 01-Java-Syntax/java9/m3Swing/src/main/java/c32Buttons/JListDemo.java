@@ -1,6 +1,7 @@
 package c32Buttons;
 
 // Demonstrate JList.
+
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
@@ -9,10 +10,10 @@ import java.awt.event.*;
 public class JListDemo {
 
     // Create an array of cities.
-    String Cities[] = { "New York", "Chicago", "Houston",
+    String Cities[] = {"New York", "Chicago", "Houston",
             "Denver", "Los Angeles", "Seattle",
             "London", "Paris", "New Delhi",
-            "Hong Kong", "Tokyo", "Sydney" };
+            "Hong Kong", "Tokyo", "Sydney"};
 
     public JListDemo() {
 
@@ -44,7 +45,7 @@ public class JListDemo {
                 int idx = jlst.getSelectedIndex();
 
                 // Display selection, if item was selected.
-                if(idx != -1)
+                if (idx != -1)
                     jlab.setText("Current selection: " + Cities[idx]);
                 else // Othewise, reprompt.
                     jlab.setText("Choose a City");

@@ -1,25 +1,26 @@
 package com.demo.java8.p02BasicTypes;
 
 import javax.swing.JOptionPane;
-class InputDoubleVariablesDemo{
-   public static void main(String[] args){
-      // Числовые переменные:
-      double mass,height,bmi;
-      // Переменная для записи значения в поле ввода:
-      String result;
-      // Считывание значения из поля ввода:
-      result=JOptionPane.showInputDialog("Ваш рост в метрах:");
-      // Преобразование текста в число:
-      height=Double.parseDouble(result);
-      // Считывание значения из поля ввода:
-      result=JOptionPane.showInputDialog("Ваш вес в килограммах:");
-      // Преобразование текста в число:
-      mass=Double.parseDouble(result);
-      // Вычисление индекса массы тела:
-      bmi=mass/height/height;
-      // Округление полученного значения:
-      bmi=Math.round(bmi*100)/100.0;
-      // Отображение окна с сообщением:
-      JOptionPane.showMessageDialog(null,"Индекс массы тела: "+bmi);
-   }
+
+class InputDoubleVariablesDemo {
+    public static void main(String[] args) {
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        double mass, height, bmi;
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+        String result;
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+        result = JOptionPane.showInputDialog("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ:");
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ:
+        height = Double.parseDouble(result);
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:
+        result = JOptionPane.showInputDialog("пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:");
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ:
+        mass = Double.parseDouble(result);
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ:
+        bmi = mass / height / height;
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        bmi = Math.round(bmi * 100) / 100.0;
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:
+        JOptionPane.showMessageDialog(null, "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: " + bmi);
+    }
 }

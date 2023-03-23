@@ -93,12 +93,12 @@ public class MenuDemo extends Application {
         EventHandler<ActionEvent> MEHandler =
                 new EventHandler<ActionEvent>() {
                     public void handle(ActionEvent ae) {
-                        String name = ((MenuItem)ae.getTarget()).getText();
+                        String name = ((MenuItem) ae.getTarget()).getText();
 
                         // If Exit is chosen, the program is terminated.
-                        if(name.equals("Exit")) Platform.exit();
+                        if (name.equals("Exit")) Platform.exit();
 
-                        response.setText( name + " selected");
+                        response.setText(name + " selected");
                     }
                 };
 

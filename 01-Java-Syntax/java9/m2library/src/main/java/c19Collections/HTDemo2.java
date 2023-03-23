@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Use iterators with a Hashtable.
+
 import java.util.*;
 
 class HTDemo2 {
@@ -23,7 +24,7 @@ class HTDemo2 {
 
         // Get an iterator.
         Iterator<String> itr = set.iterator();
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             str = itr.next();
             System.out.println(str + ": " +
                     balance.get(str));
@@ -33,7 +34,7 @@ class HTDemo2 {
 
         // Deposit 1,000 into John Doe's account.
         bal = balance.get("John Doe");
-        balance.put("John Doe", bal+1000);
+        balance.put("John Doe", bal + 1000);
         System.out.println("John Doe's new balance: " +
                 balance.get("John Doe"));
     }

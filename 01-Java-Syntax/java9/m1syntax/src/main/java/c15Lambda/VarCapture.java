@@ -7,12 +7,11 @@ interface MyFunc {
 }
 
 class VarCapture {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         // A local variable that can be captured.
         int num = 10;
 
-        MyFunc4 myLambda = (n) ->  {
+        MyFunc4 myLambda = (n) -> {
             // This use of num is OK. It does not modify num.
             int v = num + n;
 

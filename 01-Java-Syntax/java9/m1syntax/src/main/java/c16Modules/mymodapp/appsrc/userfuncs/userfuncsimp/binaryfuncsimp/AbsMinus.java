@@ -13,5 +13,7 @@ public class AbsMinus implements BinaryFunc {
     }
 
     // Implement the AbsMinus function.
-    public int func(int a, int b) { return Math.abs(a) - Math.abs(b); }
+    public int func(int a, int b) {
+        return Math.abs(a) - Math.abs(b);
+    }
 }

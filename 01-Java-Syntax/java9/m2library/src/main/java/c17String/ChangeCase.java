@@ -1,8 +1,7 @@
 package c17String;
 
 class ChangeCase {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         String s = "This is a test.";
 
         System.out.println("Original: " + s);

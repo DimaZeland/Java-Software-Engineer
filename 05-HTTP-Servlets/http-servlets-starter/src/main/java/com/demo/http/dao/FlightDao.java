@@ -77,10 +77,4 @@ public class FlightDao implements Dao<Long, Flight> {
     }
 
 
-
-
-
-
-
-
 }

@@ -74,8 +74,8 @@ public class EffectsAndTransformsDemo extends Application {
                 angle += 30.0;
 
                 rotate.setAngle(angle);
-                rotate.setPivotX(btnRotate.getWidth()/2);
-                rotate.setPivotY(btnRotate.getHeight()/2);
+                rotate.setPivotX(btnRotate.getWidth() / 2);
+                rotate.setPivotY(btnRotate.getHeight() / 2);
             }
         });
 
@@ -84,7 +84,7 @@ public class EffectsAndTransformsDemo extends Application {
             public void handle(ActionEvent ae) {
                 // Each time button is pressed, the button's scale is changed.
                 scaleFactor += 0.1;
-                if(scaleFactor > 1.0) scaleFactor = 0.4;
+                if (scaleFactor > 1.0) scaleFactor = 0.4;
 
                 scale.setX(scaleFactor);
                 scale.setY(scaleFactor);
@@ -98,7 +98,7 @@ public class EffectsAndTransformsDemo extends Application {
             public void handle(ActionEvent ae) {
                 // Each time button is pressed, its glow value is changed.
                 glowVal += 0.1;
-                if(glowVal > 1.0) glowVal = 0.0;
+                if (glowVal > 1.0) glowVal = 0.0;
 
                 // Set the new glow value.
                 glow.setLevel(glowVal);
@@ -110,7 +110,7 @@ public class EffectsAndTransformsDemo extends Application {
             public void handle(ActionEvent ae) {
                 // Each time button is pressed, its shadow status is changed.
                 shadow = !shadow;
-                if(shadow) {
+                if (shadow) {
                     btnShadow.setEffect(innerShadow);
                     btnShadow.setText("Shadow on");
                 } else {

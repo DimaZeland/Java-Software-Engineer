@@ -1,6 +1,7 @@
 package c20Util;
 
 // Use Scanner to compute an average of the values.
+
 import java.util.*;
 
 class AvgNums {
@@ -13,14 +14,13 @@ class AvgNums {
         System.out.println("Enter numbers to average.");
 
         // Read and sum numbers.
-        while(conin.hasNext()) {
-            if(conin.hasNextDouble()) {
+        while (conin.hasNext()) {
+            if (conin.hasNextDouble()) {
                 sum += conin.nextDouble();
                 count++;
-            }
-            else {
+            } else {
                 String str = conin.next();
-                if(str.equals("done")) break;
+                if (str.equals("done")) break;
                 else {
                     System.out.println("Data format error.");
                     return;

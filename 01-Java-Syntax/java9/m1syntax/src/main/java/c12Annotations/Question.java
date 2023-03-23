@@ -14,6 +14,7 @@ enum Answers {
 
 class Question {
     Random rand = new Random();
+
     Answers ask() {
         int prob = (int) (100 * rand.nextDouble());
 
@@ -34,7 +35,7 @@ class Question {
 
 class AskMe {
     static void answer(Answers result) {
-        switch(result) {
+        switch (result) {
             case NO:
                 System.out.println("No");
                 break;

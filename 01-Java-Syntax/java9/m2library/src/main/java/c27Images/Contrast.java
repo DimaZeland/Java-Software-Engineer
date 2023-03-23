@@ -1,6 +1,7 @@
 package c27Images;
 
 // Contrast filter.
+
 import java.awt.*;
 import java.awt.image.*;
 
@@ -16,8 +17,9 @@ public class Contrast extends RGBImageFilter implements PlugInFilter {
     }
 
     double gain = 1.2;
+
     private int cont(int in) {
-        return (in < 128) ? (int)(in/gain) : multclamp(in, gain);
+        return (in < 128) ? (int) (in / gain) : multclamp(in, gain);
     }
 
     public int filterRGB(int x, int y, int rgb) {

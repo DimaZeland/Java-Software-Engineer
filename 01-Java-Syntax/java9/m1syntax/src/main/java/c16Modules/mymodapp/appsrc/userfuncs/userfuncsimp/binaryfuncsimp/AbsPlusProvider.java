@@ -7,5 +7,7 @@ import c16Modules.mymodapp.appsrc.userfuncs.userfuncs.binaryfuncs.*;
 public class AbsPlusProvider implements BinFuncProvider {
 
     // Provide an AbsPlus object.
-    public BinaryFunc get() { return new AbsPlus(); }
+    public BinaryFunc get() {
+        return new AbsPlus();
+    }
 }

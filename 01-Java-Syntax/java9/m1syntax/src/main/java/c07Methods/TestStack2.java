@@ -15,7 +15,7 @@ class Stack1 {
 
     // Push an item onto the stack
     void push(int item) {
-        if(tos==stck.length-1) // use length member 
+        if (tos == stck.length - 1) // use length member
             System.out.println("Stack1 is full.");
         else
             stck[++tos] = item;
@@ -23,11 +23,10 @@ class Stack1 {
 
     // Pop an item from the stack
     int pop() {
-        if(tos < 0) {
+        if (tos < 0) {
             System.out.println("Stack1 underflow.");
             return 0;
-        }
-        else
+        } else
             return stck[tos--];
     }
 }
@@ -38,16 +37,16 @@ class TestStack2 {
         Stack1 mystack2 = new Stack1(8);
 
         // push some numbers onto the stack
-        for(int i=0; i<5; i++) mystack1.push(i);
-        for(int i=0; i<8; i++) mystack2.push(i);
+        for (int i = 0; i < 5; i++) mystack1.push(i);
+        for (int i = 0; i < 8; i++) mystack2.push(i);
 
         // pop those numbers off the stack
         System.out.println("Stack1 in mystack1:");
-        for(int i=0; i<5; i++)
+        for (int i = 0; i < 5; i++)
             System.out.println(mystack1.pop());
 
         System.out.println("Stack1 in mystack2:");
-        for(int i=0; i<8; i++)
+        for (int i = 0; i < 8; i++)
             System.out.println(mystack2.pop());
     }
 }

@@ -15,10 +15,9 @@ class BufferedInputStreamDemo {
         boolean marked = false;
 
         // Use try-with-resources to manage the file.
-        try ( BufferedInputStream f = new BufferedInputStream(in) )
-        {
+        try (BufferedInputStream f = new BufferedInputStream(in)) {
             while ((c = f.read()) != -1) {
-                switch(c) {
+                switch (c) {
                     case '&':
                         if (!marked) {
                             f.mark(32);
@@ -48,7 +47,7 @@ class BufferedInputStreamDemo {
                         break;
                 }
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("I/O Error: " + e);
         }
     }

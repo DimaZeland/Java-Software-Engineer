@@ -16,7 +16,7 @@ class Stack {
 
     // Push an item onto the stack
     void push(int item) {
-        if(tos==9)
+        if (tos == 9)
             System.out.println("Stack is full.");
         else
             stck[++tos] = item;
@@ -24,11 +24,10 @@ class Stack {
 
     // Pop an item from the stack
     int pop() {
-        if(tos < 0) {
+        if (tos < 0) {
             System.out.println("Stack underflow.");
             return 0;
-        }
-        else
+        } else
             return stck[tos--];
     }
 }

@@ -21,18 +21,18 @@ class PhaserDemo {
         System.out.println("Phase " + curPhase + " Complete");
 
         // Wait for all threads to complete phase two.
-        curPhase =  phsr.getPhase();
+        curPhase = phsr.getPhase();
         phsr.arriveAndAwaitAdvance();
         System.out.println("Phase " + curPhase + " Complete");
 
-        curPhase =  phsr.getPhase();
+        curPhase = phsr.getPhase();
         phsr.arriveAndAwaitAdvance();
         System.out.println("Phase " + curPhase + " Complete");
 
         // Deregister the main thread.
         phsr.arriveAndDeregister();
 
-        if(phsr.isTerminated())
+        if (phsr.isTerminated())
             System.out.println("The Phaser is terminated");
     }
 }
@@ -57,7 +57,7 @@ class MyThread2 implements Runnable {
         // only. It is not required for the proper opration of the phaser.
         try {
             Thread.sleep(100);
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println(e);
         }
 
@@ -68,7 +68,7 @@ class MyThread2 implements Runnable {
         // only. It is not required for the proper opration of the phaser.
         try {
             Thread.sleep(100);
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println(e);
         }
 

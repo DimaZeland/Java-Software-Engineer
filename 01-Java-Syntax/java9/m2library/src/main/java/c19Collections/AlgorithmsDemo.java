@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate various algorithms.
+
 import java.util.*;
 
 class AlgorithmsDemo {
@@ -20,8 +21,8 @@ class AlgorithmsDemo {
         Collections.sort(ll, r);
 
         System.out.print("List sorted in reverse: ");
-        for(int i : ll)
-            System.out.print(i+ " ");
+        for (int i : ll)
+            System.out.print(i + " ");
 
         System.out.println();
 
@@ -30,7 +31,7 @@ class AlgorithmsDemo {
 
         // Display randomized list.
         System.out.print("List shuffled: ");
-        for(int i : ll)
+        for (int i : ll)
             System.out.print(i + " ");
 
         System.out.println();

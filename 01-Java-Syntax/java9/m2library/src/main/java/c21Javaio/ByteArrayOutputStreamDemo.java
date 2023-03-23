@@ -12,7 +12,7 @@ class ByteArrayOutputStreamDemo {
 
         try {
             f.write(buf);
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("Error Writing to Buffer");
             return;
         }
@@ -21,15 +21,14 @@ class ByteArrayOutputStreamDemo {
         System.out.println(f.toString());
         System.out.println("Into array");
         byte b[] = f.toByteArray();
-        for (int i=0; i<b.length; i++) System.out.print((char) b[i]);
+        for (int i = 0; i < b.length; i++) System.out.print((char) b[i]);
 
         System.out.println("\nTo an OutputStream()");
 
         // Use try-with-resources to manage the file stream.
-        try ( FileOutputStream f2 = new FileOutputStream("test.txt") )
-        {
+        try (FileOutputStream f2 = new FileOutputStream("test.txt")) {
             f.writeTo(f2);
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("I/O Error: " + e);
             return;
         }
@@ -37,7 +36,7 @@ class ByteArrayOutputStreamDemo {
         System.out.println("Doing a reset");
         f.reset();
 
-        for (int i=0; i<3; i++) f.write('X');
+        for (int i = 0; i < 3; i++) f.write('X');
 
         System.out.println(f.toString());
     }

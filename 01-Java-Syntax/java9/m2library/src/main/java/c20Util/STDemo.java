@@ -1,6 +1,7 @@
 package c20Util;
 
 // Demonstrate StringTokenizer.
+
 import java.util.StringTokenizer;
 
 class STDemo {
@@ -12,7 +13,7 @@ class STDemo {
     public static void main(String args[]) {
         StringTokenizer st = new StringTokenizer(in, "=;");
 
-        while(st.hasMoreTokens()) {
+        while (st.hasMoreTokens()) {
             String key = st.nextToken();
             String val = st.nextToken();
             System.out.println(key + "\t" + val);

@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate Arrays
+
 import java.util.*;
 
 class ArraysDemo {
@@ -8,7 +9,7 @@ class ArraysDemo {
 
         // Allocate and initialize array.
         int array[] = new int[10];
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
             array[i] = -3 * i;
 
         // Display, sort, and display the array.
@@ -37,7 +38,7 @@ class ArraysDemo {
     }
 
     static void display(int array[]) {
-        for(int i: array)
+        for (int i : array)
             System.out.print(i + " ");
 
         System.out.println();

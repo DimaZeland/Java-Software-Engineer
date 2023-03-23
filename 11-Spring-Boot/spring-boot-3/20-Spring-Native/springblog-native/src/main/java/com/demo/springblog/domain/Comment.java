@@ -1,6 +1,7 @@
 package com.demo.springblog.domain;
 
 import javax.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,7 @@
 package c32Buttons;
 
 // Demonstrate JLabel and ImageIcon.
+
 import java.awt.*;
 import javax.swing.*;
 

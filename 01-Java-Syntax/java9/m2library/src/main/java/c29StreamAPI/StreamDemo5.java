@@ -33,7 +33,7 @@ class StreamDemo5 {
     public static void main(String[] args) {
 
         // A list of names, phone numbers, and e-mail addresses.
-        ArrayList<NamePhoneEmail1> myList = new ArrayList<>( );
+        ArrayList<NamePhoneEmail1> myList = new ArrayList<>();
 
         myList.add(new NamePhoneEmail1("Larry", "555-5555",
                 "Larry@HerbSchildt.com"));
@@ -43,18 +43,18 @@ class StreamDemo5 {
                 "Mary@HerbSchildt.com"));
 
         System.out.println("Original values in myList: ");
-        myList.stream().forEach( (a) -> {
+        myList.stream().forEach((a) -> {
             System.out.println(a.name + " " + a.phonenum + " " + a.email);
         });
         System.out.println();
 
         // Map just the names and phone numbers to a new stream.
         Stream<NamePhone1> nameAndPhone = myList.stream().map(
-                (a) -> new NamePhone1(a.name,a.phonenum)
+                (a) -> new NamePhone1(a.name, a.phonenum)
         );
 
         System.out.println("List of names and phone numbers: ");
-        nameAndPhone.forEach( (a) -> {
+        nameAndPhone.forEach((a) -> {
             System.out.println(a.name + " " + a.phonenum);
         });
     }

@@ -13,7 +13,7 @@ class MyStringOps1 {
         String result = "";
         int i;
 
-        for(i = str.length()-1; i >= 0; i--)
+        for (i = str.length() - 1; i >= 0; i--)
             result += str.charAt(i);
 
         return result;
@@ -29,13 +29,12 @@ class MethodRefDemo2 {
         return sf.func(s);
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         String inStr = "Lambdas add power to Java";
         String outStr;
 
         // Create a MyStringOps object.
-        MyStringOps1 strOps = new MyStringOps1( );
+        MyStringOps1 strOps = new MyStringOps1();
 
         // Now, a method reference to the instance method strReverse
         // is passed to stringOp().

@@ -21,7 +21,7 @@ public class ImageService {
     public void upload(String imagePath, InputStream imageContent) {
         var imageFullPath = Path.of(basePath, imagePath);
 
-        try(imageContent) {
+        try (imageContent) {
             Files.createDirectories(imageFullPath.getParent());
             Files.write(imageFullPath, imageContent.readAllBytes(), CREATE,
                     TRUNCATE_EXISTING);

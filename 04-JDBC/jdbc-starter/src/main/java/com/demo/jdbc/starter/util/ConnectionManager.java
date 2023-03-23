@@ -15,11 +15,12 @@ public final class ConnectionManager {
 
     private ConnectionManager() {
     }
+
     public static Connection open() {
         try {
             return DriverManager.getConnection(PropertiesUtil.get(URL_KEY),
                     PropertiesUtil.get(USERNAME_KEY),
-                    PropertiesUtil.get(PASSWORD_KEY)) ;
+                    PropertiesUtil.get(PASSWORD_KEY));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

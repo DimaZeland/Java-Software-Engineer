@@ -7,66 +7,62 @@ import javax.swing.tree.*;
 /**
  * A frame with a tree and buttons to edit the tree.
  */
-public class TreeEditFrame extends JFrame
-{
-   private static final int DEFAULT_WIDTH = 400;
-   private static final int DEFAULT_HEIGHT = 200;
+public class TreeEditFrame extends JFrame {
+    private static final int DEFAULT_WIDTH = 400;
+    private static final int DEFAULT_HEIGHT = 200;
 
-   private DefaultTreeModel model;
-   private JTree tree;
+    private DefaultTreeModel model;
+    private JTree tree;
 
-   public TreeEditFrame()
-   {
-      setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+    public TreeEditFrame() {
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
 
-      // construct tree
+        // construct tree
 
-      TreeNode root = makeSampleTree();
-      model = new DefaultTreeModel(root);
-      tree = new JTree(model);
-      tree.setEditable(true);
+        TreeNode root = makeSampleTree();
+        model = new DefaultTreeModel(root);
+        tree = new JTree(model);
+        tree.setEditable(true);
 
-      // add scroll pane with tree
+        // add scroll pane with tree
 
-      var scrollPane = new JScrollPane(tree);
-      add(scrollPane, BorderLayout.CENTER);
+        var scrollPane = new JScrollPane(tree);
+        add(scrollPane, BorderLayout.CENTER);
 
-      makeButtons();
-   }
+        makeButtons();
+    }
 
-   public TreeNode makeSampleTree()
-   {
-      var root = new DefaultMutableTreeNode("World");
-      var country = new DefaultMutableTreeNode("USA");
-      root.add(country);
-      var state = new DefaultMutableTreeNode("California");
-      country.add(state);
-      var city = new DefaultMutableTreeNode("San Jose");
-      state.add(city);
-      city = new DefaultMutableTreeNode("San Diego");
-      state.add(city);
-      state = new DefaultMutableTreeNode("Michigan");
-      country.add(state);
-      city = new DefaultMutableTreeNode("Ann Arbor");
-      state.add(city);
-      country = new DefaultMutableTreeNode("Germany");
-      root.add(country);
-      state = new DefaultMutableTreeNode("Schleswig-Holstein");
-      country.add(state);
-      city = new DefaultMutableTreeNode("Kiel");
-      state.add(city);
-      return root;
-   }
+    public TreeNode makeSampleTree() {
+        var root = new DefaultMutableTreeNode("World");
+        var country = new DefaultMutableTreeNode("USA");
+        root.add(country);
+        var state = new DefaultMutableTreeNode("California");
+        country.add(state);
+        var city = new DefaultMutableTreeNode("San Jose");
+        state.add(city);
+        city = new DefaultMutableTreeNode("San Diego");
+        state.add(city);
+        state = new DefaultMutableTreeNode("Michigan");
+        country.add(state);
+        city = new DefaultMutableTreeNode("Ann Arbor");
+        state.add(city);
+        country = new DefaultMutableTreeNode("Germany");
+        root.add(country);
+        state = new DefaultMutableTreeNode("Schleswig-Holstein");
+        country.add(state);
+        city = new DefaultMutableTreeNode("Kiel");
+        state.add(city);
+        return root;
+    }
 
-   /**
-    * Makes the buttons to add a sibling, add a child, and delete a node.
-    */
-   public void makeButtons()
-   {
-      var panel = new JPanel();
-      var addSiblingButton = new JButton("Add Sibling");
-      addSiblingButton.addActionListener(event ->
-         {
+    /**
+     * Makes the buttons to add a sibling, add a child, and delete a node.
+     */
+    public void makeButtons() {
+        var panel = new JPanel();
+        var addSiblingButton = new JButton("Add Sibling");
+        addSiblingButton.addActionListener(event ->
+        {
             var selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 
             if (selectedNode == null) return;
@@ -85,12 +81,12 @@ public class TreeEditFrame extends JFrame
             TreeNode[] nodes = model.getPathToRoot(newNode);
             var path = new TreePath(nodes);
             tree.scrollPathToVisible(path);
-         });
-      panel.add(addSiblingButton);
+        });
+        panel.add(addSiblingButton);
 
-      var addChildButton = new JButton("Add Child");
-      addChildButton.addActionListener(event ->
-         {
+        var addChildButton = new JButton("Add Child");
+        addChildButton.addActionListener(event ->
+        {
             var selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 
             if (selectedNode == null) return;
@@ -103,18 +99,18 @@ public class TreeEditFrame extends JFrame
             TreeNode[] nodes = model.getPathToRoot(newNode);
             var path = new TreePath(nodes);
             tree.scrollPathToVisible(path);
-         });
-      panel.add(addChildButton);
+        });
+        panel.add(addChildButton);
 
-      var deleteButton = new JButton("Delete");
-      deleteButton.addActionListener(event ->
-         {
+        var deleteButton = new JButton("Delete");
+        deleteButton.addActionListener(event ->
+        {
             var selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
 
             if (selectedNode != null && selectedNode.getParent() != null) model
-                  .removeNodeFromParent(selectedNode);
-         });
-      panel.add(deleteButton);
-      add(panel, BorderLayout.SOUTH);
-   }
+                    .removeNodeFromParent(selectedNode);
+        });
+        panel.add(deleteButton);
+        add(panel, BorderLayout.SOUTH);
+    }
 }

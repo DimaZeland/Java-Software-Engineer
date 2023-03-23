@@ -12,12 +12,11 @@ class FileWriterDemo {
         char buffer[] = new char[source.length()];
         source.getChars(0, source.length(), buffer, 0);
 
-        try ( FileWriter f0 = new FileWriter("file1.txt");
-              FileWriter f1 = new FileWriter("file2.txt");
-              FileWriter f2 = new FileWriter("file3.txt") )
-        {
+        try (FileWriter f0 = new FileWriter("file1.txt");
+             FileWriter f1 = new FileWriter("file2.txt");
+             FileWriter f2 = new FileWriter("file3.txt")) {
             // write to first file
-            for (int i=0; i < buffer.length; i += 2) {
+            for (int i = 0; i < buffer.length; i += 2) {
                 f0.write(buffer[i]);
             }
 
@@ -25,9 +24,9 @@ class FileWriterDemo {
             f1.write(buffer);
 
             // write to third file
-            f2.write(buffer,buffer.length-buffer.length/4,buffer.length/4);
+            f2.write(buffer, buffer.length - buffer.length / 4, buffer.length / 4);
 
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("An I/O Error Occured");
         }
     }

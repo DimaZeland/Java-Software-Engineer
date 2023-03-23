@@ -7,11 +7,13 @@ class A5 {
         i = a;
         j = b;
     }
+
     void show() {
         System.out.println("i: " + i);
         System.out.println("j: " + j);
     }
 }
+
 class B5 extends A5 {
     int k;
 

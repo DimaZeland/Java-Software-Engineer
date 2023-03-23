@@ -3,6 +3,7 @@ package c09Interfaces;
 // One interface an extend another.
 interface A1 {
     void meth1();
+
     void meth2();
 }
 

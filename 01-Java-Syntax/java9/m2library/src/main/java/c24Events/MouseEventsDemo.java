@@ -1,6 +1,7 @@
 package c24Events;
 
 // Demonstrate several mouse event handlers.
+
 import java.awt.*;
 import java.awt.event.*;
 

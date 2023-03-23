@@ -1,6 +1,7 @@
 package c30Regex;
 
 // Use a character class.
+
 import java.util.regex.*;
 
 class RegExpr7 {
@@ -9,7 +10,7 @@ class RegExpr7 {
         Pattern pat = Pattern.compile("[a-z]+");
         Matcher mat = pat.matcher("this is a test.");
 
-        while(mat.find())
+        while (mat.find())
             System.out.println("Match: " + mat.group());
     }
 }

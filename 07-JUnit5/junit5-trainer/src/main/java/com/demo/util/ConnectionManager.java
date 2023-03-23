@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 @UtilityClass
-public class  ConnectionManager {
+public class ConnectionManager {
 
     private static final String URL_KEY = "db.url";
     private static final String USER_KEY = "db.user";

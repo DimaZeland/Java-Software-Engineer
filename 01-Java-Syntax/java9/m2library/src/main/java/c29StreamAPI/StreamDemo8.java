@@ -10,7 +10,7 @@ class StreamDemo8 {
     public static void main(String[] args) {
 
         // Create a list of Strings.
-        ArrayList<String> myList = new ArrayList<>( );
+        ArrayList<String> myList = new ArrayList<>();
         myList.add("Alpha");
         myList.add("Beta");
         myList.add("Gamma");
@@ -25,7 +25,7 @@ class StreamDemo8 {
         Iterator<String> itr = myStream.iterator();
 
         // Iterate the elements in the stream.
-        while(itr.hasNext())
+        while (itr.hasNext())
             System.out.println(itr.next());
     }
 }

@@ -40,13 +40,13 @@ class PaintPanel extends JPanel {
         ins = getInsets();
 
         // Draw ten lines whose endpoints are randomly generated.
-        for(int i=0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             // Obtain random coordinates that define
             // the endpoints of each line.
-            x = rand.nextInt(width-ins.left);
-            y = rand.nextInt(height-ins.bottom);
-            x2 = rand.nextInt(width-ins.left);
-            y2 = rand.nextInt(height-ins.bottom);
+            x = rand.nextInt(width - ins.left);
+            y = rand.nextInt(height - ins.bottom);
+            x2 = rand.nextInt(width - ins.left);
+            y2 = rand.nextInt(height - ins.bottom);
 
             // Draw the line.
             g.drawLine(x, y, x2, y2);

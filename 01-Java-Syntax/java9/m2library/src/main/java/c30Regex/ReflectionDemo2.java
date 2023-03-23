@@ -1,7 +1,9 @@
 package c30Regex;
 
 // Show public methods.
+
 import java.lang.reflect.*;
+
 public class ReflectionDemo2 {
     public static void main(String args[]) {
         try {
@@ -9,14 +11,13 @@ public class ReflectionDemo2 {
             Class<?> c = a.getClass();
             System.out.println("Public Methods:");
             Method methods[] = c.getDeclaredMethods();
-            for(int i = 0; i < methods.length; i++) {
+            for (int i = 0; i < methods.length; i++) {
                 int modifiers = methods[i].getModifiers();
-                if(Modifier.isPublic(modifiers)) {
+                if (Modifier.isPublic(modifiers)) {
                     System.out.println(" " + methods[i].getName());
                 }
             }
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("Exception: " + e);
         }
     }
@@ -25,10 +26,13 @@ public class ReflectionDemo2 {
 class A {
     public void a1() {
     }
+
     public void a2() {
     }
+
     protected void a3() {
     }
+
     private void a4() {
     }
 }

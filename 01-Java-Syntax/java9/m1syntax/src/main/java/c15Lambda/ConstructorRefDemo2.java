@@ -11,20 +11,27 @@ class MyClass2<T> {
     private T val;
 
     // A constructor that takes an argument.
-    MyClass2(T v) { val = v; }
+    MyClass2(T v) {
+        val = v;
+    }
 
     // This is the default constructor.
-    MyClass2( ) { val = null;  }
+    MyClass2() {
+        val = null;
+    }
 
     // ...
 
-    T getVal() { return val; };
+    T getVal() {
+        return val;
+    }
+
+    ;
 }
 
 class ConstructorRefDemo2 {
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         // Create a reference to the MyClass<T> constructor.
         MyFunc7<Integer> myClassCons = MyClassSecond<Integer>::new;
 
@@ -32,6 +39,6 @@ class ConstructorRefDemo2 {
         MyClassSecond<Integer> mc = myClassCons.func(100);
 
         // Use the instance of MyClass<T> just created.
-        System.out.println("val in mc is " + mc.getVal( ));
+        System.out.println("val in mc is " + mc.getVal());
     }
 }

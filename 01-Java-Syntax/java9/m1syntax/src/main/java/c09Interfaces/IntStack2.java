@@ -4,6 +4,7 @@ package c09Interfaces;
 // method that is used by two default methods.
 interface IntStack2 {
     void push(int item); // store an item
+
     int pop(); // retrieve an item
 
     // A default method that returns an array that contains
@@ -29,7 +30,7 @@ interface IntStack2 {
     private int[] getElements(int n) {
         int[] elements = new int[n];
 
-        for(int i=0; i < n; i++) elements[i] = pop();
+        for (int i = 0; i < n; i++) elements[i] = pop();
         return elements;
     }
 }

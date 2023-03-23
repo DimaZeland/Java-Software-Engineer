@@ -1,6 +1,7 @@
 package c19Collections;
 
 // Demonstrate ArrayDeque.
+
 import java.util.*;
 
 class ArrayDequeDemo {
@@ -17,7 +18,7 @@ class ArrayDequeDemo {
 
         System.out.print("Popping the stack: ");
 
-        while(adq.peek() != null)
+        while (adq.peek() != null)
             System.out.print(adq.pop() + " ");
 
         System.out.println();

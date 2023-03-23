@@ -6,16 +6,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 @ActiveProfiles("test")
-@SpringBootTest(classes=SpringbootEssentialsApplication.class)
-public class SpringbootEssentialsApplicationTest
-{
-	@Autowired
-	private DataSourceConfig dataSourceConfig;
-	
-	@Test
-	public void testContextLoads()
-	{
-		System.out.println(dataSourceConfig);
-	}
+@SpringBootTest(classes = SpringbootEssentialsApplication.class)
+public class SpringbootEssentialsApplicationTest {
+    @Autowired
+    private DataSourceConfig dataSourceConfig;
+
+    @Test
+    public void testContextLoads() {
+        System.out.println(dataSourceConfig);
+    }
 
 }

@@ -1,6 +1,7 @@
 package c20Util;
 
 // Demonstrate findInLine().
+
 import java.util.*;
 
 class FindInLineDemo {
@@ -12,7 +13,7 @@ class FindInLineDemo {
         // Find and display age.
         conin.findInLine("Age:"); // find Age
 
-        if(conin.hasNext())
+        if (conin.hasNext())
             System.out.println(conin.next());
         else
             System.out.println("Error!");

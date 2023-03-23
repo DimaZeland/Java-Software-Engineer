@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.demo.controllers;
 
@@ -15,21 +15,21 @@ import java.util.Optional;
 @RestController
 public class TodoRestController {
 
-	@Autowired
-	private TodoRepository todoRepository;
-	
-	@GetMapping("/api/todos/list")
-	public List<Todo> findAll(){
-		return todoRepository.findAll();
-	}
-	
-	@GetMapping("/api/todos/{id}")
-	public Optional<Todo> findById(@PathVariable Integer id){
-		return todoRepository.findById(id);
-	}
-	
-	@PostMapping("/api/todos")
-	public Todo createTodo(@RequestBody Todo todo){
-		return todoRepository.save(todo);
-	}
+    @Autowired
+    private TodoRepository todoRepository;
+
+    @GetMapping("/api/todos/list")
+    public List<Todo> findAll() {
+        return todoRepository.findAll();
+    }
+
+    @GetMapping("/api/todos/{id}")
+    public Optional<Todo> findById(@PathVariable Integer id) {
+        return todoRepository.findById(id);
+    }
+
+    @PostMapping("/api/todos")
+    public Todo createTodo(@RequestBody Todo todo) {
+        return todoRepository.save(todo);
+    }
 }

@@ -1,12 +1,12 @@
 package c23NetWorking;
 
 // Demonstrate HttpURLConnection.
+
 import java.net.*;
 import java.io.*;
 import java.util.*;
 
-class HttpURLDemo
-{
+class HttpURLDemo {
     public static void main(String args[]) throws Exception {
         URL hp = new URL("http://www.google.com");
 
@@ -32,7 +32,7 @@ class HttpURLDemo
         System.out.println("\nHere is the header:");
 
         // Display all header keys and values..
-        for(String k : hdrField) {
+        for (String k : hdrField) {
             System.out.println("Key: " + k +
                     "  Value: " + hdrMap.get(k));
         }
