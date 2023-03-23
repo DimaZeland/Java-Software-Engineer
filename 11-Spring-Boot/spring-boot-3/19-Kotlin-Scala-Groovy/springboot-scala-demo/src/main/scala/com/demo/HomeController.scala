@@ -6,13 +6,12 @@ import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.{GetMapping}
 
 @Controller
-class HomeController
-{
+class HomeController {
   @Autowired
   var repo: UserRepository = _
 
   @GetMapping("/")
-  def home(model: Model) : String = {
+  def home(model: Model): String = {
     model.addAttribute("users", repo.findAll())
     "home"
   }

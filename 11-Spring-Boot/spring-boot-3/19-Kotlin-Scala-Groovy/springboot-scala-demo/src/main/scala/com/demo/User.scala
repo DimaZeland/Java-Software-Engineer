@@ -6,7 +6,7 @@ import jakarta.persistence._
 import scala.beans.BeanProperty
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 class User {
 
   @Id

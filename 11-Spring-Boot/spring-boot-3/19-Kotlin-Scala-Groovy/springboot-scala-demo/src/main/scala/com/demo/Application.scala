@@ -9,8 +9,8 @@ class Application {
 }
 
 object Application {
-    def main(args: Array[String]) : Unit = {
-        SpringApplication.run(classOf[Application], args:_*)
-    }
+  def main(args: Array[String]): Unit = {
+    SpringApplication.run(classOf[Application], args: _*)
+  }
 }
 
