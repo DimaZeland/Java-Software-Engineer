@@ -1,2 +1,3 @@
 ## Spring Boot Starter
-The project uses Spring Boot and provides practical examples of integrating with various tools, libraries, frameworks, relational and non-relational databases, writing REST APIs, validating requests and any other objects, writing integration tests, dynamically elevating docker containers and much more.
+
+ℹ️ The project uses Spring Boot and provides practical examples of integrating with various tools, libraries, frameworks, relational and non-relational databases, writing REST APIs, validating requests and any other objects, writing integration tests, dynamically elevating docker containers. To improve the execution of integration tests, the testcontainers library is used. Also the project uses an open-source database-migration tool Flyway. Besides the Querydsl library is used to build dynamic queries. To reduce the code in the classes and extend the functionality of the Java language, the project also uses the Lombok library. 

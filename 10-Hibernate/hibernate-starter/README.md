@@ -1,2 +1,3 @@
 ## Hibernate Starter
-The project using the Hibernate ORM framework and providing practical examples of implementing entity mappings, using PersistenceContext, building your own DAO layer.
+
+ℹ️ The project using the Hibernate ORM framework and providing practical examples of implementing entity mappings, using Persistence Context, building your own DAO layer. The project uses PostgreSQL and H2 databases. In addition, the project uses a Docker container to deploy databases, as well as the SLF4J logging library.  To enrich the Assertions functionality, the project additionally uses the AssertJ library.  To reduce the code in the classes and extend the functionality of the Java language, the project also uses the Lombok library. To improve the execution of integration tests, the testcontainers library is used. Also the Querydsl library is used to build dynamic queries.
