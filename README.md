@@ -28,7 +28,7 @@
 
 #### [JDBC Starter](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/04-JDBC/01-jdbc-starter)
 
-#### [Redis Beginner](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/04-JDBC/02-redis-demo)
+#### [Redis Beginner](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/04-JDBC/02-redis-beginner)
 
 ### [5️⃣ HTTP Servlets](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/05-HTTP-Servlets)
 
