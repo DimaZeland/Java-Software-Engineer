@@ -9,7 +9,7 @@ import java.net.URLConnection;
 public class UrlExample {
     public static void main(String[] args) throws IOException {
 //        checkGoogle();
-        URL url = new URL("file:C:\\Users\\Admin\\IdeaProjects\\http-servlets-starter\\src\\com\\dmdev\\http\\socket\\DatagramRunner.java");
+        URL url = new URL("file:C:\\Users\\Admin\\IdeaProjects\\http-servlets-starter\\src\\com\\demo\\http\\socket\\DatagramRunner.java");
         URLConnection urlConnection = url.openConnection();
 
         System.out.println(new String(urlConnection.getInputStream().readAllBytes()));
