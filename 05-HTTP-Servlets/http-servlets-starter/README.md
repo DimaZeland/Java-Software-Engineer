@@ -10,6 +10,7 @@
 - Apache Tomcat (web server and servlet container)
 - Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
 - Java Server Pages (to create dynamic web pages)
+- JSTL (JSP spec extension for conditional processing, looping, page internationalization, parsing XML data)
 
 
 

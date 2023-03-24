@@ -6,6 +6,7 @@
 - Apache Tomcat (web server and servlet container)
 - Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
 - Java Server Pages (to create dynamic web pages)
+- JSTL (JSP spec extension for conditional processing, looping, page internationalization, parsing XML data)
 - JUnit 4 framework (to perform unit, integration and acceptance tests)
 
 ℹ️ The project showing all aspects of working with the Apache Maven project build system:
