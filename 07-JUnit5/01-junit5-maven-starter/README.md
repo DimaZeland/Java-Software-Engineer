@@ -1,4 +1,4 @@
-## JUnit 5 Maven Starter
+# JUnit 5 Maven Starter
 
 ℹ️ The project implements unit, integration and acceptance tests.
 

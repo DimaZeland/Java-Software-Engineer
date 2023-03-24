@@ -1,4 +1,4 @@
-## Apache Maven Starter
+# Apache Maven Starter
 
 ### ⚙️ The project uses:
 

@@ -1,4 +1,4 @@
-## JUnit 5 Trainer
+# JUnit 5 Trainer
 
 ℹ️  This project covering unit and integration tests with 100% of the source code of the program.
 

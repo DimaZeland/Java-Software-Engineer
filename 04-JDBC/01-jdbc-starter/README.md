@@ -1,6 +1,6 @@
 # JDBC Starter
 
-ℹ️ A project that implements the main features of working with JDBC, Connection Pool, Transactions, DAO. 
+ℹ️ This project implements the main features of working with JDBC, Connection Pool, Transactions, DAO.
 
 ### ⚙️ The project uses:
 
