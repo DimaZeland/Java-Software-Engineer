@@ -1,4 +1,12 @@
-## Apache Maven
+## Apache Maven Starter
+
+### ⚙️ The project uses:
+
+- PostgreSQL database
+- Apache Tomcat (web server and servlet container)
+- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
+- Java Server Pages (to create dynamic web pages)
+- JUnit 4 framework (to perform unit, integration and acceptance tests)
 
 ℹ️ The project showing all aspects of working with the Apache Maven project build system:
 
