@@ -36,7 +36,7 @@
 
 ### [6️⃣ Apache Maven](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/06-Apache-Maven)
 
-#### [First Maven](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/06-Apache-Maven/first-maven)
+#### [Apache Maven Starter](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/06-Apache-Maven/apache-maven-starter)
 
 ### [7️⃣ JUnit 5](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/07-JUnit5)
 
