@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <!-- Описывается как Hibernate будет подключаться к нашей БД -->
+    <session-factory>
+        <!-- Указываем где находится наша БД -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/my_db?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true</property>
+
+        <!-- Драйвер для подключения к БД -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Юзер и пароль от БД -->
+        <property name="connection.username">bestuser</property>
+        <property name="connection.password">bestuser</property>
+
+        <!-- Значение тред самый распространненый вариант -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Указываем особенности (что мы именно обращаемся к MySQL) -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- При параметре true в консоли будет выводится SQL команда, которую послал Hibernate -->
+        <property name="show_sql">true</property>
+    </session-factory>
+</hibernate-configuration>

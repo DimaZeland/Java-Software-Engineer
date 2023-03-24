@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>spring-beginner</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>03-Hibernate</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <modules>
+        <module>39-Connecting-Java-application-to-the-DB</module>
+        <module>40-Links-between-class-and-table</module>
+        <module>41-Saving-java-objects-to-the-DB</module>
+        <module>42-Generating-column-values-Primary-Key</module>
+        <module>43-Getting-Java-objects-from-the-DB</module>
+        <module>44-Update-Java-objects-in-DB</module>
+        <module>45-DELETE-Java-objects-from-DB</module>
+        <module>47-48-Uni-directional</module>
+        <module>49-Bi-directional</module>
+        <module>50-One-toMany-Bi-directional</module>
+        <module>51-One-to-Many-Uni-directional</module>
+        <module>52-Types-of-downloads-Eager-and-Lazy</module>
+        <module>54-Many-toMany-part-2</module>
+    </modules>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
+        <dependency>
+            <groupId>org.hibernate.common</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>${hibernate-commons-annotations.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+        </dependency>
+    </dependencies>
+</project>
