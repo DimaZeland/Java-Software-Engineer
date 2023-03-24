@@ -108,10 +108,10 @@
                 <version>0.8.7</version>
                 <configuration>
                     <excludes>
-                        <exclude>com/dmdev/dto/*</exclude>
-                        <exclude>com/dmdev/entity/*</exclude>
-                        <exclude>com/dmdev/exception/*</exclude>
-                        <exclude>com/dmdev/validator/Error.class</exclude>
+                        <exclude>com/demo/dto/*</exclude>
+                        <exclude>com/demo/entity/*</exclude>
+                        <exclude>com/demo/exception/*</exclude>
+                        <exclude>com/demo/validator/Error.class</exclude>
                     </excludes>
                 </configuration>
                 <executions>
