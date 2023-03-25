@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.example</groupId>
+        <groupId>com.spring</groupId>
         <artifactId>02-AOP</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
