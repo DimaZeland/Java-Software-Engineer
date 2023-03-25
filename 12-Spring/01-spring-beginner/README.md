@@ -1,5 +1,7 @@
 # Spring Beginner
 
+ℹ️ The project contains many examples of the work of the main modules of the Spring Framework using related technologies
+
 ### ⚙️ The project uses:
 
 - Apache Maven (project build system)
