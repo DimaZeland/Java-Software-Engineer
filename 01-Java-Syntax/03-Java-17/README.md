@@ -11,7 +11,7 @@ topics that a programmer needs to know for professional software development.
 - Jakarta Mail (to send and receive email via SMTP, POP3 and IMAP)
 - ObjectWeb ASM library (provides a simple API for decomposing, modifying, and recomposing binary Java classes)
 - Apache Commons (provides features to make Java Collections Framework handling easy)
-- Jakarta JSON ((provides portable APIs for working with JSON file format)
+- Jakarta JSON (provides portable APIs for working with JSON file format)
 
 ## 📚 Contents
 
