@@ -4,6 +4,7 @@
 
 ### ⚙️ The project uses:
 
+- Java SE 15 (for distributing a portable code for desktops and servers)
 - Apache Maven (project build system)
 - Lombok library (to reduce the code in the classes)
 - JUnit 5 framework (to perform unit, integration and acceptance tests) 

@@ -2,6 +2,12 @@
 
 ℹ️ Source code with details examples of the entire Java language (SE 9) and its core libraries.
 
+### ⚙️ The project uses:
+
+- Java SE 11 LTS (for distributing a portable code for desktops and servers)
+- Apache Maven (project build system)
+- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
+
 ## 📚 Contents
 
 ### [1️⃣ Java Language](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/01-Java-Syntax/02-Java-9/m1syntax)

@@ -4,6 +4,7 @@
 
 ### ⚙️ The project uses:
 
+- Java SE 11 (for distributing a portable code for desktops and servers)
 - Apache Maven (project build system)
 - MySQL database
 - Hibernate ORM Framework (for mapping an object-oriented domain model to a relational database)

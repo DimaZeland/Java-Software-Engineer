@@ -2,6 +2,11 @@
 
 ℹ️ Detailed analysis of the code with comments to help you better understand the main language constructs of Java SE 8
 
+### ⚙️ The project uses:
+
+- Java SE 8 LTS (for distributing a portable code for desktops and servers)
+- Apache Maven (project build system)
+
 ## 📚 Contents
 
 ### [Introduction to Java Programming](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/01-Java-Syntax/01-Java-8/src/main/java/com/demo/java8/p00Start)

@@ -2,6 +2,38 @@
 
 ℹ️ The project implements the creation of dynamic cloud Java applications and microservices using Spring Boot 3.
 
+### ⚙️ The project uses:
+
+- Java SE 17 LTS (for distributing a portable code for desktops and servers)
+- The Apache Groovy programming language
+- Kotlin Programming Language
+- The Scala Programming Language
+- Apache Maven (project build system)
+- Spring Boot (for automatic Spring project configuration)
+- Lombok library (to reduce the code in the classes)
+- MySQL (relational database)
+- H2 database (in order to conduct full testing)
+- MongoDB (document-oriented NoSQL databases)
+- Spring Data JPA (for writing custom queries)
+- MyBatis (SQL mapping framework that abstracts JDBC boilerplate code)
+- JOOQ (Java persistence framework that provides a Fluent API to write typesafe SQL queries)
+- GraphQL (a query language that provides a complete and understandable description of the data in your API)
+- Thymeleaf library (modern server-side Java template engine for both web and standalone environments)
+- Apache Tomcat (web server and servlet container)
+- Flyway (to maintain databases and synchronize their structure with related software)
+- Docker container (to deploy databases)
+- Heroku (a Platform as a Service (PaaS) that enables developers to build and run applications in the cloud)
+- Apache Commons (provides features to make Java Collections Framework handling easy)
+- Spring WebFlux (to support building reactive web applications)
+- R2DBC (a specification to integrate SQL databases using reactive drivers)
+- Spring Security (a framework for securing Java-based applications at various layers)
+- SLF4J logging library (adapter for working with Log4J logging environment)
+- Log4j (Apache Logging Service for logging application behavior)
+- testcontainers library (to improve the execution of integration tests)
+- JUnit 5 framework (to perform unit, integration and acceptance tests)
+- Twitter4J (Java library for the Twitter API)
+- Spring Native (compile applications to native images, drastically reducing the application's startup time)
+
 ## 📚 Contents
 
 #### [Introduction to Spring Boot](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/11-Spring-Boot/02-spring-boot-3/01-Introduction)

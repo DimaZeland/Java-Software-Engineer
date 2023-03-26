@@ -35,7 +35,6 @@
         <module>18-Custom-Starter</module>
         <module>19-Kotlin-Scala-Groovy</module>
         <module>20-Spring-Native</module>
-
     </modules>
 
     <properties>

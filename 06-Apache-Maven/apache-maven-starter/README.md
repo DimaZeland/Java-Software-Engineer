@@ -2,6 +2,7 @@
 
 ### ⚙️ The project uses:
 
+- Java SE 15 (for distributing a portable code for desktops and servers)
 - PostgreSQL database
 - Apache Tomcat (web server and servlet container)
 - Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)

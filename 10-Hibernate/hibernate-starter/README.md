@@ -5,7 +5,9 @@
 
 ### ⚙️ The project uses:
 
+- Java SE 16 (for distributing a portable code for desktops and servers)
 - Gradle (project build system)
+- Groovy Gradle DSL (a gradle specific way to form build scripts)
 - Lombok library (to reduce the code in the classes)
 - PostgreSQL database
 - H2 database (in order to conduct full testing)

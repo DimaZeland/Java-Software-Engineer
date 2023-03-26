@@ -4,7 +4,9 @@
 
 ### ⚙️ The project uses:
 
+- Java SE 17 LTS (for distributing a portable code for desktops and servers)
 - Gradle (project build system)
+- Groovy Gradle DSL (a gradle specific way to form build scripts)
 - Lombok library (to reduce the code in the classes)
 - PostgreSQL database
 - Querydsl library (to build dynamic queries)
