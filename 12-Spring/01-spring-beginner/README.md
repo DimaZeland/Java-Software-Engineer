@@ -4,10 +4,12 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 11 (for distributing a portable code for desktops and servers)
+- Java SE 11 LTS (for distributing a portable code for desktops and servers)
 - Apache Maven (project build system)
 - MySQL database
+- C3P0 (a JDBC Connection pooling / Statement caching library)
 - Hibernate ORM Framework (for mapping an object-oriented domain model to a relational database)
+- Hibernate Validator (sets validation rules using annotations over class fields)
 - Apache Tomcat (web server and servlet container)
 - Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
 - Java Server Pages (to create dynamic web pages)
@@ -15,4 +17,6 @@
 - Spring MVC form tags (configurable and reusable building blocks for a web page)
 - Spring AOP (implementing custom aspects, complementing their use of OOP with AOP)
 - Spring MVC (provides the architecture of the Model-View-Controller pattern)
-- Hibernate Validator (sets validation rules using annotations over class fields)
+- Spring Web MVC (for clean separation between domain model code and web forms)
+
+
