@@ -8,6 +8,7 @@
 - [Apache Maven](https://maven.apache.org/)
 - [Lombok library](https://projectlombok.org/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [HTML](https://html.spec.whatwg.org/multipage/)
 - [Apache Tomcat](https://tomcat.apache.org/)
 - [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
 - [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)

@@ -10,6 +10,7 @@
 - [C3P0](https://www.mchange.com/projects/c3p0/)
 - [Hibernate ORM framework](https://hibernate.org/orm/)
 - [Hibernate Validator](https://hibernate.org/validator/)
+- [HTML](https://html.spec.whatwg.org/multipage/)
 - [Apache Tomcat](https://tomcat.apache.org/)
 - [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
 - [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)

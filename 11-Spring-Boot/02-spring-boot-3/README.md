@@ -17,6 +17,7 @@
 - [MyBatis](https://mybatis.org/mybatis-3/)
 - [JOOQ](https://www.jooq.org/)
 - [GraphQL](https://graphql.org/)
+- [HTML](https://html.spec.whatwg.org/multipage/)
 - [Thymeleaf library](https://www.thymeleaf.org/)
 - [Apache Tomcat](https://tomcat.apache.org/)
 - [Flyway](https://flywaydb.org/)
