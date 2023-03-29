@@ -17,6 +17,7 @@
 - [JSTL](https://docs.oracle.com/javaee/5/tutorial/doc/bnake.html)
 - [Spring MVC form tags](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/spring-form-tld.html)
 - [Spring AOP](https://mvnrepository.com/artifact/org.springframework/spring-aop)
+- [AspectJ Weaver](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver)
 - [Spring MVC](https://www.baeldung.com/spring-mvc-tutorial)
 - [Spring Web MVC](https://mvnrepository.com/artifact/org.springframework/spring-webmvc)
 
