@@ -4,19 +4,19 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 11 LTS (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
-- MySQL database
-- C3P0 (a JDBC Connection pooling / Statement caching library)
-- Hibernate ORM Framework (for mapping an object-oriented domain model to a relational database)
-- Hibernate Validator (sets validation rules using annotations over class fields)
-- Apache Tomcat (web server and servlet container)
-- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
-- Java Server Pages (to create dynamic web pages)
-- JSTL (JSP spec extension for conditional processing, looping, page internationalization, parsing XML data)
-- Spring MVC form tags (configurable and reusable building blocks for a web page)
-- Spring AOP (implementing custom aspects, complementing their use of OOP with AOP)
-- Spring MVC (provides the architecture of the Model-View-Controller pattern)
-- Spring Web MVC (for clean separation between domain model code and web forms)
+- [Java SE 11 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
+- [MySQL database](https://www.mysql.com/)
+- [C3P0](https://www.mchange.com/projects/c3p0/)
+- [Hibernate ORM framework](https://hibernate.org/orm/)
+- [Hibernate Validator](https://hibernate.org/validator/)
+- [Apache Tomcat](https://tomcat.apache.org/)
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
+- [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)
+- [JSTL](https://docs.oracle.com/javaee/5/tutorial/doc/bnake.html)
+- [Spring MVC form tags](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/spring-form-tld.html)
+- [Spring AOP](https://mvnrepository.com/artifact/org.springframework/spring-aop)
+- [Spring MVC](https://www.baeldung.com/spring-mvc-tutorial)
+- [Spring Web MVC](https://mvnrepository.com/artifact/org.springframework/spring-webmvc)
 
 

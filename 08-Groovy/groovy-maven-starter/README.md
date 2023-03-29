@@ -4,6 +4,6 @@
 
 ### ⚙️ The project uses:
 
-- The Apache Groovy programming language
-- Java SE 19 (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
+- [The Apache Groovy programming language](https://groovy-lang.org/)
+- [Java SE 19](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)

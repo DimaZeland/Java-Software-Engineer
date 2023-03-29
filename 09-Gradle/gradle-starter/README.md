@@ -4,8 +4,8 @@
 
 ### ⚙️ The project uses:
 
-- Gradle (project build system)
-- Groovy Gradle DSL (a gradle specific way to form build scripts)
-- Apache Tomcat (web server and servlet container)
-- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
-- JUnit 5 framework (to perform unit, integration and acceptance tests)
+- [Gradle Build Tool](https://gradle.org/)
+- [Groovy Gradle DSL](https://docs.gradle.org/current/dsl/index.html)
+- [Apache Tomcat](https://tomcat.apache.org/)
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
+- [JUnit 5 framework](https://junit.org/junit5/)

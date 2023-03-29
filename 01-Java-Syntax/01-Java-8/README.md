@@ -4,8 +4,8 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 8 LTS (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
+- [Java SE 8 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
 
 ## 📚 Contents
 

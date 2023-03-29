@@ -4,6 +4,7 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 17 LTS (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
-- Jakarta Mail (to send and receive email via SMTP, POP3 and IMAP)
+- [Java SE 17 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
+- [Jakarta Mail](https://jakarta.ee/specifications/mail/2.0/jakarta-mail-spec-2.0.html)
+- [JavaBeans Activation Framework](https://www.oracle.com/java/technologies/javase/jaf.html)

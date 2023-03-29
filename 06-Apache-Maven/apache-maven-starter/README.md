@@ -2,13 +2,13 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 15 (for distributing a portable code for desktops and servers)
-- PostgreSQL database
-- Apache Tomcat (web server and servlet container)
-- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
-- Java Server Pages (to create dynamic web pages)
-- JSTL (JSP spec extension for conditional processing, looping, page internationalization, parsing XML data)
-- JUnit 4 framework (to perform unit, integration and acceptance tests)
+- [Java SE 15](https://www.oracle.com/java/technologies/downloads/archive/)
+- [PostgreSQL database](https://www.postgresql.org/)
+- [Apache Tomcat](https://tomcat.apache.org/)
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
+- [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)
+- [JSTL](https://docs.oracle.com/javaee/5/tutorial/doc/bnake.html)
+- [JUnit 4 framework](https://junit.org/junit4/)
 
 ℹ️ The project showing all aspects of working with the Apache Maven project build system:
 

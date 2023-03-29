@@ -4,14 +4,14 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 19 (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
-- Lombok library (to reduce the code in the classes)
-- PostgreSQL database
-- Apache Tomcat (web server and servlet container)
-- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
-- Java Server Pages (to create dynamic web pages)
-- JSTL (JSP spec extension for conditional processing, looping, page internationalization, parsing XML data)
+- [Java SE 19](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
+- [Lombok library](https://projectlombok.org/)
+- [PostgreSQL database](https://www.postgresql.org/)
+- [Apache Tomcat](https://tomcat.apache.org/)
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
+- [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)
+- [JSTL](https://docs.oracle.com/javaee/5/tutorial/doc/bnake.html)
 
 
 

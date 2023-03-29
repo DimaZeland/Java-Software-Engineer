@@ -5,13 +5,14 @@ topics that a programmer needs to know for professional software development.
 
 ### ⚙️ The project uses:
 
-- Java SE 19 (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
-- JavaFx (to create a functional application with the ability to use a lightweight API)
-- Jakarta Mail (to send and receive email via SMTP, POP3 and IMAP)
-- ObjectWeb ASM library (provides a simple API for decomposing, modifying, and recomposing binary Java classes)
-- Apache Commons (provides features to make Java Collections Framework handling easy)
-- Jakarta JSON (provides portable APIs for working with JSON file format)
+- [Java SE 19](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
+- [JavaFx](https://openjfx.io/)
+- [Jakarta Mail](https://jakarta.ee/specifications/mail/2.0/jakarta-mail-spec-2.0.html)
+- [JavaBeans Activation Framework](https://www.oracle.com/java/technologies/javase/jaf.html)
+- [ObjectWeb ASM library](https://asm.ow2.io/)
+- [Apache Commons](https://commons.apache.org/)
+- [Jakarta JSON](https://jakarta.ee/specifications/jsonp/2.0/)
 
 ## 📚 Contents
 

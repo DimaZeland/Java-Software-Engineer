@@ -4,9 +4,9 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 11 LTS (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
-- Jakarta Servlet (to process requests to the web server via the client-server protocol HTTP/S)
+- [Java SE 11 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
 
 ## 📚 Contents
 

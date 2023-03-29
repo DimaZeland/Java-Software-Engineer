@@ -4,6 +4,6 @@
 
 ### ⚙️ The project uses:
 
-- Java SE 17 LTS (for distributing a portable code for desktops and servers)
-- Apache Maven (project build system)
-- Redis (The in-memory data store used as a database, cache, streaming engine, and message broker)
+- [Java SE 17 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
+- [Apache Maven](https://maven.apache.org/)
+- [Redis](https://redis.io/)
