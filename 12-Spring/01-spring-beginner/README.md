@@ -6,7 +6,7 @@
 
 - [Java SE 11 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
 - [Apache Maven](https://maven.apache.org/)
-- [MySQL database](https://www.mysql.com/)
+- [MySQL](https://www.mysql.com/)
 - [C3P0](https://www.mchange.com/projects/c3p0/)
 - [Hibernate ORM framework](https://hibernate.org/orm/)
 - [Hibernate Validator](https://hibernate.org/validator/)

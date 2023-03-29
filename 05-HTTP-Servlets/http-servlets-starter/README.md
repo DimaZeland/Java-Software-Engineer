@@ -7,7 +7,7 @@
 - [Java SE 19](https://www.oracle.com/java/technologies/downloads/archive/)
 - [Apache Maven](https://maven.apache.org/)
 - [Lombok library](https://projectlombok.org/)
-- [PostgreSQL database](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 - [Apache Tomcat](https://tomcat.apache.org/)
 - [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
 - [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)

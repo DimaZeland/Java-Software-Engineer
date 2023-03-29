@@ -6,4 +6,4 @@
 
 - [Java SE 17 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
 - [Apache Maven](https://maven.apache.org/)
-- [PostgreSQL database](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)

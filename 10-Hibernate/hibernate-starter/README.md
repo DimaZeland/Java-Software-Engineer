@@ -9,7 +9,7 @@
 - [Gradle Build Tool](https://gradle.org/)
 - [Groovy Gradle DSL](https://docs.gradle.org/current/dsl/index.html)
 - [Lombok library](https://projectlombok.org/)
-- [PostgreSQL database](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 - [H2 database](https://www.h2database.com/html/main.html)
 - [Ehcache](https://www.ehcache.org/)
 - [Querydsl library](http://querydsl.com/)

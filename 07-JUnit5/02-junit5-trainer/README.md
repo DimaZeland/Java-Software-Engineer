@@ -7,7 +7,7 @@
 - [Java SE 17 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
 - [Apache Maven](https://maven.apache.org/)
 - [Lombok library](https://projectlombok.org/)
-- [PostgreSQL database](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
 - [H2 database](https://www.h2database.com/html/main.html)
 - [JUnit 5 framework ](https://junit.org/junit5/)
 - [Mockito framework](https://site.mockito.org/)
