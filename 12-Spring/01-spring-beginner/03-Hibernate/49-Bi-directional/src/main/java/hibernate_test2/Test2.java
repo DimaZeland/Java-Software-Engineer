@@ -16,26 +16,26 @@ public class Test2 {
             /**
              * Добавление
              */
-                session = factory.getCurrentSession();
+            session = factory.getCurrentSession();
 
-                Employee employee = new Employee("Misha", "Sidorov", "HR", 850);
-                Detail detail = new Detail("London", "56358795221", "mashanya@gmail.com");
+            Employee employee = new Employee("Misha", "Sidorov", "HR", 850);
+            Detail detail = new Detail("London", "56358795221", "mashanya@gmail.com");
 
-                //Чтобы в таблице была двухстороння связь необходимо сделать "двойнок присвоение"
-                detail.setEmployee(employee);
-                employee.setEmpDetail(detail);
+            //Чтобы в таблице была двухстороння связь необходимо сделать "двойнок присвоение"
+            detail.setEmployee(employee);
+            employee.setEmpDetail(detail);
 
-                session.beginTransaction();
+            session.beginTransaction();
 
-                session.save(detail);
+            session.save(detail);
 
-                session.getTransaction().commit();
+            session.getTransaction().commit();
             session.close();
 
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-           // detail = session.get(Detail.class, 1);
+            // detail = session.get(Detail.class, 1);
             System.out.println(detail.getEmployee());
             session.delete(detail);
 
