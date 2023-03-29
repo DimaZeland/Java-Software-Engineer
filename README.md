@@ -32,7 +32,7 @@
 
 ### [5️⃣ HTTP Servlets](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/05-HTTP-Servlets)
 
-#### [HTTP Servlets Staerter](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/05-HTTP-Servlets/http-servlets-starter)
+#### [HTTP Servlets Starter](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/05-HTTP-Servlets/http-servlets-starter)
 
 ### [6️⃣ Apache Maven](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/06-Apache-Maven)
 
