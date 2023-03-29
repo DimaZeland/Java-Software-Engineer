@@ -7,7 +7,6 @@
 - [Java SE 17 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
 - [The Apache Groovy programming language](https://groovy-lang.org/)
 - [Kotlin programming language](https://kotlinlang.org/)
-- [Kotlin programming language](https://kotlinlang.org/)
 - [Apache Maven](https://maven.apache.org/)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Lombok library](https://projectlombok.org/)
