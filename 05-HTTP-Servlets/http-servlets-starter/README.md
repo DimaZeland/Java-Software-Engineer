@@ -9,6 +9,8 @@
 - [Lombok library](https://projectlombok.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [JavaScript Programming language](https://www.w3schools.com/js/)
 - [Apache Tomcat](https://tomcat.apache.org/)
 - [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
 - [JavaServer Pages](https://www.oracle.com/java/technologies/jspt.html)

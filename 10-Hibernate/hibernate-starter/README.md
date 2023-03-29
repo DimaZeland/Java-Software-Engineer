@@ -16,6 +16,6 @@
 - [Docker container](https://www.docker.com/)
 - [Apache Log4j](https://logging.apache.org/log4j/2.x/)
 - [SLF4J logging library](https://www.slf4j.org/)
-- [JUnit 5 framework ](https://junit.org/junit5/)
+- [JUnit 5 framework](https://junit.org/junit5/)
 - [AssertJ library](https://assertj.github.io/doc/)
 - [Testcontainers library](https://www.testcontainers.org/)

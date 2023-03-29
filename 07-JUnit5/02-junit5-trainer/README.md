@@ -9,7 +9,7 @@
 - [Lombok library](https://projectlombok.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [H2 database](https://www.h2database.com/html/main.html)
-- [JUnit 5 framework ](https://junit.org/junit5/)
+- [JUnit 5 framework](https://junit.org/junit5/)
 - [Mockito framework](https://site.mockito.org/)
 - [AssertJ library](https://assertj.github.io/doc/)
 - [JaCoCo](https://www.jacoco.org/)

@@ -13,6 +13,10 @@ topics that a programmer needs to know for professional software development.
 - [ObjectWeb ASM library](https://asm.ow2.io/)
 - [Apache Commons](https://commons.apache.org/)
 - [Jakarta JSON](https://jakarta.ee/specifications/jsonp/2.0/)
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [JavaScript Programming language](https://www.w3schools.com/js/)
+- [Apache Tomcat](https://tomcat.apache.org/)
 
 ## 📚 Contents
 

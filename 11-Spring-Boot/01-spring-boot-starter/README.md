@@ -15,5 +15,5 @@
 - [Flyway](https://flywaydb.org/)
 - [Testcontainers library](https://www.testcontainers.org/)
 - [SLF4J logging library](https://www.slf4j.org/)
-- [JUnit 5 framework ](https://junit.org/junit5/)
+- [JUnit 5 framework](https://junit.org/junit5/)
 - [Hamcrest library](https://hamcrest.org/)
