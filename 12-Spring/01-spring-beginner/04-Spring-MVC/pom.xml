@@ -12,23 +12,8 @@
     </parent>
 
     <artifactId>04-Spring-MVC</artifactId>
-    <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
-
-    <modules>
-        <module>57-First-Spring-MVC-Application</module>
-        <module>58-Use-data-in-View</module>
-        <module>59-Model-Component</module>
-        <module>60-RequestParam-annotation</module>
-        <module>61-RequestMapping-for-ControllerClass</module>
-        <module>62-Spring-MVC-form-input</module>
-        <module>63-Spring-MVC-form-select</module>
-        <module>64-Spring-form-radiobutton</module>
-        <module>65-Spring-MVC-form-checkbox</module>
-        <module>66-Data-validation-Size-NotEmpty-NotBlank</module>
-        <module>67-Data-validation-Min-Max-Pattern</module>
-        <module>68-Data-validation-Create-our-annotation</module>
-    </modules>
+    <packaging>war</packaging>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->

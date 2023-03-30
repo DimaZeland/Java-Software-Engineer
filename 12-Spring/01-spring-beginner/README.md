@@ -20,5 +20,5 @@
 - [AspectJ Weaver](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver)
 - [Spring MVC](https://www.baeldung.com/spring-mvc-tutorial)
 - [Spring Web MVC](https://mvnrepository.com/artifact/org.springframework/spring-webmvc)
-
+- [FasterXML Jackson](https://github.com/FasterXML/jackson)
 
