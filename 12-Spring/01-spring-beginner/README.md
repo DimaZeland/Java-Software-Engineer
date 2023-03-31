@@ -23,4 +23,5 @@
 - [FasterXML Jackson](https://github.com/FasterXML/jackson)
 - [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
 - [Postman](https://www.postman.com/)
-
+- [Spring Security](https://docs.spring.io/spring-security/reference/index.html)
+- [Spring Security Taglibs](https://docs.spring.io/spring-security/reference/servlet/integrations/jsp-taglibs.html)
