@@ -21,4 +21,6 @@
 - [Spring MVC](https://www.baeldung.com/spring-mvc-tutorial)
 - [Spring Web MVC](https://mvnrepository.com/artifact/org.springframework/spring-webmvc)
 - [FasterXML Jackson](https://github.com/FasterXML/jackson)
+- [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [Postman](https://www.postman.com/)
 
