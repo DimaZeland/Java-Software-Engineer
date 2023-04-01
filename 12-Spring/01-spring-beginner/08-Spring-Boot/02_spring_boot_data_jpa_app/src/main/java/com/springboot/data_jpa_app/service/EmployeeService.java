@@ -16,4 +16,6 @@ public interface EmployeeService {
     @Transactional
     void deleteEmployee(int id);
 
+    public List<Employee> findAllByName(String name);
+
 }

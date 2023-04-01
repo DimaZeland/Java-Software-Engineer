@@ -43,4 +43,9 @@ public class DefaultController {
         employeeService.deleteEmployee(id);
         return "Employee " + employee + " was deleted.";
     }
+
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmployeesByName(@PathVariable String name) {
+        return employeeService.findAllByName(name);
+    }
 }

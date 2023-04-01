@@ -1,8 +1,6 @@
 package com.spring.boot.app.dao;
 
 import com.spring.boot.app.entity.Employee;
-//import org.hibernate.Session;
-//import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

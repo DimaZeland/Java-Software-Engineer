@@ -27,6 +27,9 @@
 - [Spring Security Taglibs](https://docs.spring.io/spring-security/reference/servlet/integrations/jsp-taglibs.html)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Lombok library](https://projectlombok.org/)
+- [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+- [Spring Data REST](https://docs.spring.io/spring-data/rest/docs/current/reference/html/)
+- [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
 
 ## 📚 Contents
 

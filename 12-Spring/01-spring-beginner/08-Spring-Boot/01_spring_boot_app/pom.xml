@@ -38,6 +38,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+<!--File/Settings/Build,Execution,Deployment/Compiler/Build project automatically checkbox/Apply/OK-->
+<!--File/Settings/Advanced Settings/-->
+<!--        check the box "Allow auto-make to start even if developed application is currently running" / Apply / OK-->
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
