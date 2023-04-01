@@ -18,6 +18,7 @@
         <module>05-Spring-MVC-Hibernate-AOP</module>
         <module>06-Spring-REST</module>
         <module>07-Spring-Security</module>
+        <module>08-Spring-Boot</module>
     </modules>
 
     <properties>
