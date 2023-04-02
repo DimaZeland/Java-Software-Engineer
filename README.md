@@ -66,5 +66,7 @@
 
 #### [Spring Beginner](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/01-spring-beginner)
 
+#### [Spring Elementary](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary)
+
 #### [Spring Starter](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/03-spring-starter)
 
