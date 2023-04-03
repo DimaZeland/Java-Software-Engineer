@@ -18,7 +18,12 @@
     <modules>
         <module>02_SpringAppDemo_XML_Config</module>
         <module>04_FirstIoCApp</module>
-        <module>05-FirstDIApp</module>
+        <module>05_FirstDIApp</module>
+        <module>06_DIAppPart2</module>
+        <module>06-HWSolution</module>
+        <module>07_Scopes</module>
+        <module>08_InitDestroyAndFactory</module>
+        <module>09_SpringAnnotations1</module>
     </modules>
 
     <dependencies>
