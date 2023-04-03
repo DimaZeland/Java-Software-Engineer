@@ -18,6 +18,7 @@
     <modules>
         <module>02_SpringAppDemo_XML_Config</module>
         <module>04_FirstIoCApp</module>
+        <module>05-FirstDIApp</module>
     </modules>
 
     <dependencies>
