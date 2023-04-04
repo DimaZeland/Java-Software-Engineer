@@ -17,12 +17,12 @@
     </bean>
 
     <!--<bean id="musicPlayer"-->
-          <!--class="com.spring.MusicPlayer"-->
-          <!--scope="prototype">-->
-        <!--<property name="music" ref="musicBean"/>-->
+    <!--class="com.spring.MusicPlayer"-->
+    <!--scope="prototype">-->
+    <!--<property name="music" ref="musicBean"/>-->
 
-        <!--<property name="name" value="${musicPlayer.name}"/>-->
-        <!--<property name="volume" value="${musicPlayer.volume}"/>-->
+    <!--<property name="name" value="${musicPlayer.name}"/>-->
+    <!--<property name="volume" value="${musicPlayer.volume}"/>-->
     <!--</bean>-->
 
 </beans>

@@ -24,6 +24,12 @@
         <module>07_Scopes</module>
         <module>08_InitDestroyAndFactory</module>
         <module>09_SpringAnnotations1</module>
+        <module>10_SpringAnnotations2</module>
+        <module>11_SpringAnnotations3</module>
+        <module>11_HWSolution</module>
+        <module>12_SpringAnnotations4</module>
+        <module>13_SpringJavaConfiguration</module>
+        <module>13_HWSolution</module>
     </modules>
 
     <dependencies>

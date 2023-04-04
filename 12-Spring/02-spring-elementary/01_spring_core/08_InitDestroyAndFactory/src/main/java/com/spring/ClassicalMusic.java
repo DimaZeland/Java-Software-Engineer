@@ -2,7 +2,8 @@ package com.spring;
 
 
 public class ClassicalMusic implements Music {
-    private ClassicalMusic() {}
+    private ClassicalMusic() {
+    }
 
     public static ClassicalMusic getClassicalMusic() {
         return new ClassicalMusic();
