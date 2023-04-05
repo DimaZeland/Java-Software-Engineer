@@ -7,7 +7,15 @@
 - [Java SE 11 LTS](https://www.oracle.com/java/technologies/downloads/archive/)
 - [Apache Maven](https://maven.apache.org/)
 - [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [Apache Tomcat](https://tomcat.apache.org/)
+- [Spring MVC](https://www.baeldung.com/spring-mvc-tutorial)
+- [Thymeleaf library](https://www.thymeleaf.org/)
+- [Spring Web MVC](https://mvnrepository.com/artifact/org.springframework/spring-webmvc)
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/)
+- [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [Hibernate Validator](https://hibernate.org/validator/)
+- [PostgreSQL database](https://www.postgresql.org/)
 
 ## 📚 Contents
 
