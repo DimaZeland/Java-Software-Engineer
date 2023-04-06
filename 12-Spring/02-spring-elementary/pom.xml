@@ -13,7 +13,6 @@
     <modules>
         <module>01_core</module>
         <module>02_mvc</module>
-        <module>03_databases</module>
     </modules>
 
     <properties>
