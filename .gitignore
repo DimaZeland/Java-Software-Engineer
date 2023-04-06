@@ -51,6 +51,7 @@ $RECYCLE.BIN/
 *.rar
 
 ### Maven template
+**/log
 **/target/
 **/pom.xml.tag
 **/pom.xml.releaseBackup
@@ -72,6 +73,14 @@ $RECYCLE.BIN/
 *.iws
 *.ipr
 
+# Eclipse
+.classpath
+.project
+.settings/
+
+### VS Code ###
+.vscode/
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -81,9 +90,6 @@ $RECYCLE.BIN/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
-### VS Code ###
-.vscode/
 
 ### Spring Boot
 **/HELP.md
