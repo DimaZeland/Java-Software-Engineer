@@ -16,21 +16,9 @@
 - [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
 - [Hibernate Validator](https://hibernate.org/validator/)
 - [PostgreSQL database](https://www.postgresql.org/)
+- [Spring JDBC](https://mvnrepository.com/artifact/org.springframework/spring-jdbc)
 
 ## 📚 Contents
 
 #### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
+####
