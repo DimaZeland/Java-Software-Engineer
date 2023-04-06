@@ -17,8 +17,10 @@
 - [Hibernate Validator](https://hibernate.org/validator/)
 - [PostgreSQL DBMS](https://www.postgresql.org/)
 - [Spring JDBC](https://mvnrepository.com/artifact/org.springframework/spring-jdbc)
+- [Spring Validator](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/validation/Validator.html)
 
 ## 📚 Contents
 
 #### []()
-#### []
+#### []()
+####

@@ -11,14 +11,12 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>02_mvc</artifactId>
+    <artifactId>03_databases</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>15_MVC_XML_Conf</module>
-        <module>20_MVC_Sample</module>
-        <module>26_MVC_JDBC_API</module>
+        <module>42_MVC_JdbcTemplate</module>
     </modules>
 
     <dependencies>
@@ -57,6 +55,25 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet-api.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
         </dependency>
     </dependencies>
 </project>
