@@ -7,7 +7,7 @@
 - [Java SE 19](https://www.oracle.com/java/technologies/downloads/archive/)
 - [Apache Maven](https://maven.apache.org/)
 - [Lombok library](https://projectlombok.org/)
-- [PostgreSQL](https://www.postgresql.org/)
+- [PostgreSQL DBMS](https://www.postgresql.org/)
 - [HTML](https://html.spec.whatwg.org/multipage/)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [JavaScript Programming language](https://www.w3schools.com/js/)
