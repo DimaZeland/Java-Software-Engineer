@@ -13,6 +13,7 @@
     <modules>
         <module>01_core</module>
         <module>02_mvc</module>
+        <module>HibernateApp</module>
     </modules>
 
     <properties>
@@ -25,7 +26,9 @@
         <thymeleaf-spring5.version>3.0.11.RELEASE</thymeleaf-spring5.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <hibernate-validator.version>6.1.6.Final</hibernate-validator.version>
-        <postgresql.version>42.2.18</postgresql.version>
+        <postgresql.version>42.2.19</postgresql.version>
+        <junit.version>4.11</junit.version>
+        <hibernate-core.version>5.4.28.Final</hibernate-core.version>
     </properties>
 
     <build>
