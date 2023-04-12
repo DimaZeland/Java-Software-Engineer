@@ -13,7 +13,10 @@
     <modules>
         <module>01_core</module>
         <module>02_mvc</module>
-        <module>03_HibernateApp</module>
+        <module>50_HibernateApp</module>
+        <module>60_SpringHibernateCRUDApp</module>
+        <module>63_SpringHibernateCRUD_JPA_App</module>
+        <module>70_SpringHibernateCRUD_JPA_Library_App</module>
     </modules>
 
     <properties>
@@ -21,7 +24,7 @@
         <maven.compiler.source>${project.java.version}</maven.compiler.source>
         <maven.compiler.target>${project.java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>5.2.1.RELEASE</spring.version>
+        <spring.version>5.3.5</spring.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <thymeleaf-spring5.version>3.0.11.RELEASE</thymeleaf-spring5.version>
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
@@ -29,6 +32,7 @@
         <postgresql.version>42.2.19</postgresql.version>
         <junit.version>4.11</junit.version>
         <hibernate-core.version>5.4.28.Final</hibernate-core.version>
+        <spring-data-jpa.version>2.4.7</spring-data-jpa.version>
     </properties>
 
     <build>

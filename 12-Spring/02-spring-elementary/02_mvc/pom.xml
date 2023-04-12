@@ -20,7 +20,7 @@
         <module>20_MVC_Sample</module>
         <module>26_MVC_JDBC_API</module>
         <module>43_MVC_JdbcTemplate</module>
-        <module>45_Library_App</module>
+        <module>45_Library_JdbcTemplate_App</module>
     </modules>
 
     <dependencies>

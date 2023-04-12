@@ -20,8 +20,11 @@
 - [Spring Validator](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/validation/Validator.html)
 - [Hibernate ORM framework](https://hibernate.org/orm/)
 - [JUnit 4 framework](https://junit.org/junit4/)
+- [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+
 ## 📚 Contents
 
 #### []()
 #### []()
-####
+#### []()
+#### []()

@@ -10,7 +10,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>03_HibernateApp</artifactId>
+    <artifactId>50_HibernateApp</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <dependencies>
