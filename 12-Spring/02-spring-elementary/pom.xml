@@ -89,8 +89,8 @@
     <distributionManagement>
         <snapshotRepository>
             <id>localMachine</id>
-<!--            <url>file://${project.basedir}/snapshotRepository/</url>-->
-<!--            <url>C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.73\webapps\manager</url>-->
+            <!--            <url>file://${project.basedir}/snapshotRepository/</url>-->
+            <!--            <url>C:\Program Files\Apache Software Foundation\apache-tomcat-9.0.73\webapps\manager</url>-->
             <url>file://C:/Users/Admin/Desktop/snapshotRepository</url>
         </snapshotRepository>
         <repository>
