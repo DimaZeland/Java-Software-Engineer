@@ -21,11 +21,14 @@
 - [Hibernate ORM framework](https://hibernate.org/orm/)
 - [JUnit 4 framework](https://junit.org/junit4/)
 - [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
-
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Security](https://docs.spring.io/spring-security/reference/index.html)
+- [Postman](https://www.postman.com/)
+- 
 ## 📚 Contents
 
 #### []()
 #### []()
 #### []()
 #### []()
-###
+#### []()
