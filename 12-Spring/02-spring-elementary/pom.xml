@@ -19,6 +19,8 @@
         <module>70_SpringHibernateCRUD_JPA_Library_App</module>
         <module>74_SpringBoot_Library_App</module>
         <module>77_Session_Cookies</module>
+        <module>78_FirstSecurityApp</module>
+        <module>87_FinalSecurityApp</module>
     </modules>
 
     <properties>
