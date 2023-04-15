@@ -25,6 +25,7 @@
 - [Spring Security](https://docs.spring.io/spring-security/reference/index.html)
 - [Postman](https://www.postman.com/)
 - [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
+- [FasterXML Jackson](https://github.com/FasterXML/jackson)
 - 
 ## 📚 Contents
 

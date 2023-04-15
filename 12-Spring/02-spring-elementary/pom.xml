@@ -21,6 +21,8 @@
         <module>77_Session_Cookies</module>
         <module>78_FirstSecurityApp</module>
         <module>87_FinalSecurityApp</module>
+        <module>90_RestAPIConsumer</module>
+        <module>91_FirstRestApp</module>
     </modules>
 
     <properties>
@@ -37,6 +39,7 @@
         <junit.version>4.11</junit.version>
         <hibernate-core.version>5.4.28.Final</hibernate-core.version>
         <spring-data-jpa.version>2.4.7</spring-data-jpa.version>
+        <jackson-databind.version>2.12.4</jackson-databind.version>
     </properties>
 
     <build>
