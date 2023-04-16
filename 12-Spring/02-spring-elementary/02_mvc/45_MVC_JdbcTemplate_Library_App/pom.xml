@@ -10,7 +10,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>45_Library_JdbcTemplate_App</artifactId>
+    <artifactId>45_MVC_JdbcTemplate_Library_App</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 

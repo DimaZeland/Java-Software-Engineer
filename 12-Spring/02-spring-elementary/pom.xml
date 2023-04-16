@@ -22,7 +22,7 @@
         <module>78_FirstSecurityApp</module>
         <module>87_FinalSecurityApp</module>
         <module>90_RestAPIConsumer</module>
-        <module>91_FirstRestApp</module>
+        <module>94_FirstRestApp</module>
     </modules>
 
     <properties>

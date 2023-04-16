@@ -26,6 +26,7 @@
 - [Postman](https://www.postman.com/)
 - [REST API](https://en.wikipedia.org/wiki/Representational_state_transfer)
 - [FasterXML Jackson](https://github.com/FasterXML/jackson)
+- [ModelMapper](https://mvnrepository.com/artifact/org.modelmapper/modelmapper/2.4.5)
 - 
 ## 📚 Contents
 
@@ -35,4 +36,4 @@
 #### []()
 #### []()
 #### []()
-#### []
+#### []()
