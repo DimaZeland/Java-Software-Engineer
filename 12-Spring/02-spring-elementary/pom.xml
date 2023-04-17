@@ -27,6 +27,8 @@
         <module>87_FinalSecurityApp</module>
         <module>90_REST_API_Consumer</module>
         <module>94_First_REST_App</module>
+        <module>96_Sensor_REST_API_App</module>
+        <module>97_JWT_App</module>
     </modules>
 
     <properties>
