@@ -11,18 +11,22 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
-        <module>01_core</module>
-        <module>02_mvc</module>
+        <module>01_Core</module>
+        <module>15_MVC_XML_Conf</module>
+        <module>20_MVC_Sample</module>
+        <module>26_MVC_JDBC_API</module>
+        <module>43_MVC_JdbcTemplate</module>
+        <module>45_MVC_JdbcTemplateLibraryApp</module>
         <module>50_HibernateApp</module>
-        <module>60_SpringHibernateCRUDApp</module>
+        <module>60_SpringHibernateCRUD_App</module>
         <module>63_SpringHibernateCRUD_JPA_App</module>
-        <module>70_SpringHibernateCRUD_JPA_Library_App</module>
-        <module>74_SpringBoot_Library_App</module>
-        <module>77_Session_Cookies</module>
+        <module>70_SpringHibernateCRUD_JPA_LibraryApp</module>
+        <module>74_SpringBootLibraryApp</module>
+        <module>77_SessionCookie</module>
         <module>78_FirstSecurityApp</module>
         <module>87_FinalSecurityApp</module>
-        <module>90_RestAPIConsumer</module>
-        <module>94_FirstRestApp</module>
+        <module>90_REST_API_Consumer</module>
+        <module>94_First_REST_App</module>
     </modules>
 
     <properties>
