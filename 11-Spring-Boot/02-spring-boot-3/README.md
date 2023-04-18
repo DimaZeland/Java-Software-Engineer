@@ -37,6 +37,7 @@
 - [JUnit 5 framework](https://junit.org/junit5/)
 - [Twitter4J](https://twitter4j.org/)
 - [Spring Native](https://docs.spring.io/spring-boot/docs/current/reference/html/native-image.html)
+- [Java JWT](https://jwt.io/)
 
 ## 📚 Contents
 
