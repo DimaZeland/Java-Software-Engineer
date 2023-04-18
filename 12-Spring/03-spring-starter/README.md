@@ -1,1 +1,1 @@
-# Spring Starter
+# spring-starter
