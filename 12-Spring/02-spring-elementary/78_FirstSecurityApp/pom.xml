@@ -14,7 +14,7 @@
     <groupId>com.spring</groupId>
     <artifactId>78_FirstSecurityApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>FirstSecurityApp</name>
+    <name>78_FirstSecurityApp</name>
     <description>First Spring Boot app with Spring Security</description>
 
     <properties>
