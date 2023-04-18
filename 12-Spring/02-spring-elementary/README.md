@@ -1,6 +1,6 @@
 # Spring Elementary
 
-ℹ️ The project contains ...
+ℹ️ The project contains the source code for Spring Framework applications including Boot, Hibernate, Security, REST.
 
 ### ⚙️ The project uses:
 
@@ -32,12 +32,21 @@
 
 ## 📚 Contents
 
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#### []()
-#
+#### [Spring Core](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/01_Core)
+#### [MVC XML Configuration](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/15_MVC_XML_Conf)
+#### [MVC Sample](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/20_MVC_Sample)
+#### [MVC JDBC API](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/26_MVC_JDBC_API)
+#### [MVC JdbcTemplate](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/43_MVC_JdbcTemplate)
+#### [MVC JdbcTemplate Library App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/45_MVC_JdbcTemplateLibraryApp)
+#### [Hibernate App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/50_HibernateApp)
+#### [Spring Hibernate CRUD App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/60_SpringHibernateCRUD_App)
+#### [Spring Hibernate CRUD JPA App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/63_SpringHibernateCRUD_JPA_App)
+#### [Spring Hibernate CRUD JPA Library App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/70_SpringHibernateCRUD_JPA_LibraryApp)
+#### [Spring Boot Library App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/74_SpringBootLibraryApp)
+#### [Session and Cookie](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/77_SessionCookie)
+#### [First Security App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/78_FirstSecurityApp)
+#### [Final Security App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/87_FinalSecurityApp)
+#### [REST API Consumer](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/90_REST_API_Consumer)
+#### [First REST App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/94_First_REST_App)
+#### [Sensor REST API App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/96_Sensor_REST_API_App)
+#### [JWT App](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/02-spring-elementary/97_JWT_App)
