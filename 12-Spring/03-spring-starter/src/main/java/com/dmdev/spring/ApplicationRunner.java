@@ -14,5 +14,6 @@ public class ApplicationRunner {
         System.out.println(context.getBeanDefinitionCount());
         System.out.println(context.getBean("pool1"));
         System.out.println(context.getBean(DatabaseProperties.class));
+        System.out.println("16-17");
     }
 }
