@@ -17,7 +17,7 @@ import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 @RequiredArgsConstructor
 public class ImageService {
 
-    @Value("${app.image.bucket:/Users/dmatveyenka/IdeaProjects/spring-starter/images}")
+    @Value("${app.image.bucket:C:\\Users\\Admin\\IdeaProjects\\Java-Software-Engineer\\12-Spring\\03-spring-starter\\images}")
     private final String bucket;
 
     @SneakyThrows
