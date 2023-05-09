@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset dmatveyenka:1
+--changeset zeland:1
 CREATE TABLE IF NOT EXISTS company
 (
     id SERIAL PRIMARY KEY ,
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS company
     );
 --rollback DROP TABLE company;
 
---changeset dmatveyenka:2
+--changeset zeland:2
 CREATE TABLE IF NOT EXISTS company_locales
 (
     company_id INT REFERENCES company (id) ON DELETE CASCADE ,
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS company_locales
     PRIMARY KEY (company_id, lang)
     );
 
---changeset dmatveyenka:3
+--changeset zeland:3
 CREATE TABLE IF NOT EXISTS users
 (
     id BIGSERIAL PRIMARY KEY ,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS users
     company_id INT REFERENCES company (id)
     );
 
---changeset dmatveyenka:4
+--changeset zeland:4
 CREATE TABLE IF NOT EXISTS payment
 (
     id BIGSERIAL PRIMARY KEY ,
@@ -37,14 +37,14 @@ CREATE TABLE IF NOT EXISTS payment
     receiver_id BIGINT NOT NULL REFERENCES users (id) ON DELETE CASCADE
     );
 
---changeset dmatveyenka:5
+--changeset zeland:5
 CREATE TABLE IF NOT EXISTS chat
 (
     id BIGSERIAL PRIMARY KEY ,
     name VARCHAR(64) NOT NULL UNIQUE
     );
 
---changeset dmatveyenka:6
+--changeset zeland:6
 CREATE TABLE IF NOT EXISTS users_chat
 (
     id BIGSERIAL PRIMARY KEY ,

@@ -28,10 +28,10 @@ app.common.logging:
 logging:
   level:
     root: INFO
-    com.dmdev.spring.database.pool: INFO
+    com.spring.database.pool: INFO
     org.springframework.jdbc.core: TRACE
   file:
-    name: dmdev.log
+    name: zeland.log
     path: /
 spring:
   mvc:
