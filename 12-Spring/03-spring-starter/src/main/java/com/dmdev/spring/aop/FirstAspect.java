@@ -8,27 +8,15 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Aspect
 @Component
+@Order(1)
 public class FirstAspect {
-
-    /*
-        @within - check annotation on the class level
-     */
-    @Pointcut("@within(org.springframework.stereotype.Controller)")
-    public void isControllerLayer() {
-    }
-
-    /*
-        within - check class type name
-     */
-    @Pointcut("within(com.dmdev.spring.service.*Service)")
-    public void isServiceLayer() {
-    }
 
     /*
         this - check AOP proxy class type
@@ -42,7 +30,7 @@ public class FirstAspect {
     /*
         @annotation - check annotation on method level
      */
-    @Pointcut("isControllerLayer() && @annotation(org.springframework.web.bind.annotation.GetMapping)")
+    @Pointcut("com.dmdev.spring.aop.CommonPointcuts.isControllerLayer() && @annotation(org.springframework.web.bind.annotation.GetMapping)")
     public void hasGetMapping() {
     }
 
@@ -51,7 +39,7 @@ public class FirstAspect {
         * - any param type
         .. - 0+ any params type
      */
-    @Pointcut("isControllerLayer() && args(org.springframework.ui.Model,..)")
+    @Pointcut("com.dmdev.spring.aop.CommonPointcuts.isControllerLayer() && args(org.springframework.ui.Model,..)")
     public void hasModelParam() {
     }
 
@@ -60,7 +48,7 @@ public class FirstAspect {
         * - any param type
         .. - 0+ any params type
      */
-    @Pointcut("isControllerLayer() && @args(com.dmdev.spring.validation.UserInfo,..)")
+    @Pointcut("com.dmdev.spring.aop.CommonPointcuts.isControllerLayer() && @args(com.dmdev.spring.validation.UserInfo,..)")
     public void hasUserInfoParamAnnotation() {
     }
 
@@ -111,7 +99,6 @@ public class FirstAspect {
     public void addLoggingAfterFinally(Object service) {
         log.info("after (finally) - invoked findById method in class {}", service);
     }
-
 
 
 
