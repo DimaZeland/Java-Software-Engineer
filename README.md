@@ -70,3 +70,5 @@
 
 #### [Spring Starter](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/03-spring-starter)
 
+#### [Spring Fast](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/12-Spring/04-spring-fast)
+
