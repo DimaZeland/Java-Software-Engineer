@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>04-spring-fast</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+
+    <artifactId>02_bean_registration</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>01_context_create</module>
+        <module>02_add_beans</module>
+        <module>03_add_same_type_beans</module>
+        <module>04_add_bean_name</module>
+        <module>05_add_primary_bean</module>
+        <module>06_add_Component</module>
+        <module>07_add_PostConstruct</module>
+        <module>08_use_registerBean</module>
+        <module>09_XML_conf</module>
+    </modules>
+
+</project>

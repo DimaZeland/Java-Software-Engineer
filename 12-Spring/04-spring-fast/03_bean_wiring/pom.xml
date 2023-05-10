@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>04-spring-fast</artifactId>
+        <groupId>org.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>03_bean_wiring</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>01_bean_in_bean</module>
+        <module>02_line_wiring</module>
+        <module>03_constr_wiring</module>
+        <module>04_field_autowired</module>
+        <module>05_constr_autowired</module>
+        <module>06_setter_autowired</module>
+        <module>07_cyclic_dependence</module>
+        <module>08_Bean_Qualifier</module>
+        <module>09_bean_name_choose</module>
+        <module>10_Component_Qualifier</module>
+    </modules>
+
+</project>
