@@ -13,5 +13,10 @@
         <module>02_bean_registration</module>
         <module>03_bean_wiring</module>
         <module>04_bean_abstractions</module>
+        <module>05_beans_scope_and_lifecycle</module>
+        <module>06_aop</module>
+        <module>07_Boot_MVC</module>
+        <module>08_web_MVC</module>
+        <module>09_bean_web_scopes</module>
     </modules>
 </project>
