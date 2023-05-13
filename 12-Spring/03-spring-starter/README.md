@@ -38,7 +38,7 @@
 - [Swagger](https://swagger.io/)
 - [Spring Security](https://docs.spring.io/spring-security/reference/index.html)
 - [OAuth 2.0 Framework](https://tools.ietf.org/html/rfc6749)
-- [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html)
+- [OpenID Connect](https://openid.net/)
 - [Java JWT](https://jwt.io/)
 - [AspectJ Weaver](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver)
 - [Spring AOP](https://mvnrepository.com/artifact/org.springframework/spring-aop)
