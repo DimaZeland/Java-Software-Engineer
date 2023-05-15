@@ -14,14 +14,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class ApplicationTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Test
-  @DisplayName("Test that /home page can be successfully called.")
-  void testPageRequestAndContent() throws Exception {
-    mockMvc.perform(get("/home"))
-        .andExpect(status().isOk());
-  }
+    @Test
+    @DisplayName("Test that /home page can be successfully called.")
+    void testPageRequestAndContent() throws Exception {
+        mockMvc.perform(get("/home"))
+                .andExpect(status().isOk());
+    }
 
 }

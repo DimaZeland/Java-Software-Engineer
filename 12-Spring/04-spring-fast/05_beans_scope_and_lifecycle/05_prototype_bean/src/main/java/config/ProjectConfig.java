@@ -9,9 +9,9 @@ import services.CommentService;
 @Configuration
 public class ProjectConfig {
 
-  @Bean
-  @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-  public CommentService commentService() {
-    return new CommentService();
-  }
+    @Bean
+    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
+    public CommentService commentService() {
+        return new CommentService();
+    }
 }

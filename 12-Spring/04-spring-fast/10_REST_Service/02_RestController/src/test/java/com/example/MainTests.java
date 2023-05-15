@@ -14,21 +14,21 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class MainTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Test
-  public void helloTest() throws Exception {
-    mockMvc.perform(get("/hello"))
-        .andExpect(status().isOk())
-        .andExpect(content().string("Hello!"));
-  }
+    @Test
+    public void helloTest() throws Exception {
+        mockMvc.perform(get("/hello"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Hello!"));
+    }
 
-  @Test
-  public void ciaoTest() throws Exception {
-    mockMvc.perform(get("/ciao"))
-        .andExpect(status().isOk())
-        .andExpect(content().string("Ciao!"));
-  }
+    @Test
+    public void ciaoTest() throws Exception {
+        mockMvc.perform(get("/ciao"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Ciao!"));
+    }
 
 }

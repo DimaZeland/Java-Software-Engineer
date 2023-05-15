@@ -7,10 +7,10 @@ import repositories.CommentRepository;
 @Service
 public class CommentService {
 
-  @Autowired
-  private CommentRepository commentRepository;
+    @Autowired
+    private CommentRepository commentRepository;
 
-  public CommentRepository getCommentRepository() {
-    return commentRepository;
-  }
+    public CommentRepository getCommentRepository() {
+        return commentRepository;
+    }
 }

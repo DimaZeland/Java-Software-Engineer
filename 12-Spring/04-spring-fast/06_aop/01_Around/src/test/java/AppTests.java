@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { ProjectConfig.class })
+@ContextConfiguration(classes = {ProjectConfig.class})
 public class AppTests {
 
     private Logger serviceLogger;
@@ -38,7 +38,7 @@ public class AppTests {
 
     @Test
     @DisplayName("Test that the aspect intercepts and alters the execution" +
-        " of the publishComment() method.")
+            " of the publishComment() method.")
     public void testAspectInterceptsPublishCommentMethod() {
         Comment comment = new Comment();
         comment.setText("Test comment text");

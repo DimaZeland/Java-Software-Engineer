@@ -11,7 +11,7 @@ import services.CommentService;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { ProjectConfig.class })
+@ContextConfiguration(classes = {ProjectConfig.class})
 public class AppTests {
 
     @Autowired
@@ -19,7 +19,7 @@ public class AppTests {
 
     @Test
     @DisplayName("Test that the aspect intercepts and alters the returned type" +
-        " of the publishComment() method.")
+            " of the publishComment() method.")
     public void testAspectInterceptsPublishCommentMethod() {
         Comment comment = new Comment();
         comment.setText("Test comment text");

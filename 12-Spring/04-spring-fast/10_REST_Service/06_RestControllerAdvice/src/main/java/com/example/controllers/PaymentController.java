@@ -11,17 +11,17 @@ import com.example.service.PaymentService;
 @RestController
 public class PaymentController {
 
-  private final PaymentService paymentService;
+    private final PaymentService paymentService;
 
-  public PaymentController(PaymentService paymentService) {
-    this.paymentService = paymentService;
-  }
+    public PaymentController(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
 
-  @PostMapping("/payment")
-  public ResponseEntity<PaymentDetails> makePayment() {
-      PaymentDetails paymentDetails = paymentService.processPayment();
-      return ResponseEntity
-              .status(HttpStatus.ACCEPTED)
-              .body(paymentDetails);
-  }
+    @PostMapping("/payment")
+    public ResponseEntity<PaymentDetails> makePayment() {
+        PaymentDetails paymentDetails = paymentService.processPayment();
+        return ResponseEntity
+                .status(HttpStatus.ACCEPTED)
+                .body(paymentDetails);
+    }
 }

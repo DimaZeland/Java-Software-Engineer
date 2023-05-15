@@ -4,5 +4,5 @@ import model.Comment;
 
 public interface CommentNotificationProxy {
 
-  void sendComment(Comment comment);
+    void sendComment(Comment comment);
 }

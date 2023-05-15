@@ -10,30 +10,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ProductsController {
 
-  private final ProductService productService;
+    private final ProductService productService;
 
-  public ProductsController(ProductService productService) {
-    this.productService = productService;
-  }
+    public ProductsController(ProductService productService) {
+        this.productService = productService;
+    }
 
-  @GetMapping("/products")
-  public String viewProducts(Model model) {
-    var products = productService.findAll();
-    model.addAttribute("products", products);
+    @GetMapping("/products")
+    public String viewProducts(Model model) {
+        var products = productService.findAll();
+        model.addAttribute("products", products);
 
-    return "products.html";
-  }
+        return "products.html";
+    }
 
-  @PostMapping("/products")
-  public String addProduct(
-      Product p,
-      Model model
-  ) {
-    productService.addProduct(p);
+    @PostMapping("/products")
+    public String addProduct(
+            Product p,
+            Model model
+    ) {
+        productService.addProduct(p);
 
-    var products = productService.findAll();
-    model.addAttribute("products", products);
+        var products = productService.findAll();
+        model.addAttribute("products", products);
 
-    return "products.html";
-  }
+        return "products.html";
+    }
 }

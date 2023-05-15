@@ -19,40 +19,40 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 class MainTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Test
-  public void testGetFrance() throws Exception {
-    var mapper = new ObjectMapper();
+    @Test
+    public void testGetFrance() throws Exception {
+        var mapper = new ObjectMapper();
 
-    Country c = new Country();
-    c.setName("France");
-    c.setPopulation(67);
+        Country c = new Country();
+        c.setName("France");
+        c.setPopulation(67);
 
-    var expected = mapper.writeValueAsString(c);
+        var expected = mapper.writeValueAsString(c);
 
-    mockMvc.perform(get("/france"))
-        .andExpect(status().isOk())
-        .andExpect(content().json(expected));
-  }
+        mockMvc.perform(get("/france"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(expected));
+    }
 
-  @Test
-  public void testGetAllCountries() throws Exception {
-    var mapper = new ObjectMapper();
+    @Test
+    public void testGetAllCountries() throws Exception {
+        var mapper = new ObjectMapper();
 
-    Country c1 = new Country();
-    c1.setName("France");
-    c1.setPopulation(67);
+        Country c1 = new Country();
+        c1.setName("France");
+        c1.setPopulation(67);
 
-    Country c2 = new Country();
-    c2.setName("Spain");
-    c2.setPopulation(47);
+        Country c2 = new Country();
+        c2.setName("Spain");
+        c2.setPopulation(47);
 
-    var expected = mapper.writeValueAsString(List.of(c1,c2));
+        var expected = mapper.writeValueAsString(List.of(c1, c2));
 
-    mockMvc.perform(get("/all"))
-        .andExpect(status().isOk())
-        .andExpect(content().json(expected));
-  }
+        mockMvc.perform(get("/all"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(expected));
+    }
 }

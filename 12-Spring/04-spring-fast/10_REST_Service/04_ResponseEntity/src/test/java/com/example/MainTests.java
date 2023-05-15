@@ -17,25 +17,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class MainTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Test
-  public void testGetFrance() throws Exception {
-    var mapper = new ObjectMapper();
+    @Test
+    public void testGetFrance() throws Exception {
+        var mapper = new ObjectMapper();
 
-    Country c = new Country();
-    c.setName("France");
-    c.setPopulation(67);
+        Country c = new Country();
+        c.setName("France");
+        c.setPopulation(67);
 
-    var expected = mapper.writeValueAsString(c);
+        var expected = mapper.writeValueAsString(c);
 
-    mockMvc.perform(get("/france"))
-        .andExpect(status().isAccepted())
-        .andExpect(content().json(expected))
-        .andExpect(header().string("continent", "Europe"))
-        .andExpect(header().string("capital", "Paris"))
-        .andExpect(header().string("favorite_food", "cheese and wine"));
-  }
+        mockMvc.perform(get("/france"))
+                .andExpect(status().isAccepted())
+                .andExpect(content().json(expected))
+                .andExpect(header().string("continent", "Europe"))
+                .andExpect(header().string("capital", "Paris"))
+                .andExpect(header().string("favorite_food", "cheese and wine"));
+    }
 
 }

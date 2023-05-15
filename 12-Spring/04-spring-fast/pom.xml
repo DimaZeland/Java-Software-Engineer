@@ -18,5 +18,10 @@
         <module>07_Boot_MVC</module>
         <module>08_web_MVC</module>
         <module>09_bean_web_scopes</module>
+        <module>10_REST_Service</module>
+        <module>11_REST_Endpoints</module>
+        <module>12_Database</module>
+        <module>13_Transactions</module>
+        <module>14_Spring_Data_JDBC</module>
     </modules>
 </project>

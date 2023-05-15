@@ -13,7 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { ProjectConfig.class })
+@ContextConfiguration(classes = {ProjectConfig.class})
 public class AppTests {
 
     @Autowired

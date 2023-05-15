@@ -7,13 +7,13 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @ApplicationScope
 public class LoginCountService {
 
-  private int count;
+    private int count;
 
-  public void increment() {
-    count++;
-  }
+    public void increment() {
+        count++;
+    }
 
-  public int getCount() {
-    return count;
-  }
+    public int getCount() {
+        return count;
+    }
 }

@@ -16,27 +16,27 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 class TransferServiceTests {
 
-  @MockBean
-  private AccountRepository accountRepository;
+    @MockBean
+    private AccountRepository accountRepository;
 
-  @Autowired
-  private TransferService transferService;
+    @Autowired
+    private TransferService transferService;
 
-  @Test
-  void transferServiceTransferAmountTest() {
-    Account sender = new Account();
-    sender.setId(1);
-    sender.setAmount(new BigDecimal(1000));
+    @Test
+    void transferServiceTransferAmountTest() {
+        Account sender = new Account();
+        sender.setId(1);
+        sender.setAmount(new BigDecimal(1000));
 
-    Account receiver = new Account();
-    receiver.setId(2);
-    receiver.setAmount(new BigDecimal(1000));
+        Account receiver = new Account();
+        receiver.setId(2);
+        receiver.setAmount(new BigDecimal(1000));
 
-    when(accountRepository.findAccountById(1)).thenReturn(sender);
-    when(accountRepository.findAccountById(2)).thenReturn(receiver);
+        when(accountRepository.findAccountById(1)).thenReturn(sender);
+        when(accountRepository.findAccountById(2)).thenReturn(receiver);
 
-    assertThrows(RuntimeException.class,
-        () -> transferService.transferMoney(1, 2, new BigDecimal(1000)));
-  }
+        assertThrows(RuntimeException.class,
+                () -> transferService.transferMoney(1, 2, new BigDecimal(1000)));
+    }
 
 }

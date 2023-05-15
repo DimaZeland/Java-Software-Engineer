@@ -17,23 +17,23 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class MainTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @Test
-  public void testPayment() throws Exception {
-    var mapper = new ObjectMapper();
+    @Test
+    public void testPayment() throws Exception {
+        var mapper = new ObjectMapper();
 
-    PaymentDetails p = new PaymentDetails();
-    p.setAmount(1000);
+        PaymentDetails p = new PaymentDetails();
+        p.setAmount(1000);
 
-    var expected = mapper.writeValueAsString(p);
+        var expected = mapper.writeValueAsString(p);
 
-    mockMvc.perform(post("/payment")
-          .content(expected)
-          .contentType(MediaType.APPLICATION_JSON))
-        .andExpect(status().isAccepted())
-        .andExpect(content().json(expected));
-  }
+        mockMvc.perform(post("/payment")
+                        .content(expected)
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isAccepted())
+                .andExpect(content().json(expected));
+    }
 
 }

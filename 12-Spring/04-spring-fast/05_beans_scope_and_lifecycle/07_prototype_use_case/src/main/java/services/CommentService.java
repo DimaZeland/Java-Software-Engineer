@@ -12,18 +12,18 @@ import repositories.CommentRepository;
 @Service
 public class CommentService {
 
-  @Autowired
-  private ApplicationContext context;
+    @Autowired
+    private ApplicationContext context;
 
-  public void sendComment(Comment c) {
-    CommentProcessor p = context.getBean(CommentProcessor.class);
+    public void sendComment(Comment c) {
+        CommentProcessor p = context.getBean(CommentProcessor.class);
 
-    p.setComment(c);
-    p.processComment(c);
-    p.validateComment(c);
+        p.setComment(c);
+        p.processComment(c);
+        p.validateComment(c);
 
-    c = p.getComment();
-    // do something further
-  }
+        c = p.getComment();
+        // do something further
+    }
 
 }

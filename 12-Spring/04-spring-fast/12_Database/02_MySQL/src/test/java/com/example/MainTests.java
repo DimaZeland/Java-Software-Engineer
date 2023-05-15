@@ -25,42 +25,42 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 class MainTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @MockBean
-  private PurchaseRepository purchaseRepository;
+    @MockBean
+    private PurchaseRepository purchaseRepository;
 
-  @Test
-  void storePurchaseTest() throws Exception {
-    ObjectMapper mapper = new ObjectMapper();
-    Purchase p = new Purchase();
-    p.setProduct("Spring Quickly");
-    p.setPrice(BigDecimal.TEN);
+    @Test
+    void storePurchaseTest() throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
+        Purchase p = new Purchase();
+        p.setProduct("Spring Quickly");
+        p.setPrice(BigDecimal.TEN);
 
-    mockMvc.perform(post("/purchase")
-        .contentType(MediaType.APPLICATION_JSON)
-        .content(mapper.writeValueAsString(p))
-    ).andExpect(status().isOk());
+        mockMvc.perform(post("/purchase")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(mapper.writeValueAsString(p))
+        ).andExpect(status().isOk());
 
-    verify(purchaseRepository).storePurchase(p);
-  }
+        verify(purchaseRepository).storePurchase(p);
+    }
 
-  @Test
-  void getPurchases() throws Exception {
-    ObjectMapper mapper = new ObjectMapper();
+    @Test
+    void getPurchases() throws Exception {
+        ObjectMapper mapper = new ObjectMapper();
 
-    Purchase p = new Purchase();
-    p.setProduct("Spring Quickly");
-    p.setPrice(BigDecimal.TEN);
+        Purchase p = new Purchase();
+        p.setProduct("Spring Quickly");
+        p.setPrice(BigDecimal.TEN);
 
-    List<Purchase> purchases = List.of(p);
+        List<Purchase> purchases = List.of(p);
 
-    when(purchaseRepository.findAllPurchases()).thenReturn(purchases);
+        when(purchaseRepository.findAllPurchases()).thenReturn(purchases);
 
-    mockMvc.perform(get("/purchase"))
-        .andExpect(status().isOk())
-        .andExpect(content().json(mapper.writeValueAsString(purchases)));
-  }
+        mockMvc.perform(get("/purchase"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(mapper.writeValueAsString(purchases)));
+    }
 
 }

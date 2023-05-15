@@ -22,44 +22,44 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @AutoConfigureMockMvc
 class MainTests {
 
-  @Autowired
-  private MockMvc mockMvc;
+    @Autowired
+    private MockMvc mockMvc;
 
-  @MockBean
-  private PaymentService paymentService;
+    @MockBean
+    private PaymentService paymentService;
 
-  @Test
-  void testMakePaymentSuccessful() throws Exception {
-    var mapper = new ObjectMapper();
+    @Test
+    void testMakePaymentSuccessful() throws Exception {
+        var mapper = new ObjectMapper();
 
-    PaymentDetails p = new PaymentDetails();
-    p.setAmount(1000);
+        PaymentDetails p = new PaymentDetails();
+        p.setAmount(1000);
 
-    when(paymentService.processPayment())
-        .thenReturn(p);
+        when(paymentService.processPayment())
+                .thenReturn(p);
 
-    var expected = mapper.writeValueAsString(p);
+        var expected = mapper.writeValueAsString(p);
 
-    mockMvc.perform(post("/payment"))
-        .andExpect(status().isAccepted())
-        .andExpect(content().json(expected));
-  }
+        mockMvc.perform(post("/payment"))
+                .andExpect(status().isAccepted())
+                .andExpect(content().json(expected));
+    }
 
-  @Test
-  void testMakePaymentNotEnoughMoney() throws Exception {
-    var mapper = new ObjectMapper();
+    @Test
+    void testMakePaymentNotEnoughMoney() throws Exception {
+        var mapper = new ObjectMapper();
 
-    ErrorDetails e = new ErrorDetails();
-    e.setMessage("Not enough money to make the payment.");
+        ErrorDetails e = new ErrorDetails();
+        e.setMessage("Not enough money to make the payment.");
 
-    when(paymentService.processPayment())
-        .thenThrow(new NotEnoughMoneyException());
+        when(paymentService.processPayment())
+                .thenThrow(new NotEnoughMoneyException());
 
-    var expected = mapper.writeValueAsString(e);
+        var expected = mapper.writeValueAsString(e);
 
-    mockMvc.perform(post("/payment"))
-        .andExpect(status().isBadRequest())
-        .andExpect(content().json(expected));
-  }
+        mockMvc.perform(post("/payment"))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().json(expected));
+    }
 
 }

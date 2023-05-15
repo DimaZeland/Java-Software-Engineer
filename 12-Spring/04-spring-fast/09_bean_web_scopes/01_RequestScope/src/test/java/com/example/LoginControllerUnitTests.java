@@ -17,34 +17,34 @@ import static org.mockito.Mockito.verify;
 @ExtendWith(MockitoExtension.class)
 class LoginControllerUnitTests {
 
-  @Mock
-  private Model model;
+    @Mock
+    private Model model;
 
-  @Mock
-  private LoginProcessor loginProcessor;
+    @Mock
+    private LoginProcessor loginProcessor;
 
-  @InjectMocks
-  private LoginController loginController;
+    @InjectMocks
+    private LoginController loginController;
 
-  @Test
-  public void loginPostLoginSucceedsTest() {
-    given(loginProcessor.login()).willReturn(true);
+    @Test
+    public void loginPostLoginSucceedsTest() {
+        given(loginProcessor.login()).willReturn(true);
 
-    String result = loginController.loginPost("username", "password", model);
+        String result = loginController.loginPost("username", "password", model);
 
-    assertEquals("login.html", result);
+        assertEquals("login.html", result);
 
-    verify(model).addAttribute("message", "You are now logged in.");
-  }
+        verify(model).addAttribute("message", "You are now logged in.");
+    }
 
-  @Test
-  public void loginPostLoginFailsTest() {
-    given(loginProcessor.login()).willReturn(false);
+    @Test
+    public void loginPostLoginFailsTest() {
+        given(loginProcessor.login()).willReturn(false);
 
-    String result = loginController.loginPost("username", "password", model);
+        String result = loginController.loginPost("username", "password", model);
 
-    assertEquals("login.html", result);
+        assertEquals("login.html", result);
 
-    verify(model).addAttribute("message", "Login failed!");
-  }
+        verify(model).addAttribute("message", "Login failed!");
+    }
 }

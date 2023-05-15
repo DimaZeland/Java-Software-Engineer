@@ -7,12 +7,12 @@ import services.CommentService;
 
 public class Main {
 
-  public static void main(String[] args) {
-    var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
+    public static void main(String[] args) {
+        var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-    var commentService = c.getBean(CommentService.class);
+        var commentService = c.getBean(CommentService.class);
 
-    commentService.sendComment(new Comment());
-    commentService.sendComment(new Comment());
-  }
+        commentService.sendComment(new Comment());
+        commentService.sendComment(new Comment());
+    }
 }

@@ -11,24 +11,24 @@ import repositories.CommentRepository;
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class CommentProcessor {
 
-  @Autowired
-  private CommentRepository commentRepository;
+    @Autowired
+    private CommentRepository commentRepository;
 
-  private Comment comment;
+    private Comment comment;
 
-  public void setComment(Comment comment) {
-    this.comment = comment;
-  }
+    public void setComment(Comment comment) {
+        this.comment = comment;
+    }
 
-  public Comment getComment() {
-    return this.comment;
-  }
+    public Comment getComment() {
+        return this.comment;
+    }
 
-  public void processComment(Comment comment) {
-  }
+    public void processComment(Comment comment) {
+    }
 
-  public void validateComment(Comment comment) {
-  }
+    public void validateComment(Comment comment) {
+    }
 
 
 }

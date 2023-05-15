@@ -9,20 +9,20 @@ import java.util.logging.Logger;
 
 public class Main {
 
-  private static Logger logger = Logger.getLogger(Main.class.getName());
+    private static Logger logger = Logger.getLogger(Main.class.getName());
 
-  public static void main(String[] args) {
-    var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
+    public static void main(String[] args) {
+        var c = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-    var service = c.getBean(CommentService.class);
+        var service = c.getBean(CommentService.class);
 
-    Comment comment = new Comment();
-    comment.setText("Demo comment");
-    comment.setAuthor("Natasha");
+        Comment comment = new Comment();
+        comment.setText("Demo comment");
+        comment.setAuthor("Natasha");
 
 
-    String returnedValue = service.publishComment(comment);
+        String returnedValue = service.publishComment(comment);
 
-    logger.info(returnedValue);
-  }
+        logger.info(returnedValue);
+    }
 }

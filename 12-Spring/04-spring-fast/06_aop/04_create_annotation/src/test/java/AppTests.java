@@ -19,7 +19,7 @@ import model.Comment;
 import services.CommentService;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { ProjectConfig.class })
+@ContextConfiguration(classes = {ProjectConfig.class})
 public class AppTests {
 
     private Logger serviceLogger;
@@ -42,7 +42,7 @@ public class AppTests {
 
     @Test
     @DisplayName("Test that the aspect intercepts and alters the execution" +
-        " of the deleteComment() method.")
+            " of the deleteComment() method.")
     public void testAspectInterceptsDeleteCommentMethod() {
         Comment comment = new Comment();
         comment.setText("Test comment text");
@@ -57,7 +57,7 @@ public class AppTests {
 
     @Test
     @DisplayName("Test that the aspect doesn't intercept the execution" +
-        " of the publishComment() method.")
+            " of the publishComment() method.")
     public void testAspectDoesntInterceptPublishCommentMethod() {
         Comment comment = new Comment();
         comment.setText("Test comment text");
@@ -72,7 +72,7 @@ public class AppTests {
 
     @Test
     @DisplayName("Test that the aspect doesn't intercept the execution" +
-        " of the editComment() method.")
+            " of the editComment() method.")
     public void testAspectDoesntInterceptEditCommentMethod() {
         Comment comment = new Comment();
         comment.setText("Test comment text");

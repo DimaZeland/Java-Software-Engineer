@@ -18,7 +18,7 @@ import model.Comment;
 import services.CommentService;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = { ProjectConfig.class })
+@ContextConfiguration(classes = {ProjectConfig.class})
 public class AppTests {
 
     private Logger serviceLogger;
@@ -41,7 +41,7 @@ public class AppTests {
 
     @Test
     @DisplayName("Test that the aspect intercepts and alters the execution" +
-        " of the publishComment() method.")
+            " of the publishComment() method.")
     public void testAspectInterceptsPublishCommentMethod() {
         Comment comment = new Comment();
         comment.setText("Test comment text");
@@ -49,7 +49,7 @@ public class AppTests {
 
         commentService.publishComment(comment);
 
-        verify(serviceLogger).info("Publishing comment:"+comment.getText());
+        verify(serviceLogger).info("Publishing comment:" + comment.getText());
         verify(aspectLogger, atLeastOnce()).info("Method publishComment with parameters [Comment{text='Test comment text', author='Test comment author'}] will execute");
         verify(aspectLogger, atLeastOnce()).info("Method executed and returned SUCCESS");
     }

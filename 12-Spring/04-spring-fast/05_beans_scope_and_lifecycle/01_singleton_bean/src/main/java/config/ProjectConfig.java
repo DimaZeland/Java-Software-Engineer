@@ -7,8 +7,8 @@ import services.CommentService;
 @Configuration
 public class ProjectConfig {
 
-  @Bean
-  public CommentService commentService() {
-    return new CommentService();
-  }
+    @Bean
+    public CommentService commentService() {
+        return new CommentService();
+    }
 }

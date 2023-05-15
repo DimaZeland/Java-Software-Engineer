@@ -9,14 +9,14 @@ import repositories.CommentRepository;
 @Component
 public class CommentService {
 
-  @Autowired
-  private CommentRepository commentRepository;
+    @Autowired
+    private CommentRepository commentRepository;
 
-  @Autowired
-  private CommentNotificationProxy commentNotificationProxy;
+    @Autowired
+    private CommentNotificationProxy commentNotificationProxy;
 
-  public void publishComment(Comment comment) {
-    commentRepository.storeComment(comment);
-    commentNotificationProxy.sendComment(comment);
-  }
+    public void publishComment(Comment comment) {
+        commentRepository.storeComment(comment);
+        commentNotificationProxy.sendComment(comment);
+    }
 }
