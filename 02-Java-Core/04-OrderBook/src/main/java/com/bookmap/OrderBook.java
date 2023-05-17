@@ -44,8 +44,14 @@ public class OrderBook {
     private void doAction(String[] data) {
 
         switch (data[0]) {
+
             case "u": {
-                setLimitOrder(data);
+                int price = Integer.parseInt(data[1]);
+                int size = Integer.parseInt(data[2]);
+                String orderType = "bid".equals(data[3]) ? "buyLimit" : "sellLimit";
+
+                setLimitOrder(price, size, orderType);
+
                 break;
             }
 
@@ -68,31 +74,32 @@ public class OrderBook {
         }
     }
 
-    private void setLimitOrder(String[] data) {
+    private void setLimitOrder(int price, int size, String limitOrderType) {
 
-        TreeMap<Integer, Integer> limitOrders = "bid".equals(data[3]) ? limitBuyers : limitSellers;
-
-        int price = Integer.parseInt(data[1]);
-        int size = Integer.parseInt(data[2]);
+        TreeMap<Integer, Integer> limitOrders = "buyLimit".equals(limitOrderType) ? limitBuyers : limitSellers;
 
         if (0 == size)
             limitOrders.remove(price);
+        else if(limitOrders.containsKey(price))
+            limitOrders.replace(price, size);
         else
             limitOrders.put(price, size);
     }
 
-    private int executeMarketOrder(int marketOrderSize, String orderType) {
+    private int executeMarketOrder(int marketOrderSize, String marketOrderType) {
 
-        TreeMap<Integer, Integer> limitOrders = "buy".equals(orderType) ? limitSellers : limitBuyers;
+        TreeMap<Integer, Integer> limitOrders = "buy".equals(marketOrderType) ? limitSellers : limitBuyers;
 
         int price = limitOrders.firstKey();
         int limitOrderSize = limitOrders.get(price);
         int sizeRest = limitOrderSize - marketOrderSize;
 
+        String limitOrderType = "buy".equals(marketOrderType) ? "sellLimit" : "buyLimit";
+
         if (sizeRest > 0)
-            limitOrders.replace(price, sizeRest);
+            setLimitOrder(price, sizeRest, limitOrderType);
         else
-            limitOrders.remove(price);
+            setLimitOrder(price, 0, limitOrderType);
 
         int notExecutedMarketOrderSize = sizeRest > 0 ? 0 : -sizeRest;
 
