@@ -20,6 +20,8 @@
 
 #### [HTTP Server](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/02-Java-Core/03-HttpServer)
 
+#### [Order Book] (https://github.com/DimaZeland/Java-Software-Engineer/tree/master/02-Java-Core/04-OrderBook)
+
 ### [3️⃣ SQL](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/03-SQL)
 
 #### [Scripts](https://github.com/DimaZeland/Java-Software-Engineer/tree/master/03-SQL/scripts)
