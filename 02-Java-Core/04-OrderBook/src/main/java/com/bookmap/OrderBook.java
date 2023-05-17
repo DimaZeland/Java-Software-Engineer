@@ -101,7 +101,7 @@ public class OrderBook {
         else
             setLimitOrder(price, 0, limitOrderType);
 
-        int notExecutedMarketOrderSize = sizeRest > 0 ? 0 : -sizeRest;
+        int notExecutedMarketOrderSize = sizeRest >= 0 ? 0 : -sizeRest;
 
         return notExecutedMarketOrderSize;
     }
