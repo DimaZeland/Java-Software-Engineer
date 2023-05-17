@@ -1,14 +1,12 @@
 package com.bookmap;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class OrderBook {
 
-    private final TreeSet<Order> limitSellers = new TreeSet<>();
-    private final TreeSet<Order> limitBuyers = new TreeSet<>();
+    private final TreeMap<Integer, Integer> limitSellers = new TreeMap<>();
+    private final TreeMap<Integer, Integer> limitBuyers = new TreeMap<>(Comparator.reverseOrder());
     private StringBuilder outputData = new StringBuilder();
 
     public void manage() {
@@ -72,32 +70,29 @@ public class OrderBook {
 
     private void setLimitOrder(String[] data) {
 
+        TreeMap<Integer, Integer> limitOrders = "bid".equals(data[3]) ? limitBuyers : limitSellers;
+
         int price = Integer.parseInt(data[1]);
         int size = Integer.parseInt(data[2]);
-        Order order = new Order(price, size);
 
-        if ("bid".equals(data[3]))
-            limitBuyers.add(order);
+        if (0 == size)
+            limitOrders.remove(price);
         else
-            limitSellers.add(order);
+            limitOrders.put(price, size);
     }
 
     private int executeMarketOrder(int marketOrderSize, String orderType) {
 
-        int limitOrderSize = "buy".equals(orderType) ? limitSellers.first().getSize() : limitBuyers.last().getSize();
+        TreeMap<Integer, Integer> limitOrders = "buy".equals(orderType) ? limitSellers : limitBuyers;
+
+        int price = limitOrders.firstKey();
+        int limitOrderSize = limitOrders.get(price);
         int sizeRest = limitOrderSize - marketOrderSize;
 
-        if (sizeRest > 0) {
-            if ("buy".equals(orderType))
-                limitSellers.first().setSize(sizeRest);
-            else
-                limitBuyers.last().setSize(sizeRest);
-        } else {
-            if ("buy".equals(orderType))
-                limitSellers.pollFirst();
-            else
-                limitBuyers.pollLast();
-        }
+        if (sizeRest > 0)
+            limitOrders.replace(price, sizeRest);
+        else
+            limitOrders.remove(price);
 
         int notExecutedMarketOrderSize = sizeRest > 0 ? 0 : -sizeRest;
 
@@ -107,44 +102,26 @@ public class OrderBook {
     private String executeQuery(String[] data) {
 
         String result = "";
+        int price, size;
 
-        switch (data[1]) {
-            case "best_bid": {
-                Order order = limitBuyers.last();
-                result = order.getPrice() + "," + order.getSize();
-                break;
-            }
+        if ("size".equals(data[1])) {
+            price = Integer.parseInt(data[2]);
 
-            case "best_ask": {
-                Order order = limitSellers.first();
-                result = order.getPrice() + "," + order.getSize();
-                break;
-            }
+            if (limitBuyers.containsKey(price))
+                size = limitBuyers.get(price);
+            else if (limitSellers.containsKey(price))
+                size = limitSellers.get(price);
+            else
+                size = 0;
 
-            case "size": {
-                int price = Integer.parseInt(data[2]);
-                int size = 0;
-                boolean isFound = false;
+            result = String.valueOf(size);
+        } else {
+            TreeMap<Integer, Integer> limitOrders = "best_ask".equals(data[1]) ? limitSellers : limitBuyers;
 
-                for (Order order : limitBuyers) {
-                    if (order.getPrice() == price) {
-                        size = order.getSize();
-                        isFound = true;
-                        break;
-                    }
-                }
+            price = limitOrders.firstKey();
+            size = limitOrders.get(price);
 
-                if (false == isFound)
-                    for (Order order : limitSellers) {
-                        if (order.getPrice() == price) {
-                            size = order.getSize();
-                            break;
-                        }
-                    }
-
-                result = String.valueOf(size);
-                break;
-            }
+            result = price + "," + size;
         }
 
         return result;
@@ -161,6 +138,4 @@ public class OrderBook {
             System.out.println(ex.getMessage());
         }
     }
-
-//    private void TreeMap<Integer,Integer> map = new TreeMap<Integer,Integer>();
 }

@@ -7,4 +7,3 @@ o,sell,1
 q,size,10
 u,9,0,bid
 u,11,0,ask
-q,size,9
