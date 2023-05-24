@@ -5,22 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>04-spring-fast</artifactId>
+        <artifactId>04-spring-quickly</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>08_web_MVC</artifactId>
+    <artifactId>13_Transactions</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>01_Model</module>
-        <module>02_RequestParam</module>
-        <module>03_RequestParam2</module>
-        <module>04_PathVariable</module>
-        <module>05_POST</module>
-        <module>06_Product_autoCreate</module>
+        <module>01_Transactional</module>
+        <module>02_throw_Exception</module>
     </modules>
 
 </project>

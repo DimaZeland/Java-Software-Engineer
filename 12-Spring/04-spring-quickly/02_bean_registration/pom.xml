@@ -5,23 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>04-spring-fast</artifactId>
+        <artifactId>04-spring-quickly</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>10_REST_Service</artifactId>
+
+    <artifactId>02_bean_registration</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>01_ResponseBody</module>
-        <module>02_RestController</module>
-        <module>03_JSON</module>
-        <module>04_ResponseEntity</module>
-        <module>05_Exception</module>
-        <module>06_RestControllerAdvice</module>
-        <module>07_RequestBody</module>
+        <module>01_context_create</module>
+        <module>02_add_beans</module>
+        <module>03_add_same_type_beans</module>
+        <module>04_add_bean_name</module>
+        <module>05_add_primary_bean</module>
+        <module>06_add_Component</module>
+        <module>07_add_PostConstruct</module>
+        <module>08_use_registerBean</module>
+        <module>09_XML_conf</module>
     </modules>
 
 </project>

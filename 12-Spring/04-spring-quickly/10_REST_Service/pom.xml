@@ -5,23 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>04-spring-fast</artifactId>
+        <artifactId>04-spring-quickly</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>06_aop</artifactId>
+    <artifactId>10_REST_Service</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>01_Around</module>
-        <module>02_read_method_sign</module>
-        <module>03_set_method_sign</module>
-        <module>04_create_annotation</module>
-        <module>05_AfterReturning</module>
-        <module>06_without_Order</module>
-        <module>07_Order</module>
+        <module>01_ResponseBody</module>
+        <module>02_RestController</module>
+        <module>03_JSON</module>
+        <module>04_ResponseEntity</module>
+        <module>05_Exception</module>
+        <module>06_RestControllerAdvice</module>
+        <module>07_RequestBody</module>
     </modules>
 
 </project>

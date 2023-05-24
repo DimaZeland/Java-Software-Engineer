@@ -5,23 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>04-spring-fast</artifactId>
+        <artifactId>04-spring-quickly</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>04_bean_abstractions</artifactId>
+    <artifactId>05_beans_scope_and_lifecycle</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>01_interface_using</module>
-        <module>02_DI_Component_constr</module>
-        <module>03_DI_Component_field</module>
-        <module>04_DI_Bean_constr</module>
-        <module>05_DI_Primary</module>
-        <module>06_DI_Qualifier</module>
-        <module>07_Service_Repository</module>
+        <module>01_singleton_bean</module>
+        <module>02_singleton_Component</module>
+        <module>03_immediate_instantiation</module>
+        <module>04_lazy_instantiation</module>
+        <module>05_prototype_bean</module>
+        <module>06_prototype_Component</module>
+        <module>07_prototype_use_case</module>
     </modules>
 
 </project>
