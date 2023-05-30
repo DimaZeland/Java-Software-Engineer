@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Car name error</title>
+</head>
+<body>
+<H1>We apologise, we are not currently accepting bids for the vehicle you have mentioned.</H1>
+
+<form th:method="GET" th:action="@{/bets/index}">
+    <input type="submit" value="Make a bet"/>
+</form>
+
+<form th:method="GET" th:action="@{/bets}">
+    <input type="submit" value="View all bets"/>
+</form>
+</body>
+</html>

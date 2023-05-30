@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bets</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/bets}" th:object="${bet}">
+
+    <b>Make a new bet:</b>
+
+    <br/><br/>
+
+    <label for="car">Choose a car: </label>
+    <select th:object="${bet}" th:field="*{carName}" id="car">
+        <option th:each="car : ${cars}" th:value="${car}" th:text="${car}">
+        </option>
+    </select>
+
+    <br/><br/>
+
+    <label for="betAmount">Specify the bet amount: </label>
+    <input type="number" th:field="*{betAmount}" id="betAmount"/>
+    <div style="color:red" th:if="${#fields.hasErrors('betAmount')}" th:errors="*{betAmount}">Bet Amount Error</div>
+
+    <br/><br/>
+
+    <input type="submit" value="Create!"/>
+</form>
+<br/><br/>
+<hr/>
+<form th:method="GET" th:action="@{/bets}">
+    <input type="submit" value="View all bets"/>
+</form>
+</body>
+</html>

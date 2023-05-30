@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Show All Bets</title>
+</head>
+<body>
+
+<div th:if="${!bets.isEmpty()}">
+    <hr/>
+    <b>Bets:</b>
+    <br/>
+    <table th:each="bet : ${bets}">
+        <tr>
+            <td>
+                <span th:text="${bet.getKey()} + ': ' + ${bet.getValue()}">
+                </span>
+            </td>
+        </tr>
+    </table>
+    <hr/>
+</div>
+
+<form th:method="GET" th:action="@{/bets/index}">
+    <input type="submit" value="Make a bet"/>
+</form>
+
+</body>
+</html>

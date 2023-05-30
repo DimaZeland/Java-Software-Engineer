@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Bets by Car</title>
+</head>
+
+<body>
+<tr>
+    <td>
+                <span th:text="${bet.getCarName()} + ': ' + ${bet.getBetAmount()}">
+                </span>
+    </td>
+</tr>
+<br/><br/>
+<form th:method="GET" th:action="@{/bets/index}">
+    <input type="submit" value="Make a bet"/>
+</form>
+<br/><br/>
+<form th:method="GET" th:action="@{/bets}">
+    <input type="submit" value="View all bets"/>
+</form>
+</body>
+</html>
