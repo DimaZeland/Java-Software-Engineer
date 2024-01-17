@@ -4,7 +4,7 @@
 
 ### ⚙️ The project uses:
 
-- [React]([https://www.oracle.com/java/technologies/downloads/archive/](https://react.dev/)https://react.dev/)
+- [React](https://react.dev/)
 - [HTML](https://html.spec.whatwg.org/multipage/)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
